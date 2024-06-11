@@ -149,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Documents\Iteration 0\CS6920 Project Writeup v3.docx" />
+    <None Include="Documents\Iteration 0\Iteration 0 Wireframe.pdf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
