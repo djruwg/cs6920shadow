@@ -16,5 +16,11 @@ namespace BBB
         {
             InitializeComponent();
         }
+
+        // Use this to invoke test code
+        private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
