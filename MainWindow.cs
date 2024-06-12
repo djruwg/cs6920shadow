@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BBB.UserControls;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -67,6 +68,19 @@ namespace BBB
             {
                 MainWindowTabControl.Controls.Remove(MainWindowTabControl.TabPages[tabIndex]);
             }
+        }
+
+        private void MainWindowNewTabButton_Click(object sender, EventArgs e)
+        {
+            TabPage tabPage = new TabPage();
+            tabPage.Text = "New Tab";
+            RenderingUserControl browser = new RenderingUserControl();
+            tabPage.Controls.Add(browser);
+            // browserList.Add(browser);
+            MainWindowTabControl.Controls.Add(tabPage);
+            this.AdjustTabSizes();
+            MainWindowTabControl.SelectTab(tabPage);
+            // browser.GoToURL("https://www.google.com");
         }
     }
 }
