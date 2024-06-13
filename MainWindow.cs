@@ -17,14 +17,38 @@ namespace BBB
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Returns the rendering user control of the currently selected tab
+        /// </summary>
+        /// <returns></returns>
+        private RenderingUserControl GetRenderingUserControl()
+        {
+            RenderingUserControl renderingControl = null;
+
+            if (MainWindowTabControl.SelectedIndex > -1)
+            {
+                Control control = MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Controls[0];
+
+                if (control is RenderingUserControl)
+                {
+                    renderingControl = (RenderingUserControl)control;
+                }
+            }
+
+            return renderingControl;
+        }
+
+        /// <summary>
+        /// Instructs the currently selected rendering user control to navigate to the given URL
+        /// </summary>
+        /// <param name="url"></param>
         private void GoToURL(string url)
         {
-            Control control = (RenderingUserControl)MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Controls[0];
+            RenderingUserControl renderingControl = GetRenderingUserControl();
 
-            if (control is RenderingUserControl)
+            if (renderingControl != null && Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
-                RenderingUserControl browser = (RenderingUserControl)control;
-                browser.GoToURL(url);
+                renderingControl.GoToURL(url);
             }
         }
 
@@ -109,6 +133,36 @@ namespace BBB
             if (e.KeyChar == (char)Keys.Return)
             {
                 this.GoToURL(MainWindowURLBar.Text);
+            }
+        }
+
+        private void MainWindowBackButton_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.GoBack();
+            }
+        }
+
+        private void MainWindowForwardButton_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.GoForward();
+            }
+        }
+
+        private void MainWindowReloadButton_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.Reload();
             }
         }
     }

@@ -154,6 +154,7 @@
             this.MainWindowBackButton.TabIndex = 0;
             this.MainWindowBackButton.Text = "<";
             this.MainWindowBackButton.UseVisualStyleBackColor = true;
+            this.MainWindowBackButton.Click += new System.EventHandler(this.MainWindowBackButton_Click);
             // 
             // MainWindowForwardButton
             // 
@@ -167,6 +168,7 @@
             this.MainWindowForwardButton.TabIndex = 1;
             this.MainWindowForwardButton.Text = ">";
             this.MainWindowForwardButton.UseVisualStyleBackColor = true;
+            this.MainWindowForwardButton.Click += new System.EventHandler(this.MainWindowForwardButton_Click);
             // 
             // MainWindowReloadButton
             // 
@@ -180,6 +182,7 @@
             this.MainWindowReloadButton.TabIndex = 2;
             this.MainWindowReloadButton.Text = "R";
             this.MainWindowReloadButton.UseVisualStyleBackColor = true;
+            this.MainWindowReloadButton.Click += new System.EventHandler(this.MainWindowReloadButton_Click);
             // 
             // MainWindowURLBar
             // 
