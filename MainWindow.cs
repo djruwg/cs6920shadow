@@ -1,5 +1,6 @@
 ﻿using BBB.UserControls;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -15,15 +16,36 @@ namespace BBB
             InitializeComponent();
         }
 
+        private void GoToURL(string url)
+        {
+            Control control = (RenderingUserControl)MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Controls[0];
+
+            if (control is RenderingUserControl)
+            {
+                RenderingUserControl browser = (RenderingUserControl)control;
+                browser.GoToURL(url);
+            }
+        }
+
         // Use this to invoke test code
         private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (TabPage tabPage in MainWindowTabControl.TabPages)
+            {
+                foreach (Control control in tabPage.Controls)
+                {
+                    Debug.WriteLine(control);
+                }
+            }
 
+            this.GoToURL("https://www.kennesaw.edu");
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
             this.AdjustTabSizes();
+
+            this.OpenNewTab();
         }
 
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -81,7 +103,7 @@ namespace BBB
             tabPage.Text = "New Tab";
             RenderingUserControl browser = new RenderingUserControl();
             tabPage.Controls.Add(browser);
-            // browserList.Add(browser);
+            tabPage.AutoSize = true;
             MainWindowTabControl.Controls.Add(tabPage);
             this.AdjustTabSizes();
             MainWindowTabControl.SelectTab(tabPage);

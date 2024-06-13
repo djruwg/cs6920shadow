@@ -13,7 +13,7 @@ namespace BBB.UserControls
 
         private void RenderingUserControl_Load(object sender, System.EventArgs e)
         {
-            RenderingWebView.EnsureCoreWebView2Async();
+            //RenderingWebView.EnsureCoreWebView2Async();
         }
 
         public void GoToURL(string url)
