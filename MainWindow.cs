@@ -72,6 +72,11 @@ namespace BBB
 
         private void MainWindowNewTabButton_Click(object sender, EventArgs e)
         {
+            this.OpenNewTab();
+        }
+
+        private void OpenNewTab()
+        {
             TabPage tabPage = new TabPage();
             tabPage.Text = "New Tab";
             RenderingUserControl browser = new RenderingUserControl();
