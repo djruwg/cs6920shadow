@@ -43,6 +43,11 @@
             this.RenderingWebView.Size = new System.Drawing.Size(1351, 956);
             this.RenderingWebView.TabIndex = 0;
             this.RenderingWebView.ZoomFactor = 1D;
+            this.RenderingWebView.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.RenderingWebView_CoreWebView2InitializationCompleted);
+            this.RenderingWebView.NavigationStarting += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs>(this.RenderingWebView_NavigationStarting);
+            this.RenderingWebView.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.RenderingWebView_NavigationCompleted);
+            this.RenderingWebView.SourceChanged += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs>(this.RenderingWebView_SourceChanged);
+            this.RenderingWebView.ContentLoading += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs>(this.RenderingWebView_ContentLoading);
             // 
             // RenderingUserControl
             // 
