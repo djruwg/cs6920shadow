@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Web.WebView2.WinForms;
 
 namespace BBB.UserControls
 {
@@ -15,6 +9,16 @@ namespace BBB.UserControls
         public RenderingUserControl()
         {
             InitializeComponent();
+        }
+
+        private void RenderingUserControl_Load(object sender, System.EventArgs e)
+        {
+            RenderingWebView.EnsureCoreWebView2Async();
+        }
+
+        public void GoToURL(string url)
+        {
+            RenderingWebView.Source = new Uri(url);
         }
     }
 }

@@ -80,7 +80,7 @@ namespace BBB
             MainWindowTabControl.Controls.Add(tabPage);
             this.AdjustTabSizes();
             MainWindowTabControl.SelectTab(tabPage);
-            // browser.GoToURL("https://www.google.com");
+            browser.GoToURL("https://www.google.com");
         }
     }
 }
