@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace BBB
@@ -30,15 +31,8 @@ namespace BBB
         // Use this to invoke test code
         private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (TabPage tabPage in MainWindowTabControl.TabPages)
-            {
-                foreach (Control control in tabPage.Controls)
-                {
-                    Debug.WriteLine(control);
-                }
-            }
-
             this.GoToURL("https://www.kennesaw.edu");
+            // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = "Kennesaw";
         }
 
         private void MainWindow_Load(object sender, EventArgs e)
@@ -108,6 +102,14 @@ namespace BBB
             this.AdjustTabSizes();
             MainWindowTabControl.SelectTab(tabPage);
             browser.GoToURL("https://www.google.com");
+        }
+
+        private void MainWindowURLBar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                this.GoToURL(MainWindowURLBar.Text);
+            }
         }
     }
 }

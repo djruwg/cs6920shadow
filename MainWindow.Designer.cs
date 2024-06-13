@@ -189,6 +189,7 @@
             this.MainWindowURLBar.Name = "MainWindowURLBar";
             this.MainWindowURLBar.Size = new System.Drawing.Size(833, 40);
             this.MainWindowURLBar.TabIndex = 3;
+            this.MainWindowURLBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindowURLBar_KeyPress);
             // 
             // MainWindowNewTabButton
             // 
