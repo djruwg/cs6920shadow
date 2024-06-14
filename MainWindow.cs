@@ -142,6 +142,7 @@ namespace BBB
             TabPage tabPage = new TabPage();
             tabPage.Text = "New Tab";
             RenderingUserControl browser = new RenderingUserControl(this);
+            browser.Dock = DockStyle.Fill;
             tabPage.Controls.Add(browser);
             MainWindowTabControl.Controls.Add(tabPage);
             this.AdjustTabSizes();
