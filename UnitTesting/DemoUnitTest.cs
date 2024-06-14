@@ -3,7 +3,7 @@
 namespace UnitTesting
 {
     [TestClass]
-    public class UnitTest1
+    public class DemoUnitTest
     {
         [TestMethod]
         public void TestCanInitDemoCalass()

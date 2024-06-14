@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Security.Policy;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BBB.UserControls
@@ -8,7 +10,6 @@ namespace BBB.UserControls
     {
         void RenderingUserControlEvent(object sender, EventArgs e);
     }
-
 
 
     public partial class RenderingUserControl : UserControl
@@ -161,6 +162,11 @@ namespace BBB.UserControls
             }
 
             this._listener.RenderingUserControlEvent(sender, e);
+        }
+
+        public async Task RunScriptAsync(string script)
+        {
+            await RenderingWebView.CoreWebView2.ExecuteScriptAsync(script);
         }
     }
 }
