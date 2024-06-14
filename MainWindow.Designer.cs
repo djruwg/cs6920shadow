@@ -45,13 +45,13 @@
             this.MainWindowTableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowTabControl = new System.Windows.Forms.TabControl();
             this.MainWindowTableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowFlowLayoutPanel1.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
             this.MainWindowTableLayoutPanel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.MainWindowFlowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainWindowTableLayoutPanel1
@@ -90,7 +90,7 @@
             // FileToolStripMenuItem
             // 
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 44);
             this.FileToolStripMenuItem.Text = "File";
             // 
             // BookmarksToolStripMenuItem
@@ -99,7 +99,7 @@
             this.addToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
-            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 36);
+            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 44);
             this.BookmarksToolStripMenuItem.Text = "Bookmarks";
             // 
             // addToolStripMenuItem
@@ -120,7 +120,7 @@
             this.RunTestToolStripMenuItem});
             this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
-            this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
+            this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 44);
             this.TestingToolStripMenuItem.Text = "Testing";
             // 
             // RunTestToolStripMenuItem
@@ -248,7 +248,7 @@
             this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.60714F));
             this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.39286F));
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
-            this.MainWindowTableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
             this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 51);
             this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
@@ -257,16 +257,16 @@
             this.MainWindowTableLayoutPanel3.Size = new System.Drawing.Size(1568, 83);
             this.MainWindowTableLayoutPanel3.TabIndex = 3;
             // 
-            // flowLayoutPanel1
+            // MainWindowFlowLayoutPanel2
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.MainWindowNewTabButton);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1361, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(204, 77);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.MainWindowFlowLayoutPanel2.AutoSize = true;
+            this.MainWindowFlowLayoutPanel2.Controls.Add(this.MainWindowNewTabButton);
+            this.MainWindowFlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainWindowFlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.MainWindowFlowLayoutPanel2.Location = new System.Drawing.Point(1361, 3);
+            this.MainWindowFlowLayoutPanel2.Name = "MainWindowFlowLayoutPanel2";
+            this.MainWindowFlowLayoutPanel2.Size = new System.Drawing.Size(204, 77);
+            this.MainWindowFlowLayoutPanel2.TabIndex = 2;
             // 
             // MainWindow
             // 
@@ -289,8 +289,8 @@
             this.MainWindowTableLayoutPanel2.ResumeLayout(false);
             this.MainWindowTableLayoutPanel3.ResumeLayout(false);
             this.MainWindowTableLayoutPanel3.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.MainWindowFlowLayoutPanel2.ResumeLayout(false);
+            this.MainWindowFlowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,7 +315,7 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel MainWindowFlowLayoutPanel2;
     }
 }
 

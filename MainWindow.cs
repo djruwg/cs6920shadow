@@ -12,11 +12,19 @@ namespace BBB
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 16;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Perform initial setup once this component has loaded
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindow_Load(object sender, EventArgs e)
         {
             MainWindowReloadButton.Font = new System.Drawing.Font("Wingdings 3", 12, FontStyle.Bold);
@@ -27,11 +35,14 @@ namespace BBB
             this.OpenNewTab();
         }
 
-        // Use this to invoke test code
+        /// <summary>
+        /// Use this to invoke test code
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.GoToURL("https://www.kennesaw.edu");
-            // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = "Kennesaw";
+           // YOUR TEST CODE HERE
         }
 
         /// <summary>
@@ -55,6 +66,11 @@ namespace BBB
             return renderingControl;
         }
 
+        /// <summary>
+        /// Intercept the tab drawing routine and add an 'x' for closing tabs.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
             // e.Graphics.Clear(BackColor);
@@ -64,6 +80,9 @@ namespace BBB
             e.DrawFocusRectangle();
         }
 
+        /// <summary>
+        /// Adjust tab sizes to handle text and the closing 'x'.
+        /// </summary>
         private void AdjustTabSizes()
         {
             MainWindowTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
@@ -86,6 +105,11 @@ namespace BBB
             MainWindowTabControl.ItemSize = new Size(tabLength, MainWindowTabControl.ItemSize.Height);
         }
 
+        /// <summary>
+        /// Determine if the tab's 'x' was clicked and if so close the tab.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowTabControl_MouseUp(object sender, MouseEventArgs e)
         {
             int tabIndex = MainWindowTabControl.SelectedIndex;
@@ -100,24 +124,34 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Handle click of new tab button and open a new tab.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowNewTabButton_Click(object sender, EventArgs e)
         {
             this.OpenNewTab();
         }
 
+        /// <summary>
+        /// Open a new tab with a rendering user control.
+        /// </summary>
         private void OpenNewTab()
         {
             TabPage tabPage = new TabPage();
             tabPage.Text = "New Tab";
             RenderingUserControl browser = new RenderingUserControl(this);
             tabPage.Controls.Add(browser);
-            tabPage.AutoSize = true;
             MainWindowTabControl.Controls.Add(tabPage);
             this.AdjustTabSizes();
             MainWindowTabControl.SelectTab(tabPage);
             browser.GoToURL("https://www.google.com");
         }
 
+        /// <summary>
+        /// Listen for rendering user control events.
+        /// </summary>
         public void RenderingUserControlEvent()
         {
             RenderingUserControl renderingControl = GetRenderingUserControl();
@@ -168,6 +202,11 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Handle back button click and go back a page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowBackButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl renderingControl = GetRenderingUserControl();
@@ -178,6 +217,11 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Handle forward button click and go forward a page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowForwardButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl renderingControl = GetRenderingUserControl();
@@ -188,6 +232,11 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Handle reload button click and reload the page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MainWindowReloadButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl renderingControl = GetRenderingUserControl();
@@ -196,11 +245,6 @@ namespace BBB
             {
                 renderingControl.Reload();
             }
-        }
-
-        private void MainWindowTableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
