@@ -3,6 +3,8 @@ using BBB.UserControls;
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace BBB
@@ -11,6 +13,9 @@ namespace BBB
     {
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 16;
+
+        private static readonly Regex urlRegex = new Regex(@"^(https?|ftp)?(:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}([\/\w .-]*)*\/?$",
+                RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
         /// <summary>
         /// Constructor
@@ -178,8 +183,13 @@ namespace BBB
 
             if (renderingControl != null)
             {
-                if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+                // if (Uri.CheckHostName(url) == UriHostNameType.Basic)
+                if (urlRegex.IsMatch(url))
                 {
+                    if (!Uri.IsWellFormedUriString(url, UriKind.Absolute))
+                    {
+                        url = "http://" + url;
+                    }
                     renderingControl.GoToURL(url);
                 }
                 else
