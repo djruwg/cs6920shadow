@@ -1,4 +1,5 @@
-﻿using BBB.UserControls;
+﻿using BBB.Helpers;
+using BBB.UserControls;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -18,6 +19,9 @@ namespace BBB
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            MainWindowReloadButton.Font = new System.Drawing.Font("Wingdings 3", 12, FontStyle.Bold);
+            MainWindowReloadButton.Text = "\u2B6F";
+
             this.AdjustTabSizes();
 
             this.OpenNewTab();
@@ -53,6 +57,7 @@ namespace BBB
 
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
+            // e.Graphics.Clear(BackColor);
             e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - TAB_TRAILING_SPACE, e.Bounds.Top + 4);
             e.Graphics.DrawString(this.MainWindowTabControl.TabPages[e.Index].Text, 
                 e.Font, Brushes.Black, e.Bounds.Left + TAB_LEADING_SPACE, e.Bounds.Top + 4);
@@ -122,6 +127,8 @@ namespace BBB
                 MainWindowBackButton.Enabled = renderingControl.CanGoBack();
                 MainWindowForwardButton.Enabled = renderingControl.CanGoForward();
                 MainWindowURLBar.Text = renderingControl.GetUrl();
+                // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = MainWindowURLBar.Text.Truncate(16);
+                // this.AdjustTabSizes();
             }
         }
 
@@ -189,6 +196,11 @@ namespace BBB
             {
                 renderingControl.Reload();
             }
+        }
+
+        private void MainWindowTableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

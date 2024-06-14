@@ -44,10 +44,14 @@
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
             this.MainWindowTableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowTabControl = new System.Windows.Forms.TabControl();
+            this.MainWindowTableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowFlowLayoutPanel1.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
+            this.MainWindowTableLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainWindowTableLayoutPanel1
@@ -56,8 +60,8 @@
             this.MainWindowTableLayoutPanel1.ColumnCount = 1;
             this.MainWindowTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowMenuStrip, 0, 0);
-            this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 1);
             this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowTableLayoutPanel2, 0, 2);
+            this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowTableLayoutPanel3, 0, 1);
             this.MainWindowTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainWindowTableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.MainWindowTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
@@ -66,7 +70,7 @@
             this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTableLayoutPanel1.Size = new System.Drawing.Size(1174, 887);
+            this.MainWindowTableLayoutPanel1.Size = new System.Drawing.Size(1574, 1529);
             this.MainWindowTableLayoutPanel1.TabIndex = 0;
             // 
             // MainWindowMenuStrip
@@ -79,7 +83,7 @@
             this.TestingToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1174, 48);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 48);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -133,12 +137,11 @@
             this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowForwardButton);
             this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowReloadButton);
             this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowURLBar);
-            this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowNewTabButton);
             this.MainWindowFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 52);
+            this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.MainWindowFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowFlowLayoutPanel1.Name = "MainWindowFlowLayoutPanel1";
-            this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1166, 75);
+            this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1350, 75);
             this.MainWindowFlowLayoutPanel1.TabIndex = 1;
             this.MainWindowFlowLayoutPanel1.WrapContents = false;
             // 
@@ -147,6 +150,7 @@
             this.MainWindowBackButton.AutoSize = true;
             this.MainWindowBackButton.FlatAppearance.BorderSize = 0;
             this.MainWindowBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainWindowBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainWindowBackButton.Location = new System.Drawing.Point(4, 4);
             this.MainWindowBackButton.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowBackButton.Name = "MainWindowBackButton";
@@ -161,6 +165,7 @@
             this.MainWindowForwardButton.AutoSize = true;
             this.MainWindowForwardButton.FlatAppearance.BorderSize = 0;
             this.MainWindowForwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainWindowForwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainWindowForwardButton.Location = new System.Drawing.Point(80, 4);
             this.MainWindowForwardButton.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowForwardButton.Name = "MainWindowForwardButton";
@@ -199,7 +204,8 @@
             this.MainWindowNewTabButton.AutoSize = true;
             this.MainWindowNewTabButton.FlatAppearance.BorderSize = 0;
             this.MainWindowNewTabButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainWindowNewTabButton.Location = new System.Drawing.Point(1079, 4);
+            this.MainWindowNewTabButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainWindowNewTabButton.Location = new System.Drawing.Point(132, 4);
             this.MainWindowNewTabButton.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowNewTabButton.Name = "MainWindowNewTabButton";
             this.MainWindowNewTabButton.Size = new System.Drawing.Size(68, 67);
@@ -215,12 +221,12 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 141);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;
             this.MainWindowTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindowTableLayoutPanel2.Size = new System.Drawing.Size(1166, 1054);
+            this.MainWindowTableLayoutPanel2.Size = new System.Drawing.Size(1566, 1398);
             this.MainWindowTableLayoutPanel2.TabIndex = 2;
             // 
             // MainWindowTabControl
@@ -230,16 +236,43 @@
             this.MainWindowTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTabControl.Name = "MainWindowTabControl";
             this.MainWindowTabControl.SelectedIndex = 0;
-            this.MainWindowTabControl.Size = new System.Drawing.Size(1162, 1046);
+            this.MainWindowTabControl.Size = new System.Drawing.Size(1558, 1390);
             this.MainWindowTabControl.TabIndex = 0;
             this.MainWindowTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MainWindowTabControl_DrawItem);
             this.MainWindowTabControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainWindowTabControl_MouseUp);
+            // 
+            // MainWindowTableLayoutPanel3
+            // 
+            this.MainWindowTableLayoutPanel3.AutoSize = true;
+            this.MainWindowTableLayoutPanel3.ColumnCount = 2;
+            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.60714F));
+            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.39286F));
+            this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
+            this.MainWindowTableLayoutPanel3.Controls.Add(this.flowLayoutPanel1, 1, 0);
+            this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 51);
+            this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
+            this.MainWindowTableLayoutPanel3.RowCount = 1;
+            this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MainWindowTableLayoutPanel3.Size = new System.Drawing.Size(1568, 83);
+            this.MainWindowTableLayoutPanel3.TabIndex = 3;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.MainWindowNewTabButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1361, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(204, 77);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 887);
+            this.ClientSize = new System.Drawing.Size(1574, 1529);
             this.Controls.Add(this.MainWindowTableLayoutPanel1);
             this.MainMenuStrip = this.MainWindowMenuStrip;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -254,6 +287,10 @@
             this.MainWindowFlowLayoutPanel1.ResumeLayout(false);
             this.MainWindowFlowLayoutPanel1.PerformLayout();
             this.MainWindowTableLayoutPanel2.ResumeLayout(false);
+            this.MainWindowTableLayoutPanel3.ResumeLayout(false);
+            this.MainWindowTableLayoutPanel3.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +314,8 @@
         private System.Windows.Forms.ToolStripMenuItem RunTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
