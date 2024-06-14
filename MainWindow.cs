@@ -30,8 +30,9 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            MainWindowReloadButton.Font = new System.Drawing.Font("Wingdings 3", 12, FontStyle.Bold);
-            MainWindowReloadButton.Text = "\u2B6F";
+            Image image = MainWindowReloadButton.BackgroundImage;
+            Bitmap objBitmap = new Bitmap(image, new Size(14, 14));
+            MainWindowReloadButton.BackgroundImage = objBitmap;
 
             this.AdjustTabSizes();
 

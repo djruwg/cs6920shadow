@@ -221,6 +221,8 @@
             // MainWindowReloadButton
             // 
             this.MainWindowReloadButton.AutoSize = true;
+            this.MainWindowReloadButton.BackgroundImage = global::BBB.Properties.Resources.refresh;
+            this.MainWindowReloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.MainWindowReloadButton.FlatAppearance.BorderSize = 0;
             this.MainWindowReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainWindowReloadButton.Location = new System.Drawing.Point(156, 4);
@@ -228,7 +230,6 @@
             this.MainWindowReloadButton.Name = "MainWindowReloadButton";
             this.MainWindowReloadButton.Size = new System.Drawing.Size(74, 67);
             this.MainWindowReloadButton.TabIndex = 3;
-            this.MainWindowReloadButton.Text = "R";
             this.MainWindowReloadButton.UseVisualStyleBackColor = true;
             this.MainWindowReloadButton.Click += new System.EventHandler(this.MainWindowReloadButton_Click);
             // 
