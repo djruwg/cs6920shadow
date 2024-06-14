@@ -57,7 +57,6 @@
             this.Controls.Add(this.RenderingWebView);
             this.Name = "RenderingUserControl";
             this.Size = new System.Drawing.Size(1500, 1111);
-            this.Load += new System.EventHandler(this.RenderingUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RenderingWebView)).EndInit();
             this.ResumeLayout(false);
 

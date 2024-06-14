@@ -1,9 +1,7 @@
 ﻿using BBB.Helpers;
 using BBB.UserControls;
 using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -47,7 +45,7 @@ namespace BBB
         /// <param name="e"></param>
         private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // YOUR TEST CODE HERE
+            // YOUR TEST CODE HERE
         }
 
         /// <summary>
@@ -78,9 +76,10 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
-            // e.Graphics.Clear(BackColor);
+            Rectangle rect = MainWindowTabControl.GetTabRect(e.Index);
+            e.Graphics.FillRectangle(new SolidBrush(SystemColors.Control), rect);
             e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - TAB_TRAILING_SPACE, e.Bounds.Top + 4);
-            e.Graphics.DrawString(this.MainWindowTabControl.TabPages[e.Index].Text, 
+            e.Graphics.DrawString(this.MainWindowTabControl.TabPages[e.Index].Text,
                 e.Font, Brushes.Black, e.Bounds.Left + TAB_LEADING_SPACE, e.Bounds.Top + 4);
             e.DrawFocusRectangle();
         }
@@ -158,7 +157,7 @@ namespace BBB
         /// <summary>
         /// Listen for rendering user control events.
         /// </summary>
-        public void RenderingUserControlEvent()
+        public void RenderingUserControlEvent(object sender, EventArgs e)
         {
             RenderingUserControl renderingControl = GetRenderingUserControl();
 
@@ -167,8 +166,8 @@ namespace BBB
                 MainWindowBackButton.Enabled = renderingControl.CanGoBack();
                 MainWindowForwardButton.Enabled = renderingControl.CanGoForward();
                 MainWindowURLBar.Text = renderingControl.GetUrl();
-                // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = MainWindowURLBar.Text.Truncate(16);
-                // this.AdjustTabSizes();
+                MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = renderingControl.GetPageTitle().Truncate(16);
+                this.AdjustTabSizes();
             }
         }
 

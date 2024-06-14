@@ -6,12 +6,15 @@ namespace BBB.UserControls
 {
     public interface RenderingUserControlInterface
     {
-        void RenderingUserControlEvent();
+        void RenderingUserControlEvent(object sender, EventArgs e);
     }
+
+
 
     public partial class RenderingUserControl : UserControl
     {
-        RenderingUserControlInterface listener;
+        private RenderingUserControlInterface _listener;
+        private string _pageTitle;
 
         /// <summary>
         /// Constructor
@@ -20,7 +23,8 @@ namespace BBB.UserControls
         {
             InitializeComponent();
             InitializeWebView2();
-            this.listener = listener;
+            this._pageTitle = string.Empty;
+            this._listener = listener;
         }
 
         /// <summary>
@@ -29,11 +33,6 @@ namespace BBB.UserControls
         private async void InitializeWebView2()
         {
             await RenderingWebView.EnsureCoreWebView2Async();
-        }
-
-        private void RenderingUserControl_Load(object sender, System.EventArgs e)
-        {
-            //RenderingWebView.EnsureCoreWebView2Async();
         }
 
         /// <summary>
@@ -98,6 +97,11 @@ namespace BBB.UserControls
             return RenderingWebView.Source.ToString();
         }
 
+        public string GetPageTitle()
+        {
+            return this._pageTitle;
+        }
+
         /// <summary>
         /// Called when WebView2 completes initialization
         /// </summary>
@@ -125,8 +129,12 @@ namespace BBB.UserControls
         /// <param name="e"></param>
         private void RenderingWebView_SourceChanged(object sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
         {
-            Debug.WriteLine("source changed");
-            listener.RenderingUserControlEvent();
+            if (RenderingWebView.CoreWebView2 != null)
+            {
+                this._pageTitle = RenderingWebView.Source.ToString();
+            }
+
+            this._listener.RenderingUserControlEvent(sender, e);
 
         }
 
@@ -147,7 +155,12 @@ namespace BBB.UserControls
         /// <param name="e"></param>
         private void RenderingWebView_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
         {
-            Debug.WriteLine("navigation completed");
+            if (RenderingWebView.CoreWebView2 != null)
+            {
+                this._pageTitle = RenderingWebView.CoreWebView2.DocumentTitle;
+            }
+
+            this._listener.RenderingUserControlEvent(sender, e);
         }
     }
 }

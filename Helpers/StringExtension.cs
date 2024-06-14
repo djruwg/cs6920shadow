@@ -1,5 +1,4 @@
-﻿using System;
-namespace BBB.Helpers
+﻿namespace BBB.Helpers
 {
     public static class StringExt
     {

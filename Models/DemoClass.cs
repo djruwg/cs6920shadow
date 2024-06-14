@@ -4,7 +4,8 @@
     {
         public string Name { get; set; }
 
-        public DemoClass(string Name) {
+        public DemoClass(string Name)
+        {
             this.Name = Name;
         }
     }
