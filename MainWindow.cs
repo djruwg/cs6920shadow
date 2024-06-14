@@ -2,12 +2,11 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace BBB
 {
-    public partial class MainWindow : Form
+    public partial class MainWindow : Form, RenderingUserControlInterface
     {
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 16;
@@ -15,6 +14,20 @@ namespace BBB
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            this.AdjustTabSizes();
+
+            this.OpenNewTab();
+        }
+
+        // Use this to invoke test code
+        private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.GoToURL("https://www.kennesaw.edu");
+            // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = "Kennesaw";
         }
 
         /// <summary>
@@ -36,34 +49,6 @@ namespace BBB
             }
 
             return renderingControl;
-        }
-
-        /// <summary>
-        /// Instructs the currently selected rendering user control to navigate to the given URL
-        /// </summary>
-        /// <param name="url"></param>
-        private void GoToURL(string url)
-        {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
-
-            if (renderingControl != null && Uri.IsWellFormedUriString(url, UriKind.Absolute))
-            {
-                renderingControl.GoToURL(url);
-            }
-        }
-
-        // Use this to invoke test code
-        private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.GoToURL("https://www.kennesaw.edu");
-            // MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = "Kennesaw";
-        }
-
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            this.AdjustTabSizes();
-
-            this.OpenNewTab();
         }
 
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -119,7 +104,7 @@ namespace BBB
         {
             TabPage tabPage = new TabPage();
             tabPage.Text = "New Tab";
-            RenderingUserControl browser = new RenderingUserControl();
+            RenderingUserControl browser = new RenderingUserControl(this);
             tabPage.Controls.Add(browser);
             tabPage.AutoSize = true;
             MainWindowTabControl.Controls.Add(tabPage);
@@ -128,11 +113,51 @@ namespace BBB
             browser.GoToURL("https://www.google.com");
         }
 
+        public void RenderingUserControlEvent()
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                MainWindowBackButton.Enabled = renderingControl.CanGoBack();
+                MainWindowForwardButton.Enabled = renderingControl.CanGoForward();
+                MainWindowURLBar.Text = renderingControl.GetUrl();
+            }
+        }
+
+        /// <summary>
+        /// Instructs the currently selected rendering user control to navigate to the given URL.
+        /// If the URL is not valid, it performs a google search on the URL bar contents.
+        /// </summary>
+        /// <param name="url">The URL to navigate to or the text to search</param>
+        private void GoToURL(string url)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+                {
+                    renderingControl.GoToURL(url);
+                }
+                else
+                {
+                    renderingControl.GoToURL($"https://www.google.com/search?q={url}");
+                }
+            }
+        }
+
+        /// <summary>
+        /// On press of the enter key, requests the renderer navigate to the URL in the URL bar
+        /// </summary>
+        /// <param name="sender">the sending object</param>
+        /// <param name="e">the key press event</param>
         private void MainWindowURLBar_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
             {
                 this.GoToURL(MainWindowURLBar.Text);
+                e.Handled = true;
             }
         }
 

@@ -79,7 +79,7 @@
             this.TestingToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1174, 40);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1174, 48);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -135,7 +135,7 @@
             this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowURLBar);
             this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowNewTabButton);
             this.MainWindowFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 44);
+            this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 52);
             this.MainWindowFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowFlowLayoutPanel1.Name = "MainWindowFlowLayoutPanel1";
             this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1166, 75);
@@ -215,7 +215,7 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 127);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;

@@ -4,15 +4,23 @@ using System.Windows.Forms;
 
 namespace BBB.UserControls
 {
+    public interface RenderingUserControlInterface
+    {
+        void RenderingUserControlEvent();
+    }
+
     public partial class RenderingUserControl : UserControl
     {
+        RenderingUserControlInterface listener;
+
         /// <summary>
         /// Constructor
         /// </summary>
-        public RenderingUserControl()
+        public RenderingUserControl(RenderingUserControlInterface listener)
         {
             InitializeComponent();
             InitializeWebView2();
+            this.listener = listener;
         }
 
         /// <summary>
@@ -85,6 +93,11 @@ namespace BBB.UserControls
             RenderingWebView.Reload();
         }
 
+        public string GetUrl()
+        {
+            return RenderingWebView.Source.ToString();
+        }
+
         /// <summary>
         /// Called when WebView2 completes initialization
         /// </summary>
@@ -113,6 +126,7 @@ namespace BBB.UserControls
         private void RenderingWebView_SourceChanged(object sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
         {
             Debug.WriteLine("source changed");
+            listener.RenderingUserControlEvent();
 
         }
 
