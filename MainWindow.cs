@@ -298,5 +298,10 @@ namespace BBB
                 renderingControl.Reload();
             }
         }
+
+        private void restWorkSpaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

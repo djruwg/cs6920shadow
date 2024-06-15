@@ -31,6 +31,7 @@
             this.MainWindowTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowMenuStrip = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,7 @@
             this.MainWindowURLBar = new System.Windows.Forms.TextBox();
             this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
-            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restWorkSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
@@ -98,6 +99,14 @@
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
             this.FileToolStripMenuItem.Text = "File";
             // 
+            // RunPrintMenuToolStripItem
+            // 
+            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
+            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(276, 44);
+            this.RunPrintMenuToolStripItem.Text = "Print";
+            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
+            // 
             // BookmarksToolStripMenuItem
             // 
             this.BookmarksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -124,7 +133,8 @@
             this.TestingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RunTestToolStripMenuItem,
             this.RunDeveloperToolsMenuItem,
-            this.RunTaskManagerToolStripMenuItem});
+            this.RunTaskManagerToolStripMenuItem,
+            this.restWorkSpaceToolStripMenuItem});
             this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
             this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 38);
@@ -292,13 +302,12 @@
             this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
             this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
             // 
-            // RunPrintMenuToolStripItem
+            // restWorkSpaceToolStripMenuItem
             // 
-            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
-            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(359, 44);
-            this.RunPrintMenuToolStripItem.Text = "Print";
-            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
+            this.restWorkSpaceToolStripMenuItem.Name = "restWorkSpaceToolStripMenuItem";
+            this.restWorkSpaceToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
+            this.restWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
+            this.restWorkSpaceToolStripMenuItem.Click += new System.EventHandler(this.restWorkSpaceToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -352,6 +361,7 @@
         private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunTaskManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunPrintMenuToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem restWorkSpaceToolStripMenuItem;
     }
 }
 
