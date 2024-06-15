@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using BBB.Models;
 using BBB.Helpers;
 using System.Diagnostics;
+using BBB.DAL;
 
 namespace BBB.Views
 {
@@ -62,10 +63,13 @@ namespace BBB.Views
 
         private void getButton_Click(object sender, EventArgs e)
         {
+            BBBpingDAL pingDAL = new BBBpingDAL();
+
             Debug.WriteLine("1");
             RESTClient<BBBPing> restClient = new RESTClient<BBBPing>();
             Debug.WriteLine("2");
-            BBBPing ping2 = Task.Run(() => restClient.GetObjectAsync("http://davide.classproj.us/api/ping")).Result ;
+            //BBBPing ping2 = Task.Run(() => restClient.GetObjectAsync("http://davide.classproj.us/api/ping")).Result ;
+            BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us/api/ping");
             Debug.WriteLine("3");
             
             send2TextBox.Text = ping2.sendTime.ToString();

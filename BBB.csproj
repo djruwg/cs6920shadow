@@ -168,6 +168,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\BBBpingDAL.cs" />
     <Compile Include="Helpers\RESTClient.cs" />
     <Compile Include="Helpers\StringExtension.cs" />
     <Compile Include="Helpers\WindowsUsername.cs" />
@@ -237,7 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="DAL\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
