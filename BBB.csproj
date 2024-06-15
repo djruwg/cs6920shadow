@@ -32,7 +32,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Big Brother Browser</ProductName>
     <PublisherName>CS6920 Group 4</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -58,7 +58,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>F9FAFF10F767B035C3EBBCEC2B8B4D939AA51D80</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7A94DB0AB4259F43138790213D69F0A206AC2CA3</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>BBB_TemporaryKey.pfx</ManifestKeyFile>
