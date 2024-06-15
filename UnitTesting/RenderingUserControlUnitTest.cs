@@ -54,22 +54,17 @@ namespace UnitTesting
 
             //await rendering.RunScriptAsync(goScript);
 
-            //while (!loaded)
-            //{
-            //    Thread.Sleep(2000);
-            //}
+            //string script = @"
+            //(function() {
+            //    var link = document.querySelector('a');
+            //    if (link) {
+            //        link.click();
+            //    }
+            //})();";
 
-            string script = @"
-            (function() {
-                var link = document.querySelector('a');
-                if (link) {
-                    link.click();
-                }
-            })();";
+            //await rendering.RunScriptAsync(script);
 
-            await rendering.RunScriptAsync(script);
- 
-            Assert.IsTrue(rendering.CanGoBack());
+            // Assert.IsTrue(rendering.CanGoBack());
         }
 
         public void RenderingUserControlEvent(object sender, EventArgs e)

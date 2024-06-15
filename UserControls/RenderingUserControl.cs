@@ -164,9 +164,29 @@ namespace BBB.UserControls
             this._listener.RenderingUserControlEvent(sender, e);
         }
 
+        /// <summary>
+        /// Runs the provided Javascript
+        /// </summary>
+        /// <param name="script"></param>
+        /// <returns>an async task</returns>
         public async Task RunScriptAsync(string script)
         {
             await RenderingWebView.CoreWebView2.ExecuteScriptAsync(script);
+        }
+
+        public void OpenPrintDialog()
+        {
+            RenderingWebView.CoreWebView2.ShowPrintUI();
+        }
+
+        public void OpenDeveloperTools()
+        {
+            RenderingWebView.CoreWebView2.OpenDevToolsWindow();
+        }
+
+        public void OpenTaskManager()
+        {
+            RenderingWebView.CoreWebView2.OpenTaskManagerWindow();
         }
     }
 }

@@ -35,7 +35,6 @@ namespace BBB
             MainWindowReloadButton.BackgroundImage = objBitmap;
 
             this.AdjustTabSizes();
-
             this.OpenNewTab();
         }
 
@@ -47,6 +46,46 @@ namespace BBB
         private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // YOUR TEST CODE HERE
+        }
+
+        /// <summary>
+        /// Launches the print dialog
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RunPrintMenuToolStripItem_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.OpenPrintDialog();
+            }
+        }
+
+        /// <summary>
+        /// Launches the developer tools window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RunDeveloperToolsMenuItem_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.OpenDeveloperTools();
+            }
+        }
+
+        private void RunTaskManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RenderingUserControl renderingControl = GetRenderingUserControl();
+
+            if (renderingControl != null)
+            {
+                renderingControl.OpenTaskManager();
+            }
         }
 
         /// <summary>
@@ -136,6 +175,8 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindowNewTabButton_Click(object sender, EventArgs e)
         {
+            MainWindowNewTabButton.Enabled = false;
+
             this.OpenNewTab();
         }
 
@@ -170,6 +211,7 @@ namespace BBB
                 MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = renderingControl.GetPageTitle().Truncate(16);
                 this.AdjustTabSizes();
             }
+            MainWindowNewTabButton.Enabled = true;
         }
 
         /// <summary>
@@ -183,7 +225,6 @@ namespace BBB
 
             if (renderingControl != null)
             {
-                // if (Uri.CheckHostName(url) == UriHostNameType.Basic)
                 if (urlRegex.IsMatch(url))
                 {
                     if (!Uri.IsWellFormedUriString(url, UriKind.Absolute))

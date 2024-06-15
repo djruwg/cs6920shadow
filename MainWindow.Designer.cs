@@ -36,6 +36,8 @@
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TestingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RunTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunDeveloperToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunTaskManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowTabControl = new System.Windows.Forms.TabControl();
             this.MainWindowTableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +48,7 @@
             this.MainWindowURLBar = new System.Windows.Forms.TextBox();
             this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
+            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
@@ -83,12 +86,14 @@
             this.TestingToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 48);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 42);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
             // FileToolStripMenuItem
             // 
+            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RunPrintMenuToolStripItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
             this.FileToolStripMenuItem.Text = "File";
@@ -117,7 +122,9 @@
             // TestingToolStripMenuItem
             // 
             this.TestingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RunTestToolStripMenuItem});
+            this.RunTestToolStripMenuItem,
+            this.RunDeveloperToolsMenuItem,
+            this.RunTaskManagerToolStripMenuItem});
             this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
             this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 38);
@@ -126,9 +133,25 @@
             // RunTestToolStripMenuItem
             // 
             this.RunTestToolStripMenuItem.Name = "RunTestToolStripMenuItem";
-            this.RunTestToolStripMenuItem.Size = new System.Drawing.Size(238, 44);
+            this.RunTestToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
             this.RunTestToolStripMenuItem.Text = "Run Test";
             this.RunTestToolStripMenuItem.Click += new System.EventHandler(this.RunTestToolStripMenuItem_Click);
+            // 
+            // RunDeveloperToolsMenuItem
+            // 
+            this.RunDeveloperToolsMenuItem.Name = "RunDeveloperToolsMenuItem";
+            this.RunDeveloperToolsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.RunDeveloperToolsMenuItem.Size = new System.Drawing.Size(403, 44);
+            this.RunDeveloperToolsMenuItem.Text = "Developer Tools";
+            this.RunDeveloperToolsMenuItem.Click += new System.EventHandler(this.RunDeveloperToolsMenuItem_Click);
+            // 
+            // RunTaskManagerToolStripMenuItem
+            // 
+            this.RunTaskManagerToolStripMenuItem.Name = "RunTaskManagerToolStripMenuItem";
+            this.RunTaskManagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.RunTaskManagerToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
+            this.RunTaskManagerToolStripMenuItem.Text = "Task Manager";
+            this.RunTaskManagerToolStripMenuItem.Click += new System.EventHandler(this.RunTaskManagerToolStripMenuItem_Click);
             // 
             // MainWindowTableLayoutPanel2
             // 
@@ -137,7 +160,7 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 141);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;
@@ -166,7 +189,7 @@
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
             this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 51);
+            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 45);
             this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
             this.MainWindowTableLayoutPanel3.RowCount = 1;
             this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -269,6 +292,14 @@
             this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
             this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
             // 
+            // RunPrintMenuToolStripItem
+            // 
+            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
+            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(359, 44);
+            this.RunPrintMenuToolStripItem.Text = "Print";
+            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -318,6 +349,9 @@
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel MainWindowFlowLayoutPanel2;
+        private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunTaskManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunPrintMenuToolStripItem;
     }
 }
 
