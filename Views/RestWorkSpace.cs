@@ -18,11 +18,15 @@ namespace BBB.Views
         public RestWorkSpace()
         {
             InitializeComponent();
+            // Create object and serialize
             ping = new BBBPing(DateTime.Now, DateTime.MinValue, "test data");
             sendTextBox.Text = ping.sendTime.ToString();
             returnTextBox.Text = ping.returnTime.ToString(); 
             testDataTextBox.Text = ping.testData.ToString();
             jsonTextBox.Text = ping.ToJSON();
+   
+ 
+
         }
         
     }
