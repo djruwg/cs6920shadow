@@ -13,6 +13,9 @@ namespace BBB
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 16;
 
+        /// <summary>
+        /// Compiled regular expression for validating URLs
+        /// </summary>
         private static readonly Regex urlRegex = new Regex(@"^(https?|ftp)?(:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}([\/\w .-]*)*\/?$",
                 RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
