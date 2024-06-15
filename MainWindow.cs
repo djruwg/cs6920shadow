@@ -1,5 +1,6 @@
 ﻿using BBB.Helpers;
 using BBB.UserControls;
+using BBB.Views;
 using System;
 using System.Drawing;
 using System.Text.RegularExpressions;
@@ -297,6 +298,12 @@ namespace BBB
             {
                 renderingControl.Reload();
             }
+        }
+
+        private void restWorkSpaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RestWorkSpace restWorkSpace = new RestWorkSpace();  
+            restWorkSpace.Show();
         }
     }
 }
