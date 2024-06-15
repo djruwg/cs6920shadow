@@ -38,6 +38,16 @@ namespace UnitTesting
             Assert.IsFalse(rendering.CanGoBack());
         }
 
+        [TestMethod]
+        public void TestRenderingUserControlCanNotGoForward()
+        {
+            BBB.UserControls.RenderingUserControl rendering = new BBB.UserControls.RenderingUserControl(this);
+
+            rendering.GoToURL("https://www.google.com");
+
+            Assert.IsFalse(rendering.CanGoForward());
+        }
+
         bool loaded = false;
 
         [TestMethod]
@@ -46,13 +56,9 @@ namespace UnitTesting
             BBB.UserControls.RenderingUserControl rendering = new BBB.UserControls.RenderingUserControl(this);
 
             rendering.GoToURL("https://www.google.com");
-
-            //string goScript = @"
-            //(function() {
-            //    window.location.href = 'https://www.google.com';
-            //})();";
-
-            //await rendering.RunScriptAsync(goScript);
+                
+            // await Task.Delay(5000);
+            // await Task.Run(() => { while (loaded == false); });
 
             //string script = @"
             //(function() {
@@ -69,7 +75,6 @@ namespace UnitTesting
 
         public void RenderingUserControlEvent(object sender, EventArgs e)
         {
-            Debug.WriteLine("CALLBACK");
             loaded = true;
         }
     }
