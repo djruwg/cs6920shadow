@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 namespace BBB.Models
 {
 
-    internal class Ping
+    internal class BBBPing
     {
         [JsonInclude]
-        public DateTime sendingTime { get; private set; }
+        public DateTime sendTime { get; private set; }
         [JsonInclude]
         public DateTime returnTime { get; private set; }
         [JsonInclude]
         public String testData { get; private set; }
 
-        public Ping(DateTime s, DateTime r, string testDate)
+        public BBBPing(DateTime s, DateTime r, string testData)
         {
-            this.sendingTime = s;
+            this.sendTime = s;
             this.returnTime = r;
             this.testData = testData;
         }
@@ -32,14 +32,14 @@ namespace BBB.Models
 
         public void SetAsJSON(string json)
         {
-            Ping temp = Ping.FromJSON(json);
-            this.sendingTime = temp.sendingTime;
+            BBBPing temp = BBBPing.FromJSON(json);
+            this.sendTime = temp.sendTime;
             this.returnTime = temp.returnTime;
             this.testData = temp.testData;
         }
-        static public Ping FromJSON(string json)
+        static public BBBPing FromJSON(string json)
         {
-            return JsonSerializer.Deserialize<Ping>(json);
+            return JsonSerializer.Deserialize<BBBPing>(json);
         }
 
     }

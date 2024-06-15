@@ -162,7 +162,7 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DemoClass.cs" />
-    <Compile Include="Models\Ping.cs" />
+    <Compile Include="Models\BBBPing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\RenderingUserControl.cs">
