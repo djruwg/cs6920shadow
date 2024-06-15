@@ -82,6 +82,7 @@ namespace BBB.Models
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($" Deserialize got {ex.Message}");
                 return new BBBPing();
             }
         }

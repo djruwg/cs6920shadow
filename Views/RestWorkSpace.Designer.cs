@@ -44,6 +44,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.resetButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
+            this.getButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.testData2TextBox = new System.Windows.Forms.TextBox();
             this.data2Label = new System.Windows.Forms.Label();
@@ -225,6 +226,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.resetButton);
             this.flowLayoutPanel1.Controls.Add(this.updateButton);
+            this.flowLayoutPanel1.Controls.Add(this.getButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(503, 1347);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -254,6 +256,18 @@
             this.updateButton.Text = "update";
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // getButton
+            // 
+            this.getButton.AutoSize = true;
+            this.getButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getButton.Location = new System.Drawing.Point(279, 3);
+            this.getButton.Name = "getButton";
+            this.getButton.Size = new System.Drawing.Size(105, 52);
+            this.getButton.TabIndex = 2;
+            this.getButton.Text = "get";
+            this.getButton.UseVisualStyleBackColor = true;
+            this.getButton.Click += new System.EventHandler(this.getButton_Click);
             // 
             // button1
             // 
@@ -321,5 +335,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox testData2TextBox;
         private System.Windows.Forms.Label data2Label;
+        private System.Windows.Forms.Button getButton;
     }
 }

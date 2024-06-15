@@ -25,5 +25,6 @@ namespace BBB.Interface
         /// </summary>
         /// <param name="json"></param>
         void SetAsJSON(string json);
+
     }
 }
