@@ -49,6 +49,7 @@
             this.MainWindowURLBar = new System.Windows.Forms.TextBox();
             this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
+            this.restWorkSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
@@ -86,7 +87,7 @@
             this.TestingToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 48);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 40);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -132,7 +133,8 @@
             this.TestingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RunTestToolStripMenuItem,
             this.RunDeveloperToolsMenuItem,
-            this.RunTaskManagerToolStripMenuItem});
+            this.RunTaskManagerToolStripMenuItem,
+            this.restWorkSpaceToolStripMenuItem});
             this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
             this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
@@ -168,7 +170,7 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 141);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 133);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;
@@ -197,7 +199,7 @@
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
             this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 51);
+            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 43);
             this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
             this.MainWindowTableLayoutPanel3.RowCount = 1;
             this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -302,6 +304,13 @@
             this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
             this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
             // 
+            // restWorkSpaceToolStripMenuItem
+            // 
+            this.restWorkSpaceToolStripMenuItem.Name = "restWorkSpaceToolStripMenuItem";
+            this.restWorkSpaceToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
+            this.restWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
+            this.restWorkSpaceToolStripMenuItem.Click += new System.EventHandler(this.restWorkSpaceToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -354,6 +363,7 @@
         private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunTaskManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunPrintMenuToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem restWorkSpaceToolStripMenuItem;
     }
 }
 
