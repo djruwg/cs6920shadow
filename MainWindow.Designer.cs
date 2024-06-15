@@ -31,6 +31,7 @@
             this.MainWindowTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowMenuStrip = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.MainWindowURLBar = new System.Windows.Forms.TextBox();
             this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
-            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
@@ -86,7 +86,7 @@
             this.TestingToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 42);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 48);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -95,8 +95,16 @@
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RunPrintMenuToolStripItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
             this.FileToolStripMenuItem.Text = "File";
+            // 
+            // RunPrintMenuToolStripItem
+            // 
+            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
+            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(276, 44);
+            this.RunPrintMenuToolStripItem.Text = "Print";
+            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
             // 
             // BookmarksToolStripMenuItem
             // 
@@ -104,7 +112,7 @@
             this.addToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
-            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
+            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 36);
             this.BookmarksToolStripMenuItem.Text = "Bookmarks";
             // 
             // addToolStripMenuItem
@@ -127,7 +135,7 @@
             this.RunTaskManagerToolStripMenuItem});
             this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
-            this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 38);
+            this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
             this.TestingToolStripMenuItem.Text = "Testing";
             // 
             // RunTestToolStripMenuItem
@@ -160,7 +168,7 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 141);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;
@@ -184,15 +192,15 @@
             // 
             this.MainWindowTableLayoutPanel3.AutoSize = true;
             this.MainWindowTableLayoutPanel3.ColumnCount = 2;
-            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.60714F));
-            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.39286F));
+            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
             this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 45);
+            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 51);
             this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
             this.MainWindowTableLayoutPanel3.RowCount = 1;
-            this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainWindowTableLayoutPanel3.Size = new System.Drawing.Size(1568, 83);
             this.MainWindowTableLayoutPanel3.TabIndex = 3;
             // 
@@ -207,7 +215,7 @@
             this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
             this.MainWindowFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowFlowLayoutPanel1.Name = "MainWindowFlowLayoutPanel1";
-            this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1350, 75);
+            this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1478, 75);
             this.MainWindowFlowLayoutPanel1.TabIndex = 1;
             this.MainWindowFlowLayoutPanel1.WrapContents = false;
             // 
@@ -258,11 +266,13 @@
             // 
             // MainWindowURLBar
             // 
+            this.MainWindowURLBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainWindowURLBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainWindowURLBar.Location = new System.Drawing.Point(238, 16);
             this.MainWindowURLBar.Margin = new System.Windows.Forms.Padding(4, 16, 4, 4);
             this.MainWindowURLBar.Name = "MainWindowURLBar";
-            this.MainWindowURLBar.Size = new System.Drawing.Size(833, 40);
+            this.MainWindowURLBar.Size = new System.Drawing.Size(1221, 40);
             this.MainWindowURLBar.TabIndex = 4;
             this.MainWindowURLBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindowURLBar_KeyPress);
             // 
@@ -272,9 +282,9 @@
             this.MainWindowFlowLayoutPanel2.Controls.Add(this.MainWindowNewTabButton);
             this.MainWindowFlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainWindowFlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.MainWindowFlowLayoutPanel2.Location = new System.Drawing.Point(1361, 3);
+            this.MainWindowFlowLayoutPanel2.Location = new System.Drawing.Point(1489, 3);
             this.MainWindowFlowLayoutPanel2.Name = "MainWindowFlowLayoutPanel2";
-            this.MainWindowFlowLayoutPanel2.Size = new System.Drawing.Size(204, 77);
+            this.MainWindowFlowLayoutPanel2.Size = new System.Drawing.Size(76, 77);
             this.MainWindowFlowLayoutPanel2.TabIndex = 2;
             // 
             // MainWindowNewTabButton
@@ -283,7 +293,7 @@
             this.MainWindowNewTabButton.FlatAppearance.BorderSize = 0;
             this.MainWindowNewTabButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainWindowNewTabButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainWindowNewTabButton.Location = new System.Drawing.Point(132, 4);
+            this.MainWindowNewTabButton.Location = new System.Drawing.Point(4, 4);
             this.MainWindowNewTabButton.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowNewTabButton.Name = "MainWindowNewTabButton";
             this.MainWindowNewTabButton.Size = new System.Drawing.Size(68, 67);
@@ -291,14 +301,6 @@
             this.MainWindowNewTabButton.Text = "+";
             this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
             this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
-            // 
-            // RunPrintMenuToolStripItem
-            // 
-            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
-            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(359, 44);
-            this.RunPrintMenuToolStripItem.Text = "Print";
-            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
             // 
             // MainWindow
             // 
