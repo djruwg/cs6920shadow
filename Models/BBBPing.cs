@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BBB.Interface;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,13 +8,14 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using BBB.Interface;
 
 namespace BBB.Models
 {
 /// <summary>
 /// BBBPing (because Ping exists in C#) is a class that provides a simple object with timestamps and data that is useful for testing basic REST functions
 /// </summary>
-    internal class BBBPing
+    internal class BBBPing : BBBSerializableObject
     {
         [JsonInclude]
         public DateTime sendTime { get; private set; }
@@ -22,10 +24,10 @@ namespace BBB.Models
         [JsonInclude]
         public String testData { get; private set; }
 
-        /// <summary>
-        /// Empty Constructor
-        /// </summary>
-        public BBBPing()
+    /// <summary>
+    /// Empty Constructor
+    /// </summary>
+    public BBBPing()
         {
             this.sendTime = DateTime.MinValue;
             this.returnTime = DateTime.MinValue;

@@ -168,8 +168,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\RESTClient.cs" />
     <Compile Include="Helpers\StringExtension.cs" />
     <Compile Include="Helpers\WindowsUsername.cs" />
+    <Compile Include="Interface\BBBSerializableObject.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
