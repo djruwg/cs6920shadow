@@ -308,5 +308,20 @@ namespace BBB
             RestWorkSpace restWorkSpace = new RestWorkSpace();  
             restWorkSpace.Show();
         }
+
+        private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Placeholder
+        }
+
+        private void manageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Placeholder
+        }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Placeholder
+        }
     }
 }

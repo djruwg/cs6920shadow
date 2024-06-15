@@ -35,10 +35,11 @@
             this.BookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TestingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RunTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RunDeveloperToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RunTaskManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunRestWorkSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.MainWindowTabControl = new System.Windows.Forms.TabControl();
             this.MainWindowTableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,7 +50,10 @@
             this.MainWindowURLBar = new System.Windows.Forms.TextBox();
             this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.MainWindowNewTabButton = new System.Windows.Forms.Button();
-            this.restWorkSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunUnlockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunManageBlockListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunManageBookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainWindowTableLayoutPanel1.SuspendLayout();
             this.MainWindowMenuStrip.SuspendLayout();
             this.MainWindowTableLayoutPanel2.SuspendLayout();
@@ -84,10 +88,11 @@
             this.MainWindowMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.BookmarksToolStripMenuItem,
-            this.TestingToolStripMenuItem});
+            this.TeacherToolStripMenuItem,
+            this.ToolsToolStripMenuItem});
             this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 40);
+            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 42);
             this.MainWindowMenuStrip.TabIndex = 0;
             this.MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -96,7 +101,7 @@
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RunPrintMenuToolStripItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
+            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
             this.FileToolStripMenuItem.Text = "File";
             // 
             // RunPrintMenuToolStripItem
@@ -113,7 +118,7 @@
             this.addToolStripMenuItem,
             this.viewToolStripMenuItem});
             this.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
-            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 36);
+            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
             this.BookmarksToolStripMenuItem.Text = "Bookmarks";
             // 
             // addToolStripMenuItem
@@ -128,17 +133,17 @@
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(198, 44);
             this.viewToolStripMenuItem.Text = "View";
             // 
-            // TestingToolStripMenuItem
+            // ToolsToolStripMenuItem
             // 
-            this.TestingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RunTestToolStripMenuItem,
             this.RunDeveloperToolsMenuItem,
             this.RunTaskManagerToolStripMenuItem,
-            this.restWorkSpaceToolStripMenuItem});
-            this.TestingToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.TestingToolStripMenuItem.Name = "TestingToolStripMenuItem";
-            this.TestingToolStripMenuItem.Size = new System.Drawing.Size(110, 36);
-            this.TestingToolStripMenuItem.Text = "Testing";
+            this.RunRestWorkSpaceToolStripMenuItem});
+            this.ToolsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
+            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 38);
+            this.ToolsToolStripMenuItem.Text = "Tools";
             // 
             // RunTestToolStripMenuItem
             // 
@@ -163,6 +168,13 @@
             this.RunTaskManagerToolStripMenuItem.Text = "Task Manager";
             this.RunTaskManagerToolStripMenuItem.Click += new System.EventHandler(this.RunTaskManagerToolStripMenuItem_Click);
             // 
+            // RunRestWorkSpaceToolStripMenuItem
+            // 
+            this.RunRestWorkSpaceToolStripMenuItem.Name = "RunRestWorkSpaceToolStripMenuItem";
+            this.RunRestWorkSpaceToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
+            this.RunRestWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
+            this.RunRestWorkSpaceToolStripMenuItem.Click += new System.EventHandler(this.restWorkSpaceToolStripMenuItem_Click);
+            // 
             // MainWindowTableLayoutPanel2
             // 
             this.MainWindowTableLayoutPanel2.AutoSize = true;
@@ -170,7 +182,7 @@
             this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
             this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 133);
+            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
             this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             this.MainWindowTableLayoutPanel2.RowCount = 1;
@@ -199,7 +211,7 @@
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
             this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
             this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 43);
+            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 45);
             this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
             this.MainWindowTableLayoutPanel3.RowCount = 1;
             this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -304,12 +316,36 @@
             this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
             this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
             // 
-            // restWorkSpaceToolStripMenuItem
+            // TeacherToolStripMenuItem
             // 
-            this.restWorkSpaceToolStripMenuItem.Name = "restWorkSpaceToolStripMenuItem";
-            this.restWorkSpaceToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
-            this.restWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
-            this.restWorkSpaceToolStripMenuItem.Click += new System.EventHandler(this.restWorkSpaceToolStripMenuItem_Click);
+            this.TeacherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RunUnlockToolStripMenuItem,
+            this.RunManageBlockListToolStripMenuItem,
+            this.RunManageBookmarksToolStripMenuItem});
+            this.TeacherToolStripMenuItem.Name = "TeacherToolStripMenuItem";
+            this.TeacherToolStripMenuItem.Size = new System.Drawing.Size(116, 38);
+            this.TeacherToolStripMenuItem.Text = "Teacher";
+            // 
+            // RunUnlockToolStripMenuItem
+            // 
+            this.RunUnlockToolStripMenuItem.Name = "RunUnlockToolStripMenuItem";
+            this.RunUnlockToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.RunUnlockToolStripMenuItem.Text = "Unlock";
+            this.RunUnlockToolStripMenuItem.Click += new System.EventHandler(this.unlockToolStripMenuItem_Click);
+            // 
+            // RunManageBlockListToolStripMenuItem
+            // 
+            this.RunManageBlockListToolStripMenuItem.Name = "RunManageBlockListToolStripMenuItem";
+            this.RunManageBlockListToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.RunManageBlockListToolStripMenuItem.Text = "Manage Block List";
+            this.RunManageBlockListToolStripMenuItem.Click += new System.EventHandler(this.manageBlockListToolStripMenuItem_Click);
+            // 
+            // RunManageBookmarksToolStripMenuItem
+            // 
+            this.RunManageBookmarksToolStripMenuItem.Name = "RunManageBookmarksToolStripMenuItem";
+            this.RunManageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.RunManageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
+            this.RunManageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -354,7 +390,7 @@
         private System.Windows.Forms.Button MainWindowNewTabButton;
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel2;
         private System.Windows.Forms.TabControl MainWindowTabControl;
-        private System.Windows.Forms.ToolStripMenuItem TestingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
@@ -363,7 +399,11 @@
         private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunTaskManagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunPrintMenuToolStripItem;
-        private System.Windows.Forms.ToolStripMenuItem restWorkSpaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunRestWorkSpaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TeacherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunUnlockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunManageBlockListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RunManageBookmarksToolStripMenuItem;
     }
 }
 
