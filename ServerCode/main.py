@@ -5,6 +5,7 @@ import json
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from types import SimpleNamespace
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -39,5 +40,12 @@ class BBBPing(db.Model):
 with app.app_context():
     db.create_all()
 
+# Route gets all pings from table
+@app.route('/get_pings', methods=['GET'])
+def get_pings():
+    pings = BBBPing.query.all()
+    pings_list = [ping.to_dict() for ping in pings]
+    return jsonify(pings_list), 200
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8081)
+    app.run(host='0.0.0.0', port=8080)
