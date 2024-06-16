@@ -48,6 +48,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.testData2TextBox = new System.Windows.Forms.TextBox();
             this.data2Label = new System.Windows.Forms.Label();
+            this.putButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -227,6 +228,7 @@
             this.flowLayoutPanel1.Controls.Add(this.resetButton);
             this.flowLayoutPanel1.Controls.Add(this.updateButton);
             this.flowLayoutPanel1.Controls.Add(this.getButton);
+            this.flowLayoutPanel1.Controls.Add(this.putButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(503, 1347);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -298,6 +300,19 @@
             this.data2Label.TabIndex = 16;
             this.data2Label.Text = "test data";
             // 
+            // putButton
+            // 
+            this.putButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.putButton.AutoSize = true;
+            this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.putButton.Location = new System.Drawing.Point(390, 3);
+            this.putButton.Name = "putButton";
+            this.putButton.Size = new System.Drawing.Size(80, 52);
+            this.putButton.TabIndex = 1;
+            this.putButton.Text = "put";
+            this.putButton.UseVisualStyleBackColor = true;
+            this.putButton.Click += new System.EventHandler(this.putButton_Click);
+            // 
             // RestWorkSpace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -336,5 +351,6 @@
         private System.Windows.Forms.TextBox testData2TextBox;
         private System.Windows.Forms.Label data2Label;
         private System.Windows.Forms.Button getButton;
+        private System.Windows.Forms.Button putButton;
     }
 }

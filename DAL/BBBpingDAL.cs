@@ -21,5 +21,15 @@ namespace BBB.DAL
         {
             return Task.Run(() => _restClient.GetObjectAsync("http://davide.classproj.us/api/ping")).Result;
         }
+
+        public BBBPing putBBBPing(string endpoing, BBBPing obj)
+        {
+            string gotback = Task.Run(() => _restClient.PutObjectAsync("http://davide.classproj.us/api/ping",obj)).Result;
+            BBBPing temp = new BBBPing();
+            temp.SetAsJSON(gotback);
+            return temp;
+        }
+
+
     }
 }

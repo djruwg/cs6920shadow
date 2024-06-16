@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using BBB.Interface;
 using Microsoft.Testing.Platform.Extensions.Messages;
 using BBB.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Drawing.Imaging;
 
 namespace BBB.Helpers
 {
@@ -18,19 +20,31 @@ namespace BBB.Helpers
     internal class RESTClient<T> where T : BBBSerializableObject, new()
     {
         public RESTClient() { }
+
+        const string _userid = "apiuser";
+        const string _password = "apikey";
+        
         public async Task<T> GetObjectAsync(string restEndpoint)
         {
-
+            //string concatenated = $"{_userid}:{_password}";
+            //string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+        
             string json ="";
             T tempObject = new T();
 
             using (var client = new HttpClient())
             {
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 Debug.WriteLine("into GetObjectAsync");
+
                 try
                 {
                     Debug.WriteLine(restEndpoint);
+                    foreach (var header in client.DefaultRequestHeaders)
+                    {
+                        Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+                    }
                     HttpResponseMessage response = await client.GetAsync(restEndpoint);
 
                     if (response.IsSuccessStatusCode)
@@ -55,15 +69,25 @@ namespace BBB.Helpers
 
         public async Task<string> PutObjectAsync(string restEndpoint, T obj)
         {
+            //string concatenated = $"{_userid}:{_password}";
+            //string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+
             string data = "{}";
 
             using (var client = new HttpClient())
             {
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
                 var content = new StringContent(obj.ToJSON(), Encoding.UTF8, "application/json");
 
                 try
                 {
-                    var response = await client.PostAsync(restEndpoint, content);
+                    foreach (var header in client.DefaultRequestHeaders)
+                    {
+                        Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+                    }
+                    var response = await client.PutAsync(restEndpoint, content);
 
                     if (response.IsSuccessStatusCode)
                     {
