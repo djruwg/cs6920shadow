@@ -38,16 +38,16 @@ namespace BBB.Views
             string updateJSON;
             updateJSON = jsonTextBox.Text;
             ping2.SetAsJSON(updateJSON);
-            send2TextBox.Text = ping2.sendTime.ToString();
-            return2TextBox.Text = ping2.returnTime.ToString();
+            send2TextBox.Text = ping2.clientTime.ToString();
+            return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
 
         }
 
         private void Default()
         {
-            sendTextBox.Text = ping.sendTime.ToString();
-            returnTextBox.Text = ping.returnTime.ToString();
+            sendTextBox.Text = ping.clientTime.ToString();
+            returnTextBox.Text = ping.serverTime.ToString();
             testDataTextBox.Text = ping.testData.ToString();
             jsonString = ping.ToJSON();
             jsonTextBox.Text = jsonString;
@@ -55,8 +55,8 @@ namespace BBB.Views
             ping2 = new BBBPing();
             ping2.SetAsJSON(jsonString);
 
-            send2TextBox.Text = ping2.sendTime.ToString();
-            return2TextBox.Text = ping2.returnTime.ToString();
+            send2TextBox.Text = ping2.clientTime.ToString();
+            return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
 
         }
@@ -72,8 +72,8 @@ namespace BBB.Views
             BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us/api/ping");
             Debug.WriteLine("3");
             
-            send2TextBox.Text = ping2.sendTime.ToString();
-            return2TextBox.Text = ping2.returnTime.ToString();
+            send2TextBox.Text = ping2.clientTime.ToString();
+            return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
 
         }

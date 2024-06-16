@@ -19,8 +19,8 @@ namespace UnitTesting
         {
             BBB.Models.BBBPing testObj = new BBB.Models.BBBPing();
             Assert.IsNotNull(testObj);
-            Assert.AreEqual(testObj.sendTime, DateTime.MinValue);
-            Assert.AreEqual(testObj.returnTime, DateTime.MinValue);
+            Assert.AreEqual(testObj.clientTime, DateTime.MinValue);
+            Assert.AreEqual(testObj.serverTime, DateTime.MinValue);
             Assert.AreEqual(testObj.testData, "");
         }
 
@@ -33,8 +33,8 @@ namespace UnitTesting
 
             BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(sendTime, returnTime, data);
             Assert.IsNotNull(testObj);
-            Assert.AreEqual(testObj.sendTime, sendTime);
-            Assert.AreEqual(testObj.returnTime, returnTime);
+            Assert.AreEqual(testObj.clientTime, sendTime);
+            Assert.AreEqual(testObj.serverTime, returnTime);
             Assert.AreEqual(testObj.testData, data);
         }
 
@@ -44,13 +44,13 @@ namespace UnitTesting
             DateTime sendTime = DateTime.MaxValue;
             DateTime returnTime = DateTime.MaxValue;
             string data = "this is test data";
-            string jsonString = "{\"sendTime\":\"9999-12-31T23:59:59.9999999\",\"returnTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
+            string jsonString = "{\"clientTime\":\"9999-12-31T23:59:59.9999999\",\"serverTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
             
             BBB.Models.BBBPing testObj = BBB.Models.BBBPing.FromJSON(jsonString);
             
             Assert.IsNotNull(testObj);
-            Assert.AreEqual(testObj.sendTime, sendTime);
-            Assert.AreEqual(testObj.returnTime, returnTime);
+            Assert.AreEqual(testObj.clientTime, sendTime);
+            Assert.AreEqual(testObj.serverTime, returnTime);
             Assert.AreEqual(testObj.testData, data);
 
         }
@@ -61,7 +61,7 @@ namespace UnitTesting
             DateTime sendTime = DateTime.MaxValue;
             DateTime returnTime = DateTime.MaxValue;
             string data = "this is test data";
-            string jsonStringExpected = "{\"sendTime\":\"9999-12-31T23:59:59.9999999\",\"returnTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
+            string jsonStringExpected = "{\"clientTime\":\"9999-12-31T23:59:59.9999999\",\"serverTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
             string jsonStringActual;
 
             BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(sendTime, returnTime, data);
@@ -77,13 +77,13 @@ namespace UnitTesting
             DateTime sendTime = DateTime.MaxValue;
             DateTime returnTime = DateTime.MaxValue;
             string data = "this is test data";
-            string jsonString = "{\"sendTime\":\"9999-12-31T23:59:59.9999999\",\"returnTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
+            string jsonString = "{\"clientTime\":\"9999-12-31T23:59:59.9999999\",\"serverTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
 
             BBB.Models.BBBPing testObj = new BBB.Models.BBBPing();
             testObj.SetAsJSON(jsonString);
 
-            Assert.AreEqual(testObj.sendTime, sendTime);
-            Assert.AreEqual(testObj.returnTime, returnTime);
+            Assert.AreEqual(testObj.clientTime, sendTime);
+            Assert.AreEqual(testObj.serverTime, returnTime);
             Assert.AreEqual(testObj.testData, data);
 
         }

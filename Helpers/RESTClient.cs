@@ -53,7 +53,7 @@ namespace BBB.Helpers
             return tempObject; 
         }
 
-        public Boolean PutObjectAsync()
+        public Boolean PutObjectAsync(string restEndpoint, string json)
         {
             return false;
         }
