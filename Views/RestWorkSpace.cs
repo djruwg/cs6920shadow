@@ -65,15 +65,7 @@ namespace BBB.Views
         {
             BBBpingDAL pingDAL = new BBBpingDAL();
 
-            Debug.WriteLine("1");
-            RESTClient<BBBPing> restClient = new RESTClient<BBBPing>();
-            Debug.WriteLine("2");
-            //BBBPing ping2 = Task.Run(() => restClient.GetObjectAsync("http://davide.classproj.us/api/ping")).Result ;
-            BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us/api/ping");
-            //BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us:8080/ping");
-            //BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us/ping");
-
-            Debug.WriteLine("3");
+            BBBPing ping2 = pingDAL.GetBBBPing("/ping");
             
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
@@ -85,15 +77,18 @@ namespace BBB.Views
         {
             BBBpingDAL pingDAL = new BBBpingDAL();
 
-            Debug.WriteLine("1");
-            RESTClient<BBBPing> restClient = new RESTClient<BBBPing>();
-            Debug.WriteLine("2");
-            //BBBPing ping2 = Task.Run(() => restClient.GetObjectAsync("http://davide.classproj.us/api/ping")).Result ;
-            BBBPing ping2 = pingDAL.putBBBPing("https://davide.classproj.us/api/ping", ping);
-            //BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us:8080/ping");
-            //BBBPing ping2 = pingDAL.getBBBPing("https://davide.classproj.us/ping");
+            BBBPing ping2 = pingDAL.PutBBBPing("/ping", ping);
 
-            Debug.WriteLine("3");
+            send2TextBox.Text = ping2.clientTime.ToString();
+            return2TextBox.Text = ping2.serverTime.ToString();
+            testData2TextBox.Text = ping2.testData.ToString();
+        }
+
+        private void postButton_Click(object sender, EventArgs e)
+        {
+            BBBpingDAL pingDAL = new BBBpingDAL();
+
+            BBBPing ping2 = pingDAL.PostBBBPing("/ping", ping);
 
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();

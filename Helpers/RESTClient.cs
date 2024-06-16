@@ -11,6 +11,7 @@ using Microsoft.Testing.Platform.Extensions.Messages;
 using BBB.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing.Imaging;
+using System.Net;
 
 namespace BBB.Helpers
 {
@@ -26,15 +27,15 @@ namespace BBB.Helpers
         
         public async Task<T> GetObjectAsync(string restEndpoint)
         {
-            //string concatenated = $"{_userid}:{_password}";
-            //string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+            string concatenated = $"{_userid}:{_password}";
+            string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
         
             string json ="";
             T tempObject = new T();
 
             using (var client = new HttpClient())
             {
-                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 Debug.WriteLine("into GetObjectAsync");
 
@@ -45,6 +46,7 @@ namespace BBB.Helpers
                     {
                         Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
                     }
+                    Debug.WriteLine($"running GET client code to {restEndpoint}");
                     HttpResponseMessage response = await client.GetAsync(restEndpoint);
 
                     if (response.IsSuccessStatusCode)
@@ -87,6 +89,7 @@ namespace BBB.Helpers
                     {
                         Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
                     }
+                    Debug.WriteLine($"running PUT client code to {restEndpoint}");
                     var response = await client.PutAsync(restEndpoint, content);
 
                     if (response.IsSuccessStatusCode)
@@ -100,12 +103,54 @@ namespace BBB.Helpers
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine("Exception: {ex.Message}");
+                    Debug.WriteLine($"Exception: {ex.Message}");
                 }
             }
 
             return data;
         }
+
+        public async Task<string> PostObjectAsync(string restEndpoint, T obj)
+        {
+            //string concatenated = $"{_userid}:{_password}";
+            //string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+
+            string data = "{}";
+
+            using (var client = new HttpClient())
+            {
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                var content = new StringContent(obj.ToJSON(), Encoding.UTF8, "application/json");
+
+                try
+                {
+                    foreach (var header in client.DefaultRequestHeaders)
+                    {
+                        Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+                    }
+                    Debug.WriteLine($"running POST client code to {restEndpoint}");
+                    var response = await client.PostAsync(restEndpoint, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        data = await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Status {0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Exception: {ex.Message}");
+                }
+            }
+
+            return data;
+        }
+
 
         //public Boolean PutObjectAsync(string restEndpoint, string json)
         //{
