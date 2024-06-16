@@ -43,9 +43,33 @@ with app.app_context():
 # Route gets all pings from table
 @app.route('/get_pings', methods=['GET'])
 def get_pings():
+    print('1')
     pings = BBBPing.query.all()
+    print('2')
     pings_list = [ping.to_dict() for ping in pings]
+    print('3')
     return jsonify(pings_list), 200
 
+# Route takes the following JSON formart in POST request
+"""
+{
+    "clientTime": "2024-06-15 12:00:00", 
+    "serverTime": "2024-06-15 12:01:00", 
+    "testData": "Test data"
+}
+"""
+@app.route('/add_ping', methods=['POST'])
+def add_ping():
+    data = request.get_json()
+    clientTime = datetime.strptime(data['clientTime'], '%Y-%m-%d %H:%M:%S')
+    serverTime = datetime.strptime(data['serverTime'], '%Y-%m-%d %H:%M:%S')
+    testData = data['testData']
+
+    new_ping = BBBPing(clientTime=clientTime, serverTime=serverTime, testData=testData)
+    db.session.add(new_ping)
+    db.session.commit()
+
+    return jsonify(new_ping.to_dict()), 201
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8081)
