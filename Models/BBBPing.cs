@@ -17,6 +17,8 @@ namespace BBB.Models
     internal class BBBPing : BBBSerializableObject
     {
         [JsonInclude]
+        public int id { get; private set; }
+        [JsonInclude]
         public DateTime clientTime { get; private set; }
         [JsonInclude]
         public DateTime serverTime { get; private set; }
@@ -28,6 +30,7 @@ namespace BBB.Models
     /// </summary>
     public BBBPing()
         {
+            this.id = 0;
             this.clientTime = DateTime.MinValue;
             this.serverTime = DateTime.MinValue;
             this.testData = "";
@@ -38,8 +41,9 @@ namespace BBB.Models
         /// <param name="s">send time</param>
         /// <param name="r">return time</param>
         /// <param name="testData">test data</param>
-        public BBBPing(DateTime c, DateTime s, string testData)
+        public BBBPing(int id, DateTime c, DateTime s, string testData)
         {
+            this.id = id;
             this.clientTime = c;
             this.serverTime = s;
             this.testData = testData;
@@ -63,6 +67,7 @@ namespace BBB.Models
             Debug.WriteLine($"json is {json}");
             BBBPing temp = BBBPing.FromJSON(json);
             Debug.WriteLine(temp);
+            this.id = temp.id;
             this.clientTime = temp.clientTime;
             this.serverTime = temp.serverTime;
             this.testData = temp.testData;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -27,8 +28,14 @@ namespace BBB.DAL
 
         public BBBPing GetBBBPing(string endpoint)
         {
-            endpoint = _baseURL + endpoint; 
-            return Task.Run(() => _restClient.GetObjectAsync(endpoint)).Result;
+            //endpoint = _baseURL + endpoint; 
+            //return Task.Run(() => _restClient.GetObjectAsync(endpoint)).Result;
+            
+            endpoint = _baseURL + endpoint;
+            BBBRestWrapper<BBBPing> wrapper = Task.Run(() => _restClient.GetObjectAsyncWithStatus(endpoint)).Result;
+            Debug.WriteLine($"status = {wrapper.status}");
+            Debug.WriteLine($"message = {wrapper.message}");
+            return wrapper.obj;
         }
 
         public BBBPing PutBBBPing(string endpoint, BBBPing obj)
@@ -48,6 +55,18 @@ namespace BBB.DAL
             BBBPing temp = new BBBPing();
             temp.SetAsJSON(gotback);
             return temp;
+        }
+
+        public BBBRestWrapper<BBBPing> GetBBBPingWithStatus(string endpoint)
+        {
+            endpoint = _baseURL + endpoint;
+            return Task.Run(() => _restClient.GetObjectAsyncWithStatus(endpoint)).Result;
+        }
+
+        public BBBRestWrapper<BBBPing> DeleteBBBPingWithStatus(string endpoint)
+        {
+            endpoint = _baseURL + endpoint;
+            return Task.Run(() => _restClient.DeleteObjectAsyncWithStatus(endpoint)).Result;
         }
 
     }

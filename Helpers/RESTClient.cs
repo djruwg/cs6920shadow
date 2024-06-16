@@ -157,6 +157,109 @@ namespace BBB.Helpers
         //    return false;
         //}
 
+
+        public async Task<BBBRestWrapper<T>> GetObjectAsyncWithStatus(string restEndpoint)
+        {
+            string concatenated = $"{_userid}:{_password}";
+            string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+
+            string json = "";
+            T tempObject = new T();
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                Debug.WriteLine("into GetObjectAsync");
+
+                try
+                {
+                    Debug.WriteLine(restEndpoint);
+                    foreach (var header in client.DefaultRequestHeaders)
+                    {
+                        Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+                    }
+                    Debug.WriteLine($"running GET client code to {restEndpoint}");
+                    HttpResponseMessage response = await client.GetAsync(restEndpoint);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        json = await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Status {0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Exception: {ex.Message}");
+                }
+            }
+
+            //tempObject.SetAsJSON(json);
+            BBBRestWrapper<T> tempWrap = new BBBRestWrapper<T>();
+            Debug.WriteLine($"JSON from Server {json}");
+            tempWrap.SetAsJSON(json);
+
+            //return tempObject;
+            return tempWrap;
+        }
+
+
+
+
+        public async Task<BBBRestWrapper<T>> DeleteObjectAsyncWithStatus(string restEndpoint)
+        {
+            string concatenated = $"{_userid}:{_password}";
+            string encoded = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(concatenated));
+
+            string json = "";
+            T tempObject = new T();
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", encoded);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Debug.WriteLine("into DeleteObjectAsyncWithStatus");
+
+                try
+                {
+                    Debug.WriteLine(restEndpoint);
+                    foreach (var header in client.DefaultRequestHeaders)
+                    {
+                        Debug.WriteLine($"{header.Key}: {string.Join(", ", header.Value)}");
+                    }
+                    Debug.WriteLine($"running GET client code to {restEndpoint}");
+                    HttpResponseMessage response = await client.DeleteAsync(restEndpoint);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        json = await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Status {0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Exception: {ex.Message}");
+                }
+            }
+
+            //tempObject.SetAsJSON(json);
+            BBBRestWrapper<T> tempWrap = new BBBRestWrapper<T>();
+            Debug.WriteLine($"JSON from Server {json}");
+            tempWrap.SetAsJSON(json);
+
+            //return tempObject;
+            return tempWrap;
+        }
+
+
+
         public Boolean PatchObjectAsync()
         {
             return false;

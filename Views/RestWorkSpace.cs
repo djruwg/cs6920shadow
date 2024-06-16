@@ -24,8 +24,11 @@ namespace BBB.Views
         public RestWorkSpace()
         {
             InitializeComponent();
-            ping = new BBBPing(DateTime.Now, DateTime.MinValue, "test data");
+            ping = new BBBPing(0, DateTime.Now, DateTime.MinValue, "test data");
             Default();
+
+            BBBRestWrapper<BBBPing> bbbrw = new BBBRestWrapper<BBBPing>(false, "wrapper message", ping);
+            Debug.WriteLine(bbbrw.ToJSON());
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -65,8 +68,17 @@ namespace BBB.Views
         {
             BBBpingDAL pingDAL = new BBBpingDAL();
 
-            BBBPing ping2 = pingDAL.GetBBBPing("/ping");
-            
+            BBBPing ping2 = pingDAL.GetBBBPing("/wrap");
+            BBBRestWrapper<BBBPing> fullDetails = pingDAL.GetBBBPingWithStatus("/wrap");
+            Debug.WriteLine($"fullDetails.status = {fullDetails.status}");
+            Debug.WriteLine($"fullDetails.message = {fullDetails.message}");
+
+            BBBRestWrapper<BBBPing> deleteDetails = pingDAL.DeleteBBBPingWithStatus("/wrap");
+            Debug.WriteLine($"deleteDetails.status = {deleteDetails.status}");
+            Debug.WriteLine($"deleteDetails.message = {deleteDetails.message}");
+            Debug.WriteLine($"deleteDetails.obj = {deleteDetails.obj.ToJSON()}");
+
+
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
