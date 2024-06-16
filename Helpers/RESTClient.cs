@@ -53,10 +53,40 @@ namespace BBB.Helpers
             return tempObject; 
         }
 
-        public Boolean PutObjectAsync(string restEndpoint, string json)
+        public async Task<string> PutObjectAsync(string restEndpoint, T obj)
         {
-            return false;
+            string data = "{}";
+
+            using (var client = new HttpClient())
+            {
+                var content = new StringContent(obj.ToJSON(), Encoding.UTF8, "application/json");
+
+                try
+                {
+                    var response = await client.PostAsync(restEndpoint, content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        data = await response.Content.ReadAsStringAsync();
+                    }
+                    else
+                    {
+                        Debug.WriteLine("Status {0} ({1})", (int)response.StatusCode, response.ReasonPhrase);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("Exception: {ex.Message}");
+                }
+            }
+
+            return data;
         }
+
+        //public Boolean PutObjectAsync(string restEndpoint, string json)
+        //{
+        //    return false;
+        //}
 
         public Boolean PatchObjectAsync()
         {
