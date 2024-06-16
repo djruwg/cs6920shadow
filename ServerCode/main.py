@@ -13,21 +13,26 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-# Class for represeting the objects in the table
-class DistrictBookmarks(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(255), nullable=False)
-    url = db.Column(db.String(2083), nullable=False)
+# Model for creating test table
+class BBBPing(db.Model):
+    __tablename__ = 'BBBPing'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    clientTime = db.Column(db.DateTime, nullable=False)
+    serverTime = db.Column(db.DateTime, nullable=False)
+    testData = db.Column(db.String(255), nullable=False)
 
-    def __init__(self, title, url):
-        self.name = title
-        self.url = url
+    def __init__(self, clientTime, serverTime, testData):
+        self.clientTime = clientTime
+        self.serverTime = serverTime
+        self.testData = testData
 
     def to_dict(self):
         return {
             'id': self.id,
-            'name': self.name,
-            'url': self.url
+            'clientTime': self.clientTime,
+            'serverTime': self.serverTime,
+            'testData': self.testData
         }
 
 # Create the database table
