@@ -18,7 +18,7 @@ namespace BBB.DAL
         public BBBpingDAL() 
         {
             _restClient = new RESTClient<BBBPing>();
-            _baseURL = "http://davide.classproj.us:8080";
+            _baseURL = "http://davide.classproj.us:8484";
         }
 
         public void SetBaseURL(string baseURL)
