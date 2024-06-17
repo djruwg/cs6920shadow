@@ -35,6 +35,20 @@ class BBBPing(db.Model):
             'serverTime': self.serverTime,
             'testData': self.testData
         }
+    
+# Model for creating Settings object and table
+class Settings(db.Model):
+    __tablename__ = 'Settings'
+    
+    start_url = db.Column(db.String(255), nullable=False, primary_key=True)
+
+    def __init__(self, start_url):
+        self.start_url = start_url
+
+    def to_dict(self):
+        return {
+            'start_url': self.start_url
+        }
 
 # Create the database table
 with app.app_context():
@@ -43,11 +57,8 @@ with app.app_context():
 # Route gets all pings from table
 @app.route('/get_pings', methods=['GET'])
 def get_pings():
-    print('1')
     pings = BBBPing.query.all()
-    print('2')
     pings_list = [ping.to_dict() for ping in pings]
-    print('3')
     return jsonify(pings_list), 200
 
 # Route takes the following JSON formart in POST request
@@ -60,6 +71,10 @@ def get_pings():
 """
 @app.route('/add_ping', methods=['POST'])
 def add_ping():
+    #testing for getting headers
+    headers = request.headers
+    print(headers.get('Content-Type'))
+
     data = request.get_json()
     clientTime = datetime.strptime(data['clientTime'], '%Y-%m-%d %H:%M:%S')
     serverTime = datetime.strptime(data['serverTime'], '%Y-%m-%d %H:%M:%S')
@@ -72,4 +87,4 @@ def add_ping():
     return jsonify(new_ping.to_dict()), 201
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8081)
+    app.run(host='0.0.0.0', port=8080)
