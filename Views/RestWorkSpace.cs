@@ -27,8 +27,6 @@ namespace BBB.Views
             ping = new BBBPing(0, DateTime.Now, DateTime.MinValue, "test data");
             Default();
 
-            BBBRestWrapper<BBBPing> bbbrw = new BBBRestWrapper<BBBPing>(false, "wrapper message", ping);
-            Debug.WriteLine(bbbrw.ToJSON());
         }
 
         private void resetButton_Click(object sender, EventArgs e)

@@ -179,7 +179,6 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\BBBRestWrapper.cs" />
     <Compile Include="Models\DemoClass.cs" />
     <Compile Include="Models\BBBPing.cs" />
     <Compile Include="ClientRESTHelpers\RESTClientReturnData.cs" />
