@@ -169,6 +169,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientRESTHelpers\RESTClient.cs" />
+    <Compile Include="ClientRESTHelpers\ValidateClientMessage.cs" />
+    <Compile Include="ClientRESTHelpers\ValidateServerMessage.cs" />
     <Compile Include="DAL\BBBpingDAL.cs" />
     <Compile Include="Helpers\StringExtension.cs" />
     <Compile Include="Helpers\WindowsUsername.cs" />
@@ -179,9 +181,9 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\DemoClass.cs" />
     <Compile Include="Models\BBBPing.cs" />
     <Compile Include="ClientRESTHelpers\RESTClientReturnData.cs" />
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\RenderingUserControl.cs">
