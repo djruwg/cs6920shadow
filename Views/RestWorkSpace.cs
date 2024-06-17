@@ -68,17 +68,8 @@ namespace BBB.Views
         {
             BBBpingDAL pingDAL = new BBBpingDAL();
 
-            BBBPing ping2 = pingDAL.GetBBBPing("/wrap");
-            BBBRestWrapper<BBBPing> fullDetails = pingDAL.GetBBBPingWithStatus("/wrap");
-            Debug.WriteLine($"fullDetails.status = {fullDetails.status}");
-            Debug.WriteLine($"fullDetails.message = {fullDetails.message}");
-
-            BBBRestWrapper<BBBPing> deleteDetails = pingDAL.DeleteBBBPingWithStatus("/wrap");
-            Debug.WriteLine($"deleteDetails.status = {deleteDetails.status}");
-            Debug.WriteLine($"deleteDetails.message = {deleteDetails.message}");
-            Debug.WriteLine($"deleteDetails.obj = {deleteDetails.obj.ToJSON()}");
-
-
+            BBBPing ping2 = pingDAL.GetBBBPing("/ping");
+ 
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
@@ -105,6 +96,9 @@ namespace BBB.Views
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
+
+            BBBPing ping4 = pingDAL.DeleteBBBPing("/ping");
+
         }
     }
 
