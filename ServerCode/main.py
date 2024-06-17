@@ -54,6 +54,12 @@ class Settings(db.Model):
 with app.app_context():
     db.create_all()
 
+# Route gets all settings from table
+@app.route('/settings', methods=['GET'])
+def get_settings():
+    settings = Settings.query.all()
+    return jsonify(settings[0].to_dict()), 200
+
 # Route gets all pings from table
 @app.route('/get_pings', methods=['GET'])
 def get_pings():
