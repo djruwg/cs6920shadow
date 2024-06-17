@@ -2,6 +2,7 @@
 using BBB.UserControls;
 using BBB.Views;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -63,7 +64,14 @@ namespace BBB
 
             if (renderingControl != null)
             {
-                renderingControl.OpenPrintDialog();
+                try
+                {
+                    renderingControl.OpenPrintDialog();
+                }
+                catch
+                {
+                    MessageBox.Show("Print Dialog Error", "Could not open the print dialog.");
+                }
             }
         }
 
@@ -78,7 +86,14 @@ namespace BBB
 
             if (renderingControl != null)
             {
-                renderingControl.OpenDeveloperTools();
+                try
+                {
+                    renderingControl.OpenDeveloperTools();
+                }
+                catch
+                {
+                    MessageBox.Show("Developer Tools Error", "Could not open the developer tools.");
+                }
             }
         }
 
@@ -88,7 +103,14 @@ namespace BBB
 
             if (renderingControl != null)
             {
-                renderingControl.OpenTaskManager();
+                try
+                {
+                    renderingControl.OpenTaskManager();
+                }
+                catch
+                {
+                    MessageBox.Show("Task Manager Error", "Could not open the task manager.");
+                }
             }
         }
 
