@@ -31,7 +31,7 @@ namespace UnitTesting
             DateTime returnTime = DateTime.MaxValue;
             string data = "this is test data";
 
-            BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(sendTime, returnTime, data);
+            BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(0,sendTime, returnTime, data);
             Assert.IsNotNull(testObj);
             Assert.AreEqual(testObj.clientTime, sendTime);
             Assert.AreEqual(testObj.serverTime, returnTime);
@@ -64,7 +64,7 @@ namespace UnitTesting
             string jsonStringExpected = "{\"clientTime\":\"9999-12-31T23:59:59.9999999\",\"serverTime\":\"9999-12-31T23:59:59.9999999\",\"testData\":\"this is test data\"}";
             string jsonStringActual;
 
-            BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(sendTime, returnTime, data);
+            BBB.Models.BBBPing testObj = new BBB.Models.BBBPing(0, sendTime, returnTime, data);
             jsonStringActual = testObj.ToJSON();
 
             Assert.AreEqual(jsonStringExpected, jsonStringActual);

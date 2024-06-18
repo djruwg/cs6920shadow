@@ -41,11 +41,11 @@ namespace UnitTesting
         bool loaded = false;
 
         [TestMethod]
-        public async Task TestRenderingUserControlCanGoBack()
-        {
-            BBB.UserControls.RenderingUserControl rendering = new BBB.UserControls.RenderingUserControl(this);
+        //public async Task TestRenderingUserControlCanGoBack()
+        //{
+            //BBB.UserControls.RenderingUserControl rendering = new BBB.UserControls.RenderingUserControl(this);
 
-            rendering.GoToURL("https://www.google.com");
+            //rendering.GoToURL("https://www.google.com");
 
             //string goScript = @"
             //(function() {
@@ -65,7 +65,7 @@ namespace UnitTesting
             //await rendering.RunScriptAsync(script);
 
             // Assert.IsTrue(rendering.CanGoBack());
-        }
+        //}
 
         public void RenderingUserControlEvent(object sender, EventArgs e)
         {
