@@ -11,7 +11,6 @@ namespace BBB.UserControls
         void RenderingUserControlEvent(object sender, EventArgs e);
     }
 
-
     public partial class RenderingUserControl : UserControl
     {
         private RenderingUserControlInterface _listener;
@@ -174,9 +173,10 @@ namespace BBB.UserControls
             await RenderingWebView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
-        public void OpenPrintDialog()
+        public async Task OpenPrintDialog()
         {
-            RenderingWebView.CoreWebView2.ShowPrintUI();
+            // RenderingWebView.CoreWebView2.ShowPrintUI();
+            await RenderingWebView.CoreWebView2.ExecuteScriptAsync("window.print();");
         }
 
         public void OpenDeveloperTools()
