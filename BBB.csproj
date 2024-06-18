@@ -168,6 +168,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientRESTHelpers\BearerToken.cs" />
     <Compile Include="ClientRESTHelpers\RESTClient.cs" />
     <Compile Include="ClientRESTHelpers\ValidateClientMessage.cs" />
     <Compile Include="ClientRESTHelpers\ValidateServerMessage.cs" />

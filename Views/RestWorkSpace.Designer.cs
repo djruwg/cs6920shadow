@@ -45,11 +45,11 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.getButton = new System.Windows.Forms.Button();
+            this.putButton = new System.Windows.Forms.Button();
+            this.postButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.testData2TextBox = new System.Windows.Forms.TextBox();
             this.data2Label = new System.Windows.Forms.Label();
-            this.putButton = new System.Windows.Forms.Button();
-            this.postButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -273,6 +273,32 @@
             this.getButton.UseVisualStyleBackColor = true;
             this.getButton.Click += new System.EventHandler(this.getButton_Click);
             // 
+            // putButton
+            // 
+            this.putButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.putButton.AutoSize = true;
+            this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.putButton.Location = new System.Drawing.Point(390, 3);
+            this.putButton.Name = "putButton";
+            this.putButton.Size = new System.Drawing.Size(80, 52);
+            this.putButton.TabIndex = 1;
+            this.putButton.Text = "put";
+            this.putButton.UseVisualStyleBackColor = true;
+            this.putButton.Click += new System.EventHandler(this.putButton_Click);
+            // 
+            // postButton
+            // 
+            this.postButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.postButton.AutoSize = true;
+            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postButton.Location = new System.Drawing.Point(476, 3);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(99, 52);
+            this.postButton.TabIndex = 3;
+            this.postButton.Text = "post";
+            this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(3, 3);
@@ -301,32 +327,6 @@
             this.data2Label.Size = new System.Drawing.Size(161, 42);
             this.data2Label.TabIndex = 16;
             this.data2Label.Text = "test data";
-            // 
-            // putButton
-            // 
-            this.putButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.putButton.AutoSize = true;
-            this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.putButton.Location = new System.Drawing.Point(390, 3);
-            this.putButton.Name = "putButton";
-            this.putButton.Size = new System.Drawing.Size(80, 52);
-            this.putButton.TabIndex = 1;
-            this.putButton.Text = "put";
-            this.putButton.UseVisualStyleBackColor = true;
-            this.putButton.Click += new System.EventHandler(this.putButton_Click);
-            // 
-            // postButton
-            // 
-            this.postButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.postButton.AutoSize = true;
-            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postButton.Location = new System.Drawing.Point(476, 3);
-            this.postButton.Name = "postButton";
-            this.postButton.Size = new System.Drawing.Size(99, 52);
-            this.postButton.TabIndex = 3;
-            this.postButton.Text = "post";
-            this.postButton.UseVisualStyleBackColor = true;
-            this.postButton.Click += new System.EventHandler(this.postButton_Click);
             // 
             // RestWorkSpace
             // 

@@ -13,6 +13,7 @@ using BBB.Models;
 using BBB.Helpers;
 using System.Diagnostics;
 using BBB.DAL;
+using BBB.ClientRESTHelpers;
 
 namespace BBB.Views
 {
@@ -71,6 +72,7 @@ namespace BBB.Views
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();
+
 
         }
 

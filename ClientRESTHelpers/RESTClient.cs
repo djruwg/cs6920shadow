@@ -12,6 +12,7 @@ using BBB.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing.Imaging;
 using System.Net;
+using System.Diagnostics.PerformanceData;
 
 namespace BBB.ClientRESTHelpers
 
@@ -23,21 +24,7 @@ namespace BBB.ClientRESTHelpers
         where TIN : BBBSerializableObject, new() 
         where TOUT : BBBSerializableObject, new()
     {
-        private string _accessToken;
-
-
-        public RESTClient() 
-        {
-            this._accessToken = "none";
-        }
-
-
-        public void SetToken(string accessToken)
-        {
-            this._accessToken = accessToken;   
-        }
-
-
+        
         public async Task<RESTClientReturnData<TOUT>> GetObjectAsync(string restEndpoint)
         {
             string json = "";
@@ -46,7 +33,7 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
          
                 try
@@ -82,7 +69,7 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
@@ -120,7 +107,7 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 
@@ -159,7 +146,7 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _accessToken);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
