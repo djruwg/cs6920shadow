@@ -37,7 +37,21 @@
             this.jsonTextBox = new System.Windows.Forms.TextBox();
             this.testDataTextBox = new System.Windows.Forms.TextBox();
             this.testDataLabel = new System.Windows.Forms.Label();
+            this.send2Label = new System.Windows.Forms.Label();
+            this.return2Label = new System.Windows.Forms.Label();
+            this.send2TextBox = new System.Windows.Forms.TextBox();
+            this.return2TextBox = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.getButton = new System.Windows.Forms.Button();
+            this.putButton = new System.Windows.Forms.Button();
+            this.postButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.testData2TextBox = new System.Windows.Forms.TextBox();
+            this.data2Label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -53,6 +67,14 @@
             this.tableLayoutPanel1.Controls.Add(this.jsonTextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.testDataTextBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.testDataLabel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.send2Label, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.return2Label, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.send2TextBox, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.return2TextBox, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 21);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.testData2TextBox, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.data2Label, 0, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -153,14 +175,158 @@
             // 
             // testDataLabel
             // 
+            this.testDataLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.testDataLabel.AutoSize = true;
-            this.testDataLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.testDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testDataLabel.Location = new System.Drawing.Point(3, 320);
+            this.testDataLabel.Location = new System.Drawing.Point(3, 331);
             this.testDataLabel.Name = "testDataLabel";
-            this.testDataLabel.Size = new System.Drawing.Size(494, 64);
+            this.testDataLabel.Size = new System.Drawing.Size(161, 42);
             this.testDataLabel.TabIndex = 7;
             this.testDataLabel.Text = "test data";
+            // 
+            // send2Label
+            // 
+            this.send2Label.AutoSize = true;
+            this.send2Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.send2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.send2Label.Location = new System.Drawing.Point(3, 576);
+            this.send2Label.Name = "send2Label";
+            this.send2Label.Size = new System.Drawing.Size(494, 64);
+            this.send2Label.TabIndex = 8;
+            this.send2Label.Text = "send time";
+            // 
+            // return2Label
+            // 
+            this.return2Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.return2Label.AutoSize = true;
+            this.return2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return2Label.Location = new System.Drawing.Point(3, 715);
+            this.return2Label.Name = "return2Label";
+            this.return2Label.Size = new System.Drawing.Size(494, 42);
+            this.return2Label.TabIndex = 9;
+            this.return2Label.Text = "return time";
+            // 
+            // send2TextBox
+            // 
+            this.send2TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.send2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.send2TextBox.Location = new System.Drawing.Point(503, 579);
+            this.send2TextBox.Name = "send2TextBox";
+            this.send2TextBox.Size = new System.Drawing.Size(1992, 49);
+            this.send2TextBox.TabIndex = 10;
+            // 
+            // return2TextBox
+            // 
+            this.return2TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.return2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.return2TextBox.Location = new System.Drawing.Point(503, 707);
+            this.return2TextBox.Name = "return2TextBox";
+            this.return2TextBox.Size = new System.Drawing.Size(1992, 49);
+            this.return2TextBox.TabIndex = 11;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.resetButton);
+            this.flowLayoutPanel1.Controls.Add(this.updateButton);
+            this.flowLayoutPanel1.Controls.Add(this.getButton);
+            this.flowLayoutPanel1.Controls.Add(this.putButton);
+            this.flowLayoutPanel1.Controls.Add(this.postButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(503, 1347);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1992, 476);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // resetButton
+            // 
+            this.resetButton.AutoSize = true;
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetButton.Location = new System.Drawing.Point(3, 3);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(111, 52);
+            this.resetButton.TabIndex = 0;
+            this.resetButton.Text = "reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.AutoSize = true;
+            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Location = new System.Drawing.Point(120, 3);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(153, 52);
+            this.updateButton.TabIndex = 1;
+            this.updateButton.Text = "update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // getButton
+            // 
+            this.getButton.AutoSize = true;
+            this.getButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getButton.Location = new System.Drawing.Point(279, 3);
+            this.getButton.Name = "getButton";
+            this.getButton.Size = new System.Drawing.Size(105, 52);
+            this.getButton.TabIndex = 2;
+            this.getButton.Text = "get";
+            this.getButton.UseVisualStyleBackColor = true;
+            this.getButton.Click += new System.EventHandler(this.getButton_Click);
+            // 
+            // putButton
+            // 
+            this.putButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.putButton.AutoSize = true;
+            this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.putButton.Location = new System.Drawing.Point(390, 3);
+            this.putButton.Name = "putButton";
+            this.putButton.Size = new System.Drawing.Size(80, 52);
+            this.putButton.TabIndex = 1;
+            this.putButton.Text = "put";
+            this.putButton.UseVisualStyleBackColor = true;
+            this.putButton.Click += new System.EventHandler(this.putButton_Click);
+            // 
+            // postButton
+            // 
+            this.postButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.postButton.AutoSize = true;
+            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postButton.Location = new System.Drawing.Point(476, 3);
+            this.postButton.Name = "postButton";
+            this.postButton.Size = new System.Drawing.Size(99, 52);
+            this.postButton.TabIndex = 3;
+            this.postButton.Text = "post";
+            this.postButton.UseVisualStyleBackColor = true;
+            this.postButton.Click += new System.EventHandler(this.postButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // testData2TextBox
+            // 
+            this.testData2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.testData2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testData2TextBox.Location = new System.Drawing.Point(503, 839);
+            this.testData2TextBox.Name = "testData2TextBox";
+            this.testData2TextBox.Size = new System.Drawing.Size(1992, 49);
+            this.testData2TextBox.TabIndex = 15;
+            // 
+            // data2Label
+            // 
+            this.data2Label.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.data2Label.AutoSize = true;
+            this.data2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.data2Label.Location = new System.Drawing.Point(3, 843);
+            this.data2Label.Name = "data2Label";
+            this.data2Label.Size = new System.Drawing.Size(161, 42);
+            this.data2Label.TabIndex = 16;
+            this.data2Label.Text = "test data";
             // 
             // RestWorkSpace
             // 
@@ -172,6 +338,8 @@
             this.Text = "RestWorkSpace";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -187,5 +355,18 @@
         private System.Windows.Forms.TextBox jsonTextBox;
         private System.Windows.Forms.TextBox testDataTextBox;
         private System.Windows.Forms.Label testDataLabel;
+        private System.Windows.Forms.Label send2Label;
+        private System.Windows.Forms.Label return2Label;
+        private System.Windows.Forms.TextBox send2TextBox;
+        private System.Windows.Forms.TextBox return2TextBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox testData2TextBox;
+        private System.Windows.Forms.Label data2Label;
+        private System.Windows.Forms.Button getButton;
+        private System.Windows.Forms.Button putButton;
+        private System.Windows.Forms.Button postButton;
     }
 }
