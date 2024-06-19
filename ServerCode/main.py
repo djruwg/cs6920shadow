@@ -42,13 +42,14 @@ class Settings(db.Model):
     
     start_url = db.Column(db.String(255), nullable=False, primary_key=True)
 
-    def __init__(self, start_url):
-        self.start_url = start_url
-
-    def to_dict(self):
-        return {
-            'start_url': self.start_url
-        }
+# Model for creating Admin object and table
+class Admin(db.Model):
+    __tablename__ = 'Admin'
+    
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    username = db.Column(db.String(255), nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    Bearer = db.Column(db.String(255), nullable=False)
 
 # Create the database table
 with app.app_context():
@@ -57,8 +58,11 @@ with app.app_context():
 # Route gets all settings from table
 @app.route('/settings', methods=['GET'])
 def get_settings():
-    settings = Settings.query.all()
-    return jsonify(settings[0].to_dict()), 200
+    settings = Settings.query.first()
+    if settings:
+        return jsonify(start_url=settings.start_url), 200
+    else:
+        return jsonify(start_url=None), 404
 
 # Route gets all pings from table
 @app.route('/get_pings', methods=['GET'])
