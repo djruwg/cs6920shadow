@@ -12,7 +12,7 @@ namespace BBB
     public partial class MainWindow : Form, RenderingUserControlInterface
     {
         private const int TAB_LEADING_SPACE = 8;
-        private const int TAB_TRAILING_SPACE = 16;
+        private const int TAB_TRAILING_SPACE = 32;
 
         /// <summary>
         /// Compiled regular expression for validating URLs
