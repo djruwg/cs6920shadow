@@ -356,5 +356,15 @@ namespace BBB
         {
 
         }
+
+        private void RunNewTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.OpenNewTab();
+        }
+
+        private void RunQuitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
