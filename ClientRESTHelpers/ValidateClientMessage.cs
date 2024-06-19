@@ -1,13 +1,7 @@
 ﻿using BBB.Interface;
-using BBB.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
 using System.Text.Json;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace BBB.ClientRESTHelpers
 {
@@ -23,11 +17,11 @@ namespace BBB.ClientRESTHelpers
             this.username = "";
             this.password = "";
         }
- 
+
         public ValidateClientMessage(string username, string password)
         {
             this.username = username;
-            this.password = password; 
+            this.password = password;
         }
 
         /// <summary>

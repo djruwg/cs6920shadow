@@ -28,352 +28,324 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainWindowTableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.MainWindowMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunPrintMenuToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.BookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunDeveloperToolsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunTaskManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunRestWorkSpaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainWindowTableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.MainWindowTabControl = new System.Windows.Forms.TabControl();
-            this.MainWindowTableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.MainWindowFlowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.MainWindowBackButton = new System.Windows.Forms.Button();
-            this.MainWindowForwardButton = new System.Windows.Forms.Button();
-            this.MainWindowReloadButton = new System.Windows.Forms.Button();
-            this.MainWindowURLBar = new System.Windows.Forms.TextBox();
-            this.MainWindowFlowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.MainWindowNewTabButton = new System.Windows.Forms.Button();
-            this.TeacherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunUnlockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunManageBlockListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunManageBookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainWindowTableLayoutPanel1.SuspendLayout();
-            this.MainWindowMenuStrip.SuspendLayout();
-            this.MainWindowTableLayoutPanel2.SuspendLayout();
-            this.MainWindowTableLayoutPanel3.SuspendLayout();
-            this.MainWindowFlowLayoutPanel1.SuspendLayout();
-            this.MainWindowFlowLayoutPanel2.SuspendLayout();
-            this.SuspendLayout();
+            MainWindowTableLayoutPanel1 = new TableLayoutPanel();
+            MainWindowMenuStrip = new MenuStrip();
+            FileToolStripMenuItem = new ToolStripMenuItem();
+            RunPrintMenuToolStripItem = new ToolStripMenuItem();
+            BookmarksToolStripMenuItem = new ToolStripMenuItem();
+            TeacherToolStripMenuItem = new ToolStripMenuItem();
+            RunUnlockToolStripMenuItem = new ToolStripMenuItem();
+            RunManageBlockListToolStripMenuItem = new ToolStripMenuItem();
+            RunManageBookmarksToolStripMenuItem = new ToolStripMenuItem();
+            ToolsToolStripMenuItem = new ToolStripMenuItem();
+            RunTestToolStripMenuItem = new ToolStripMenuItem();
+            RunDeveloperToolsMenuItem = new ToolStripMenuItem();
+            RunTaskManagerToolStripMenuItem = new ToolStripMenuItem();
+            RunRestWorkSpaceToolStripMenuItem = new ToolStripMenuItem();
+            MainWindowTableLayoutPanel2 = new TableLayoutPanel();
+            MainWindowTabControl = new TabControl();
+            MainWindowTableLayoutPanel3 = new TableLayoutPanel();
+            MainWindowFlowLayoutPanel1 = new FlowLayoutPanel();
+            MainWindowBackButton = new Button();
+            MainWindowForwardButton = new Button();
+            MainWindowReloadButton = new Button();
+            MainWindowURLBar = new TextBox();
+            MainWindowFlowLayoutPanel2 = new FlowLayoutPanel();
+            MainWindowNewTabButton = new Button();
+            MainWindowTableLayoutPanel1.SuspendLayout();
+            MainWindowMenuStrip.SuspendLayout();
+            MainWindowTableLayoutPanel2.SuspendLayout();
+            MainWindowTableLayoutPanel3.SuspendLayout();
+            MainWindowFlowLayoutPanel1.SuspendLayout();
+            MainWindowFlowLayoutPanel2.SuspendLayout();
+            SuspendLayout();
             // 
             // MainWindowTableLayoutPanel1
             // 
-            this.MainWindowTableLayoutPanel1.AutoSize = true;
-            this.MainWindowTableLayoutPanel1.ColumnCount = 1;
-            this.MainWindowTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowMenuStrip, 0, 0);
-            this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowTableLayoutPanel2, 0, 2);
-            this.MainWindowTableLayoutPanel1.Controls.Add(this.MainWindowTableLayoutPanel3, 0, 1);
-            this.MainWindowTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.MainWindowTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowTableLayoutPanel1.Name = "MainWindowTableLayoutPanel1";
-            this.MainWindowTableLayoutPanel1.RowCount = 3;
-            this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.MainWindowTableLayoutPanel1.Size = new System.Drawing.Size(1574, 1529);
-            this.MainWindowTableLayoutPanel1.TabIndex = 0;
+            MainWindowTableLayoutPanel1.AutoSize = true;
+            MainWindowTableLayoutPanel1.ColumnCount = 1;
+            MainWindowTableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            MainWindowTableLayoutPanel1.Controls.Add(MainWindowMenuStrip, 0, 0);
+            MainWindowTableLayoutPanel1.Controls.Add(MainWindowTableLayoutPanel2, 0, 2);
+            MainWindowTableLayoutPanel1.Controls.Add(MainWindowTableLayoutPanel3, 0, 1);
+            MainWindowTableLayoutPanel1.Dock = DockStyle.Fill;
+            MainWindowTableLayoutPanel1.Location = new Point(0, 0);
+            MainWindowTableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            MainWindowTableLayoutPanel1.Name = "MainWindowTableLayoutPanel1";
+            MainWindowTableLayoutPanel1.RowCount = 3;
+            MainWindowTableLayoutPanel1.RowStyles.Add(new RowStyle());
+            MainWindowTableLayoutPanel1.RowStyles.Add(new RowStyle());
+            MainWindowTableLayoutPanel1.RowStyles.Add(new RowStyle());
+            MainWindowTableLayoutPanel1.Size = new Size(1705, 1771);
+            MainWindowTableLayoutPanel1.TabIndex = 0;
             // 
             // MainWindowMenuStrip
             // 
-            this.MainWindowMenuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.MainWindowMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.MainWindowMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem,
-            this.BookmarksToolStripMenuItem,
-            this.TeacherToolStripMenuItem,
-            this.ToolsToolStripMenuItem});
-            this.MainWindowMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MainWindowMenuStrip.Name = "MainWindowMenuStrip";
-            this.MainWindowMenuStrip.Size = new System.Drawing.Size(1574, 42);
-            this.MainWindowMenuStrip.TabIndex = 0;
-            this.MainWindowMenuStrip.Text = "menuStrip1";
+            MainWindowMenuStrip.ImageScalingSize = new Size(32, 32);
+            MainWindowMenuStrip.Items.AddRange(new ToolStripItem[] { FileToolStripMenuItem, BookmarksToolStripMenuItem, TeacherToolStripMenuItem, ToolsToolStripMenuItem });
+            MainWindowMenuStrip.Location = new Point(0, 0);
+            MainWindowMenuStrip.Name = "MainWindowMenuStrip";
+            MainWindowMenuStrip.Padding = new Padding(6, 3, 0, 3);
+            MainWindowMenuStrip.Size = new Size(1705, 42);
+            MainWindowMenuStrip.TabIndex = 0;
+            MainWindowMenuStrip.Text = "menuStrip1";
             // 
             // FileToolStripMenuItem
             // 
-            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RunPrintMenuToolStripItem});
-            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            this.FileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
-            this.FileToolStripMenuItem.Text = "File";
+            FileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunPrintMenuToolStripItem });
+            FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            FileToolStripMenuItem.Size = new Size(71, 36);
+            FileToolStripMenuItem.Text = "File";
             // 
             // RunPrintMenuToolStripItem
             // 
-            this.RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
-            this.RunPrintMenuToolStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.RunPrintMenuToolStripItem.Size = new System.Drawing.Size(276, 44);
-            this.RunPrintMenuToolStripItem.Text = "Print";
-            this.RunPrintMenuToolStripItem.Click += new System.EventHandler(this.RunPrintMenuToolStripItem_Click);
+            RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
+            RunPrintMenuToolStripItem.ShortcutKeys = Keys.Control | Keys.P;
+            RunPrintMenuToolStripItem.Size = new Size(276, 44);
+            RunPrintMenuToolStripItem.Text = "Print";
+            RunPrintMenuToolStripItem.Click += RunPrintMenuToolStripItem_Click;
             // 
             // BookmarksToolStripMenuItem
             // 
-            this.BookmarksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.viewToolStripMenuItem});
-            this.BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
-            this.BookmarksToolStripMenuItem.Size = new System.Drawing.Size(151, 38);
-            this.BookmarksToolStripMenuItem.Text = "Bookmarks";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(198, 44);
-            this.addToolStripMenuItem.Text = "Add";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(198, 44);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // ToolsToolStripMenuItem
-            // 
-            this.ToolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RunTestToolStripMenuItem,
-            this.RunDeveloperToolsMenuItem,
-            this.RunTaskManagerToolStripMenuItem,
-            this.RunRestWorkSpaceToolStripMenuItem});
-            this.ToolsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            this.ToolsToolStripMenuItem.Size = new System.Drawing.Size(89, 38);
-            this.ToolsToolStripMenuItem.Text = "Tools";
-            // 
-            // RunTestToolStripMenuItem
-            // 
-            this.RunTestToolStripMenuItem.Name = "RunTestToolStripMenuItem";
-            this.RunTestToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
-            this.RunTestToolStripMenuItem.Text = "Run Test";
-            this.RunTestToolStripMenuItem.Click += new System.EventHandler(this.RunTestToolStripMenuItem_Click);
-            // 
-            // RunDeveloperToolsMenuItem
-            // 
-            this.RunDeveloperToolsMenuItem.Name = "RunDeveloperToolsMenuItem";
-            this.RunDeveloperToolsMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.RunDeveloperToolsMenuItem.Size = new System.Drawing.Size(403, 44);
-            this.RunDeveloperToolsMenuItem.Text = "Developer Tools";
-            this.RunDeveloperToolsMenuItem.Click += new System.EventHandler(this.RunDeveloperToolsMenuItem_Click);
-            // 
-            // RunTaskManagerToolStripMenuItem
-            // 
-            this.RunTaskManagerToolStripMenuItem.Name = "RunTaskManagerToolStripMenuItem";
-            this.RunTaskManagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.RunTaskManagerToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
-            this.RunTaskManagerToolStripMenuItem.Text = "Task Manager";
-            this.RunTaskManagerToolStripMenuItem.Click += new System.EventHandler(this.RunTaskManagerToolStripMenuItem_Click);
-            // 
-            // RunRestWorkSpaceToolStripMenuItem
-            // 
-            this.RunRestWorkSpaceToolStripMenuItem.Name = "RunRestWorkSpaceToolStripMenuItem";
-            this.RunRestWorkSpaceToolStripMenuItem.Size = new System.Drawing.Size(403, 44);
-            this.RunRestWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
-            this.RunRestWorkSpaceToolStripMenuItem.Click += new System.EventHandler(this.restWorkSpaceToolStripMenuItem_Click);
-            // 
-            // MainWindowTableLayoutPanel2
-            // 
-            this.MainWindowTableLayoutPanel2.AutoSize = true;
-            this.MainWindowTableLayoutPanel2.ColumnCount = 1;
-            this.MainWindowTableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.MainWindowTableLayoutPanel2.Controls.Add(this.MainWindowTabControl, 0, 0);
-            this.MainWindowTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel2.Location = new System.Drawing.Point(4, 135);
-            this.MainWindowTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
-            this.MainWindowTableLayoutPanel2.RowCount = 1;
-            this.MainWindowTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindowTableLayoutPanel2.Size = new System.Drawing.Size(1566, 1398);
-            this.MainWindowTableLayoutPanel2.TabIndex = 2;
-            // 
-            // MainWindowTabControl
-            // 
-            this.MainWindowTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTabControl.Location = new System.Drawing.Point(4, 4);
-            this.MainWindowTabControl.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowTabControl.Name = "MainWindowTabControl";
-            this.MainWindowTabControl.SelectedIndex = 0;
-            this.MainWindowTabControl.Size = new System.Drawing.Size(1558, 1390);
-            this.MainWindowTabControl.TabIndex = 6;
-            this.MainWindowTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MainWindowTabControl_DrawItem);
-            this.MainWindowTabControl.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MainWindowTabControl_MouseUp);
-            // 
-            // MainWindowTableLayoutPanel3
-            // 
-            this.MainWindowTableLayoutPanel3.AutoSize = true;
-            this.MainWindowTableLayoutPanel3.ColumnCount = 2;
-            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindowTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel1, 0, 0);
-            this.MainWindowTableLayoutPanel3.Controls.Add(this.MainWindowFlowLayoutPanel2, 1, 0);
-            this.MainWindowTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowTableLayoutPanel3.Location = new System.Drawing.Point(3, 45);
-            this.MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
-            this.MainWindowTableLayoutPanel3.RowCount = 1;
-            this.MainWindowTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainWindowTableLayoutPanel3.Size = new System.Drawing.Size(1568, 83);
-            this.MainWindowTableLayoutPanel3.TabIndex = 3;
-            // 
-            // MainWindowFlowLayoutPanel1
-            // 
-            this.MainWindowFlowLayoutPanel1.AutoSize = true;
-            this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowBackButton);
-            this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowForwardButton);
-            this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowReloadButton);
-            this.MainWindowFlowLayoutPanel1.Controls.Add(this.MainWindowURLBar);
-            this.MainWindowFlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowFlowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
-            this.MainWindowFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowFlowLayoutPanel1.Name = "MainWindowFlowLayoutPanel1";
-            this.MainWindowFlowLayoutPanel1.Size = new System.Drawing.Size(1478, 75);
-            this.MainWindowFlowLayoutPanel1.TabIndex = 1;
-            this.MainWindowFlowLayoutPanel1.WrapContents = false;
-            // 
-            // MainWindowBackButton
-            // 
-            this.MainWindowBackButton.AutoSize = true;
-            this.MainWindowBackButton.FlatAppearance.BorderSize = 0;
-            this.MainWindowBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainWindowBackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainWindowBackButton.Location = new System.Drawing.Point(4, 4);
-            this.MainWindowBackButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowBackButton.Name = "MainWindowBackButton";
-            this.MainWindowBackButton.Size = new System.Drawing.Size(68, 67);
-            this.MainWindowBackButton.TabIndex = 1;
-            this.MainWindowBackButton.Text = "<";
-            this.MainWindowBackButton.UseVisualStyleBackColor = true;
-            this.MainWindowBackButton.Click += new System.EventHandler(this.MainWindowBackButton_Click);
-            // 
-            // MainWindowForwardButton
-            // 
-            this.MainWindowForwardButton.AutoSize = true;
-            this.MainWindowForwardButton.FlatAppearance.BorderSize = 0;
-            this.MainWindowForwardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainWindowForwardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainWindowForwardButton.Location = new System.Drawing.Point(80, 4);
-            this.MainWindowForwardButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowForwardButton.Name = "MainWindowForwardButton";
-            this.MainWindowForwardButton.Size = new System.Drawing.Size(68, 67);
-            this.MainWindowForwardButton.TabIndex = 2;
-            this.MainWindowForwardButton.Text = ">";
-            this.MainWindowForwardButton.UseVisualStyleBackColor = true;
-            this.MainWindowForwardButton.Click += new System.EventHandler(this.MainWindowForwardButton_Click);
-            // 
-            // MainWindowReloadButton
-            // 
-            this.MainWindowReloadButton.AutoSize = true;
-            this.MainWindowReloadButton.BackgroundImage = global::BBB.Properties.Resources.refresh;
-            this.MainWindowReloadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.MainWindowReloadButton.FlatAppearance.BorderSize = 0;
-            this.MainWindowReloadButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainWindowReloadButton.Location = new System.Drawing.Point(156, 4);
-            this.MainWindowReloadButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowReloadButton.Name = "MainWindowReloadButton";
-            this.MainWindowReloadButton.Size = new System.Drawing.Size(74, 67);
-            this.MainWindowReloadButton.TabIndex = 3;
-            this.MainWindowReloadButton.UseVisualStyleBackColor = true;
-            this.MainWindowReloadButton.Click += new System.EventHandler(this.MainWindowReloadButton_Click);
-            // 
-            // MainWindowURLBar
-            // 
-            this.MainWindowURLBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainWindowURLBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainWindowURLBar.Location = new System.Drawing.Point(238, 16);
-            this.MainWindowURLBar.Margin = new System.Windows.Forms.Padding(4, 16, 4, 4);
-            this.MainWindowURLBar.Name = "MainWindowURLBar";
-            this.MainWindowURLBar.Size = new System.Drawing.Size(1221, 40);
-            this.MainWindowURLBar.TabIndex = 4;
-            this.MainWindowURLBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainWindowURLBar_KeyPress);
-            // 
-            // MainWindowFlowLayoutPanel2
-            // 
-            this.MainWindowFlowLayoutPanel2.AutoSize = true;
-            this.MainWindowFlowLayoutPanel2.Controls.Add(this.MainWindowNewTabButton);
-            this.MainWindowFlowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainWindowFlowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.MainWindowFlowLayoutPanel2.Location = new System.Drawing.Point(1489, 3);
-            this.MainWindowFlowLayoutPanel2.Name = "MainWindowFlowLayoutPanel2";
-            this.MainWindowFlowLayoutPanel2.Size = new System.Drawing.Size(76, 77);
-            this.MainWindowFlowLayoutPanel2.TabIndex = 2;
-            // 
-            // MainWindowNewTabButton
-            // 
-            this.MainWindowNewTabButton.AutoSize = true;
-            this.MainWindowNewTabButton.FlatAppearance.BorderSize = 0;
-            this.MainWindowNewTabButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainWindowNewTabButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainWindowNewTabButton.Location = new System.Drawing.Point(4, 4);
-            this.MainWindowNewTabButton.Margin = new System.Windows.Forms.Padding(4);
-            this.MainWindowNewTabButton.Name = "MainWindowNewTabButton";
-            this.MainWindowNewTabButton.Size = new System.Drawing.Size(68, 67);
-            this.MainWindowNewTabButton.TabIndex = 5;
-            this.MainWindowNewTabButton.Text = "+";
-            this.MainWindowNewTabButton.UseVisualStyleBackColor = true;
-            this.MainWindowNewTabButton.Click += new System.EventHandler(this.MainWindowNewTabButton_Click);
+            BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
+            BookmarksToolStripMenuItem.Size = new Size(151, 36);
+            BookmarksToolStripMenuItem.Text = "Bookmarks";
+            BookmarksToolStripMenuItem.Click += BookmarksToolStripMenuItem_Click;
             // 
             // TeacherToolStripMenuItem
             // 
-            this.TeacherToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.RunUnlockToolStripMenuItem,
-            this.RunManageBlockListToolStripMenuItem,
-            this.RunManageBookmarksToolStripMenuItem});
-            this.TeacherToolStripMenuItem.Name = "TeacherToolStripMenuItem";
-            this.TeacherToolStripMenuItem.Size = new System.Drawing.Size(116, 38);
-            this.TeacherToolStripMenuItem.Text = "Teacher";
+            TeacherToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunUnlockToolStripMenuItem, RunManageBlockListToolStripMenuItem, RunManageBookmarksToolStripMenuItem });
+            TeacherToolStripMenuItem.Name = "TeacherToolStripMenuItem";
+            TeacherToolStripMenuItem.Size = new Size(116, 36);
+            TeacherToolStripMenuItem.Text = "Teacher";
             // 
             // RunUnlockToolStripMenuItem
             // 
-            this.RunUnlockToolStripMenuItem.Name = "RunUnlockToolStripMenuItem";
-            this.RunUnlockToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.RunUnlockToolStripMenuItem.Text = "Unlock";
-            this.RunUnlockToolStripMenuItem.Click += new System.EventHandler(this.unlockToolStripMenuItem_Click);
+            RunUnlockToolStripMenuItem.Name = "RunUnlockToolStripMenuItem";
+            RunUnlockToolStripMenuItem.Size = new Size(358, 44);
+            RunUnlockToolStripMenuItem.Text = "Unlock";
+            RunUnlockToolStripMenuItem.Click += unlockToolStripMenuItem_Click;
             // 
             // RunManageBlockListToolStripMenuItem
             // 
-            this.RunManageBlockListToolStripMenuItem.Name = "RunManageBlockListToolStripMenuItem";
-            this.RunManageBlockListToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.RunManageBlockListToolStripMenuItem.Text = "Manage Block List";
-            this.RunManageBlockListToolStripMenuItem.Click += new System.EventHandler(this.manageBlockListToolStripMenuItem_Click);
+            RunManageBlockListToolStripMenuItem.Name = "RunManageBlockListToolStripMenuItem";
+            RunManageBlockListToolStripMenuItem.Size = new Size(358, 44);
+            RunManageBlockListToolStripMenuItem.Text = "Manage Block List";
+            RunManageBlockListToolStripMenuItem.Click += manageBlockListToolStripMenuItem_Click;
             // 
             // RunManageBookmarksToolStripMenuItem
             // 
-            this.RunManageBookmarksToolStripMenuItem.Name = "RunManageBookmarksToolStripMenuItem";
-            this.RunManageBookmarksToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.RunManageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
-            this.RunManageBookmarksToolStripMenuItem.Click += new System.EventHandler(this.manageBookmarksToolStripMenuItem_Click);
+            RunManageBookmarksToolStripMenuItem.Name = "RunManageBookmarksToolStripMenuItem";
+            RunManageBookmarksToolStripMenuItem.Size = new Size(358, 44);
+            RunManageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
+            RunManageBookmarksToolStripMenuItem.Click += manageBookmarksToolStripMenuItem_Click;
+            // 
+            // ToolsToolStripMenuItem
+            // 
+            ToolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunTestToolStripMenuItem, RunDeveloperToolsMenuItem, RunTaskManagerToolStripMenuItem, RunRestWorkSpaceToolStripMenuItem });
+            ToolsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
+            ToolsToolStripMenuItem.Size = new Size(89, 36);
+            ToolsToolStripMenuItem.Text = "Tools";
+            // 
+            // RunTestToolStripMenuItem
+            // 
+            RunTestToolStripMenuItem.Name = "RunTestToolStripMenuItem";
+            RunTestToolStripMenuItem.Size = new Size(403, 44);
+            RunTestToolStripMenuItem.Text = "Run Test";
+            RunTestToolStripMenuItem.Click += RunTestToolStripMenuItem_Click;
+            // 
+            // RunDeveloperToolsMenuItem
+            // 
+            RunDeveloperToolsMenuItem.Name = "RunDeveloperToolsMenuItem";
+            RunDeveloperToolsMenuItem.ShortcutKeys = Keys.Control | Keys.D;
+            RunDeveloperToolsMenuItem.Size = new Size(403, 44);
+            RunDeveloperToolsMenuItem.Text = "Developer Tools";
+            RunDeveloperToolsMenuItem.Click += RunDeveloperToolsMenuItem_Click;
+            // 
+            // RunTaskManagerToolStripMenuItem
+            // 
+            RunTaskManagerToolStripMenuItem.Name = "RunTaskManagerToolStripMenuItem";
+            RunTaskManagerToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.T;
+            RunTaskManagerToolStripMenuItem.Size = new Size(403, 44);
+            RunTaskManagerToolStripMenuItem.Text = "Task Manager";
+            RunTaskManagerToolStripMenuItem.Click += RunTaskManagerToolStripMenuItem_Click;
+            // 
+            // RunRestWorkSpaceToolStripMenuItem
+            // 
+            RunRestWorkSpaceToolStripMenuItem.Name = "RunRestWorkSpaceToolStripMenuItem";
+            RunRestWorkSpaceToolStripMenuItem.Size = new Size(403, 44);
+            RunRestWorkSpaceToolStripMenuItem.Text = "Rest Work Space";
+            RunRestWorkSpaceToolStripMenuItem.Click += restWorkSpaceToolStripMenuItem_Click;
+            // 
+            // MainWindowTableLayoutPanel2
+            // 
+            MainWindowTableLayoutPanel2.AutoSize = true;
+            MainWindowTableLayoutPanel2.ColumnCount = 1;
+            MainWindowTableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
+            MainWindowTableLayoutPanel2.Controls.Add(MainWindowTabControl, 0, 0);
+            MainWindowTableLayoutPanel2.Dock = DockStyle.Fill;
+            MainWindowTableLayoutPanel2.Location = new Point(4, 161);
+            MainWindowTableLayoutPanel2.Margin = new Padding(4, 5, 4, 5);
+            MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
+            MainWindowTableLayoutPanel2.RowCount = 1;
+            MainWindowTableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            MainWindowTableLayoutPanel2.Size = new Size(1697, 1789);
+            MainWindowTableLayoutPanel2.TabIndex = 2;
+            // 
+            // MainWindowTabControl
+            // 
+            MainWindowTabControl.Dock = DockStyle.Fill;
+            MainWindowTabControl.Location = new Point(4, 5);
+            MainWindowTabControl.Margin = new Padding(4, 5, 4, 5);
+            MainWindowTabControl.Name = "MainWindowTabControl";
+            MainWindowTabControl.SelectedIndex = 0;
+            MainWindowTabControl.Size = new Size(1689, 1779);
+            MainWindowTabControl.TabIndex = 6;
+            MainWindowTabControl.DrawItem += MainWindowTabControl_DrawItem;
+            MainWindowTabControl.MouseUp += MainWindowTabControl_MouseUp;
+            // 
+            // MainWindowTableLayoutPanel3
+            // 
+            MainWindowTableLayoutPanel3.AutoSize = true;
+            MainWindowTableLayoutPanel3.ColumnCount = 2;
+            MainWindowTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            MainWindowTableLayoutPanel3.ColumnStyles.Add(new ColumnStyle());
+            MainWindowTableLayoutPanel3.Controls.Add(MainWindowFlowLayoutPanel1, 0, 0);
+            MainWindowTableLayoutPanel3.Controls.Add(MainWindowFlowLayoutPanel2, 1, 0);
+            MainWindowTableLayoutPanel3.Dock = DockStyle.Fill;
+            MainWindowTableLayoutPanel3.Location = new Point(3, 46);
+            MainWindowTableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
+            MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
+            MainWindowTableLayoutPanel3.RowCount = 1;
+            MainWindowTableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            MainWindowTableLayoutPanel3.Size = new Size(1699, 106);
+            MainWindowTableLayoutPanel3.TabIndex = 3;
+            // 
+            // MainWindowFlowLayoutPanel1
+            // 
+            MainWindowFlowLayoutPanel1.AutoSize = true;
+            MainWindowFlowLayoutPanel1.Controls.Add(MainWindowBackButton);
+            MainWindowFlowLayoutPanel1.Controls.Add(MainWindowForwardButton);
+            MainWindowFlowLayoutPanel1.Controls.Add(MainWindowReloadButton);
+            MainWindowFlowLayoutPanel1.Controls.Add(MainWindowURLBar);
+            MainWindowFlowLayoutPanel1.Dock = DockStyle.Fill;
+            MainWindowFlowLayoutPanel1.Location = new Point(4, 5);
+            MainWindowFlowLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
+            MainWindowFlowLayoutPanel1.Name = "MainWindowFlowLayoutPanel1";
+            MainWindowFlowLayoutPanel1.Size = new Size(1603, 96);
+            MainWindowFlowLayoutPanel1.TabIndex = 1;
+            MainWindowFlowLayoutPanel1.WrapContents = false;
+            // 
+            // MainWindowBackButton
+            // 
+            MainWindowBackButton.AutoSize = true;
+            MainWindowBackButton.FlatAppearance.BorderSize = 0;
+            MainWindowBackButton.FlatStyle = FlatStyle.Flat;
+            MainWindowBackButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MainWindowBackButton.Location = new Point(4, 5);
+            MainWindowBackButton.Margin = new Padding(4, 5, 4, 5);
+            MainWindowBackButton.Name = "MainWindowBackButton";
+            MainWindowBackButton.Size = new Size(74, 86);
+            MainWindowBackButton.TabIndex = 1;
+            MainWindowBackButton.Text = "<";
+            MainWindowBackButton.UseVisualStyleBackColor = true;
+            MainWindowBackButton.Click += MainWindowBackButton_Click;
+            // 
+            // MainWindowForwardButton
+            // 
+            MainWindowForwardButton.AutoSize = true;
+            MainWindowForwardButton.FlatAppearance.BorderSize = 0;
+            MainWindowForwardButton.FlatStyle = FlatStyle.Flat;
+            MainWindowForwardButton.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MainWindowForwardButton.Location = new Point(86, 5);
+            MainWindowForwardButton.Margin = new Padding(4, 5, 4, 5);
+            MainWindowForwardButton.Name = "MainWindowForwardButton";
+            MainWindowForwardButton.Size = new Size(74, 86);
+            MainWindowForwardButton.TabIndex = 2;
+            MainWindowForwardButton.Text = ">";
+            MainWindowForwardButton.UseVisualStyleBackColor = true;
+            MainWindowForwardButton.Click += MainWindowForwardButton_Click;
+            // 
+            // MainWindowReloadButton
+            // 
+            MainWindowReloadButton.AutoSize = true;
+            MainWindowReloadButton.BackgroundImage = Properties.Resources.refresh;
+            MainWindowReloadButton.BackgroundImageLayout = ImageLayout.Center;
+            MainWindowReloadButton.FlatAppearance.BorderSize = 0;
+            MainWindowReloadButton.FlatStyle = FlatStyle.Flat;
+            MainWindowReloadButton.Location = new Point(168, 5);
+            MainWindowReloadButton.Margin = new Padding(4, 5, 4, 5);
+            MainWindowReloadButton.Name = "MainWindowReloadButton";
+            MainWindowReloadButton.Size = new Size(80, 86);
+            MainWindowReloadButton.TabIndex = 3;
+            MainWindowReloadButton.UseVisualStyleBackColor = true;
+            MainWindowReloadButton.Click += MainWindowReloadButton_Click;
+            // 
+            // MainWindowURLBar
+            // 
+            MainWindowURLBar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            MainWindowURLBar.Font = new Font("Microsoft Sans Serif", 10.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MainWindowURLBar.Location = new Point(256, 28);
+            MainWindowURLBar.Margin = new Padding(4, 28, 4, 1);
+            MainWindowURLBar.Name = "MainWindowURLBar";
+            MainWindowURLBar.Size = new Size(1322, 40);
+            MainWindowURLBar.TabIndex = 4;
+            MainWindowURLBar.KeyPress += MainWindowURLBar_KeyPress;
+            // 
+            // MainWindowFlowLayoutPanel2
+            // 
+            MainWindowFlowLayoutPanel2.AutoSize = true;
+            MainWindowFlowLayoutPanel2.Controls.Add(MainWindowNewTabButton);
+            MainWindowFlowLayoutPanel2.Dock = DockStyle.Fill;
+            MainWindowFlowLayoutPanel2.FlowDirection = FlowDirection.RightToLeft;
+            MainWindowFlowLayoutPanel2.Location = new Point(1614, 4);
+            MainWindowFlowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
+            MainWindowFlowLayoutPanel2.Name = "MainWindowFlowLayoutPanel2";
+            MainWindowFlowLayoutPanel2.Size = new Size(82, 98);
+            MainWindowFlowLayoutPanel2.TabIndex = 2;
+            // 
+            // MainWindowNewTabButton
+            // 
+            MainWindowNewTabButton.AutoSize = true;
+            MainWindowNewTabButton.FlatAppearance.BorderSize = 0;
+            MainWindowNewTabButton.FlatStyle = FlatStyle.Flat;
+            MainWindowNewTabButton.Font = new Font("Microsoft Sans Serif", 7.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MainWindowNewTabButton.Location = new Point(4, 5);
+            MainWindowNewTabButton.Margin = new Padding(4, 5, 4, 5);
+            MainWindowNewTabButton.Name = "MainWindowNewTabButton";
+            MainWindowNewTabButton.Size = new Size(74, 86);
+            MainWindowNewTabButton.TabIndex = 5;
+            MainWindowNewTabButton.Text = "+";
+            MainWindowNewTabButton.UseVisualStyleBackColor = true;
+            MainWindowNewTabButton.Click += MainWindowNewTabButton_Click;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1574, 1529);
-            this.Controls.Add(this.MainWindowTableLayoutPanel1);
-            this.MainMenuStrip = this.MainWindowMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MainWindow";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Big Brother Browser";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
-            this.MainWindowTableLayoutPanel1.ResumeLayout(false);
-            this.MainWindowTableLayoutPanel1.PerformLayout();
-            this.MainWindowMenuStrip.ResumeLayout(false);
-            this.MainWindowMenuStrip.PerformLayout();
-            this.MainWindowTableLayoutPanel2.ResumeLayout(false);
-            this.MainWindowTableLayoutPanel3.ResumeLayout(false);
-            this.MainWindowTableLayoutPanel3.PerformLayout();
-            this.MainWindowFlowLayoutPanel1.ResumeLayout(false);
-            this.MainWindowFlowLayoutPanel1.PerformLayout();
-            this.MainWindowFlowLayoutPanel2.ResumeLayout(false);
-            this.MainWindowFlowLayoutPanel2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            ClientSize = new Size(1705, 1771);
+            Controls.Add(MainWindowTableLayoutPanel1);
+            MainMenuStrip = MainWindowMenuStrip;
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "MainWindow";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Big Brother Browser";
+            Load += MainWindow_Load;
+            MainWindowTableLayoutPanel1.ResumeLayout(false);
+            MainWindowTableLayoutPanel1.PerformLayout();
+            MainWindowMenuStrip.ResumeLayout(false);
+            MainWindowMenuStrip.PerformLayout();
+            MainWindowTableLayoutPanel2.ResumeLayout(false);
+            MainWindowTableLayoutPanel3.ResumeLayout(false);
+            MainWindowTableLayoutPanel3.PerformLayout();
+            MainWindowFlowLayoutPanel1.ResumeLayout(false);
+            MainWindowFlowLayoutPanel1.PerformLayout();
+            MainWindowFlowLayoutPanel2.ResumeLayout(false);
+            MainWindowFlowLayoutPanel2.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -392,8 +364,6 @@
         private System.Windows.Forms.TabControl MainWindowTabControl;
         private System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RunTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel MainWindowFlowLayoutPanel2;
         private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;

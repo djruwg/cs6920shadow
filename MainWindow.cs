@@ -1,11 +1,7 @@
 ﻿using BBB.Helpers;
 using BBB.UserControls;
 using BBB.Views;
-using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 
 namespace BBB
 {
@@ -39,7 +35,7 @@ namespace BBB
 
             if (image != null)
             {
-                Bitmap objBitmap = new Bitmap(image, new Size(14, 14));
+                Bitmap objBitmap = new Bitmap(image, new Size(28, 28));
                 MainWindowReloadButton.BackgroundImage = objBitmap;
             }
 
@@ -332,7 +328,7 @@ namespace BBB
 
         private void restWorkSpaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RestWorkSpace restWorkSpace = new RestWorkSpace();  
+            RestWorkSpace restWorkSpace = new RestWorkSpace();
             restWorkSpace.Show();
         }
 
@@ -349,6 +345,11 @@ namespace BBB
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Placeholder
+        }
+
+        private void BookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

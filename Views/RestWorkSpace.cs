@@ -1,19 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using BBB.DAL;
 using BBB.Models;
-using BBB.Helpers;
-using System.Diagnostics;
-using BBB.DAL;
-using BBB.ClientRESTHelpers;
 
 namespace BBB.Views
 {
@@ -68,7 +54,7 @@ namespace BBB.Views
             BBBpingDAL pingDAL = new BBBpingDAL();
 
             BBBPing ping2 = pingDAL.GetBBBPing("/ping");
- 
+
             send2TextBox.Text = ping2.clientTime.ToString();
             return2TextBox.Text = ping2.serverTime.ToString();
             testData2TextBox.Text = ping2.testData.ToString();

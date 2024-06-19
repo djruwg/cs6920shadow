@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BBB.Interface;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http.Headers;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
-using BBB.Interface;
-using Microsoft.Testing.Platform.Extensions.Messages;
-using BBB.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using System.Drawing.Imaging;
-using System.Net;
-using System.Diagnostics.PerformanceData;
 
 namespace BBB.ClientRESTHelpers
 
@@ -20,11 +9,11 @@ namespace BBB.ClientRESTHelpers
     /// <summary>
     /// Class to handle talking to webserver that provides REST service
     /// </summary>
-    internal class RESTClient<TIN,TOUT>
-        where TIN : BBBSerializableObject, new() 
+    internal class RESTClient<TIN, TOUT>
+        where TIN : BBBSerializableObject, new()
         where TOUT : BBBSerializableObject, new()
     {
-        
+
         public async Task<RESTClientReturnData<TOUT>> GetObjectAsync(string restEndpoint)
         {
             string json = "";
@@ -35,7 +24,7 @@ namespace BBB.ClientRESTHelpers
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-         
+
                 try
                 {
                     HttpResponseMessage response = await client.GetAsync(restEndpoint);
@@ -57,7 +46,7 @@ namespace BBB.ClientRESTHelpers
                     Debug.WriteLine($"Exception: {ex.Message}");
                 }
             }
-            return returnObj; 
+            return returnObj;
         }
 
 

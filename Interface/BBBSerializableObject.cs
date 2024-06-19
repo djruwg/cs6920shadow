@@ -1,13 +1,4 @@
-﻿using BBB.Models;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-
-namespace BBB.Interface
+﻿namespace BBB.Interface
 {
     /// <summary>
     /// Methods needed by the RESTClient to transmit and receive an Object over REST with JSON encoding
