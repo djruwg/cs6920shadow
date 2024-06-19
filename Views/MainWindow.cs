@@ -343,6 +343,13 @@ namespace BBB
         {
             AuthController authController = new AuthController();
 
+            using (TeacherModeLogin login =  new TeacherModeLogin())
+            {
+                DialogResult result = login.ShowDialog();
+                Debug.Write(result.ToString());
+            }
+
+
             Boolean auth;
             auth = authController.ValidateUser("admin", "test123");
             auth = authController.TestAuth();

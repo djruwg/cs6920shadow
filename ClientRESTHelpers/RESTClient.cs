@@ -18,7 +18,7 @@ namespace BBB.ClientRESTHelpers
         public async Task<RESTClientReturnData<TOUT>> GetObjectAsync(string restEndpoint)
         {
             string fullendpoint = RestServiceMasterEndpointRoot.Instance.EndpointRoot + restEndpoint;
-            Debug.Write($" fullendpoint = {fullendpoint}");
+            Debug.WriteLine($" fullendpoint = {fullendpoint}");
             string json = "";
             RESTClientReturnData<TOUT> returnObj = new RESTClientReturnData<TOUT>();
             TOUT innerObj = new TOUT();

@@ -41,7 +41,7 @@ namespace BBB.ClientRESTHelpers
                         _endpointRoot = "http://cloud.classproj.us";
                         break;
                     case "TEST":
-                        _endpointRoot = "http://davide.classproj.us:8484/";
+                        _endpointRoot = "http://davide.classproj.us:8484";
                         break;
                     case "TESTBAD":
                         _endpointRoot = "http://davide.classproj.us:8484/bad";
