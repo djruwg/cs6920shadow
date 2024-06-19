@@ -35,9 +35,13 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            Image image = MainWindowReloadButton.BackgroundImage;
-            Bitmap objBitmap = new Bitmap(image, new Size(14, 14));
-            MainWindowReloadButton.BackgroundImage = objBitmap;
+            Image? image = MainWindowReloadButton.BackgroundImage;
+
+            if (image != null)
+            {
+                Bitmap objBitmap = new Bitmap(image, new Size(14, 14));
+                MainWindowReloadButton.BackgroundImage = objBitmap;
+            }
 
             this.AdjustTabSizes();
             this.OpenNewTab();
@@ -60,7 +64,7 @@ namespace BBB
         /// <param name="e"></param>
         private void RunPrintMenuToolStripItem_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -82,7 +86,7 @@ namespace BBB
         /// <param name="e"></param>
         private void RunDeveloperToolsMenuItem_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -99,7 +103,7 @@ namespace BBB
 
         private void RunTaskManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -118,9 +122,9 @@ namespace BBB
         /// Returns the rendering user control of the currently selected tab
         /// </summary>
         /// <returns></returns>
-        private RenderingUserControl GetRenderingUserControl()
+        private RenderingUserControl? GetRenderingUserControl()
         {
-            RenderingUserControl renderingControl = null;
+            RenderingUserControl? renderingControl = null;
 
             if (MainWindowTabControl.SelectedIndex > -1)
             {
@@ -144,9 +148,9 @@ namespace BBB
         {
             Rectangle rect = MainWindowTabControl.GetTabRect(e.Index);
             e.Graphics.FillRectangle(new SolidBrush(SystemColors.Control), rect);
-            e.Graphics.DrawString("x", e.Font, Brushes.Black, e.Bounds.Right - TAB_TRAILING_SPACE, e.Bounds.Top + 4);
+            e.Graphics.DrawString("x", e.Font ?? SystemFonts.DefaultFont, Brushes.Black, e.Bounds.Right - TAB_TRAILING_SPACE, e.Bounds.Top + 4);
             e.Graphics.DrawString(this.MainWindowTabControl.TabPages[e.Index].Text,
-                e.Font, Brushes.Black, e.Bounds.Left + TAB_LEADING_SPACE, e.Bounds.Top + 4);
+                e.Font ?? SystemFonts.DefaultFont, Brushes.Black, e.Bounds.Left + TAB_LEADING_SPACE, e.Bounds.Top + 4);
             e.DrawFocusRectangle();
         }
 
@@ -227,7 +231,7 @@ namespace BBB
         /// </summary>
         public void RenderingUserControlEvent(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -237,6 +241,7 @@ namespace BBB
                 MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = renderingControl.GetPageTitle().Truncate(16);
                 this.AdjustTabSizes();
             }
+
             MainWindowNewTabButton.Enabled = true;
         }
 
@@ -247,7 +252,7 @@ namespace BBB
         /// <param name="url">The URL to navigate to or the text to search</param>
         private void GoToURL(string url)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -287,7 +292,7 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindowBackButton_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -302,7 +307,7 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindowForwardButton_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
@@ -317,7 +322,7 @@ namespace BBB
         /// <param name="e"></param>
         private void MainWindowReloadButton_Click(object sender, EventArgs e)
         {
-            RenderingUserControl renderingControl = GetRenderingUserControl();
+            RenderingUserControl? renderingControl = GetRenderingUserControl();
 
             if (renderingControl != null)
             {
