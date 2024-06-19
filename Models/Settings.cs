@@ -16,6 +16,10 @@ namespace BBB.Models
         [JsonInclude]
         public String starturl { get; private set; }
 
+        public Settings() {
+            starturl = "http://www.google.com/";
+        }
+
         /// <summary>
         /// Convert current Object into a JSON representation.
         /// </summary>

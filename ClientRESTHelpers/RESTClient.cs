@@ -46,6 +46,7 @@ namespace BBB.ClientRESTHelpers
                         innerObj.SetAsJSON(json);
                         returnObj.obj = innerObj;
                         returnObj.success = true;
+                        returnObj.containsData = true;
                     }
                     else
                     {
