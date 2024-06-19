@@ -45,18 +45,7 @@
             private BearerToken()
             {
                 _token = "";
-                // Constructor is private to prevent direct instantiation.
             }
         }
     }
-
-
-
-    /*
-    internal class BearerToken
-    {
-        public static string token { get; set; }
-
-    }
-    */
 }

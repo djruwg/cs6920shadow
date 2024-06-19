@@ -18,6 +18,8 @@ namespace BBB.ClientRESTHelpers
 
         public async Task<RESTClientReturnData<TOUT>> GetObjectAsync(string restEndpoint)
         {
+            string fullendpoint = RestServiceMasterEndpointRoot.Instance.EndpointRoot + restEndpoint;
+            Debug.Write($" fullendpoint = {fullendpoint}");
             string json = "";
             RESTClientReturnData<TOUT> returnObj = new RESTClientReturnData<TOUT>();
             TOUT innerObj = new TOUT();
@@ -32,7 +34,7 @@ namespace BBB.ClientRESTHelpers
 
                 try
                 {
-                    HttpResponseMessage response = await client.GetAsync(restEndpoint);
+                    HttpResponseMessage response = await client.GetAsync(fullendpoint);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -58,6 +60,7 @@ namespace BBB.ClientRESTHelpers
 
         public async Task<RESTClientReturnData<TOUT>> PutObjectAsync(string restEndpoint, TIN obj)
         {
+            string fullendpoint = RestServiceMasterEndpointRoot.Instance.EndpointRoot + restEndpoint;
             string json = "{}";
             RESTClientReturnData<TOUT> returnObj = new RESTClientReturnData<TOUT>();
             TOUT innerObj = new TOUT();
@@ -73,7 +76,7 @@ namespace BBB.ClientRESTHelpers
                 try
                 {
                     StringContent content = new StringContent(obj.ToJSON(), Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await client.PutAsync(restEndpoint, content);
+                    HttpResponseMessage response = await client.PutAsync(fullendpoint, content);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -99,6 +102,7 @@ namespace BBB.ClientRESTHelpers
 
         public async Task<RESTClientReturnData<TOUT>> PostObjectAsync(string restEndpoint, TIN obj)
         {
+            string fullendpoint = RestServiceMasterEndpointRoot.Instance.EndpointRoot + restEndpoint;
             string json = "{}";
             RESTClientReturnData<TOUT> returnObj = new RESTClientReturnData<TOUT>();
             TOUT innerObj = new TOUT();
@@ -115,7 +119,7 @@ namespace BBB.ClientRESTHelpers
                 try
                 {
                     StringContent content = new StringContent(obj.ToJSON(), Encoding.UTF8, "application/json");
-                    HttpResponseMessage response = await client.PostAsync(restEndpoint, content);
+                    HttpResponseMessage response = await client.PostAsync(fullendpoint, content);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -141,6 +145,7 @@ namespace BBB.ClientRESTHelpers
 
         public async Task<RESTClientReturnData<TOUT>> DeleteObjectAsync(string restEndpoint)
         {
+            string fullendpoint = RestServiceMasterEndpointRoot.Instance.EndpointRoot + restEndpoint;
             string json = "{}";
             RESTClientReturnData<TOUT> returnObj = new RESTClientReturnData<TOUT>();
             TOUT innerObj = new TOUT();
@@ -155,7 +160,7 @@ namespace BBB.ClientRESTHelpers
 
                 try
                 {
-                    HttpResponseMessage response = await client.DeleteAsync(restEndpoint);
+                    HttpResponseMessage response = await client.DeleteAsync(fullendpoint);
 
                     if (response.IsSuccessStatusCode)
                     {

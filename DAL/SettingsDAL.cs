@@ -13,7 +13,7 @@ namespace BBB.DAL
     public class SettingsDAL
     {
         static RESTClient<BlankRestMessage, Settings> _restClient;
-        static string _endpoint = "http://davide.classproj.us:8484/settings";
+        static string _endpoint = "/settings";
 
         public SettingsDAL()
         {
