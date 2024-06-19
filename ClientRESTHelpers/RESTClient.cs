@@ -1,7 +1,9 @@
 ﻿using BBB.Interface;
+using BBB.ClientRESTHelpers;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Text;
+using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
 
 namespace BBB.ClientRESTHelpers
 
@@ -22,7 +24,10 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
+                if (BearerToken.Instance.Status)
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.Instance.Token);
+                }
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
@@ -59,7 +64,10 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
+                if (BearerToken.Instance.Status)
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.Instance.Token);
+                }
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
@@ -97,7 +105,10 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
+                if (BearerToken.Instance.Status)
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.Instance.Token);
+                }
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
 
@@ -136,7 +147,10 @@ namespace BBB.ClientRESTHelpers
 
             using (var client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.token);
+                if (BearerToken.Instance.Status)
+                {
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken.Instance.Token);
+                }
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try

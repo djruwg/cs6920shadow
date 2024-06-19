@@ -1,4 +1,5 @@
-﻿using BBB.DAL;
+﻿using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
+using BBB.DAL;
 using BBB.Models;
 using System.Diagnostics;
 
@@ -85,6 +86,10 @@ namespace BBB.Views
             testData2TextBox.Text = ping2.testData.ToString();
 
             BBBPing ping4 = pingDAL.DeleteBBBPing("/ping");
+
+
+            BearerToken.Instance.Token = "testatoken";
+
 
             SettingsDAL sdal = new SettingsDAL();
             Settings settings = sdal.GetSettings();
