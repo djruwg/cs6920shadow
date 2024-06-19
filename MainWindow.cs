@@ -1,4 +1,5 @@
-﻿using BBB.Helpers;
+﻿using BBB.Controllers;
+using BBB.Helpers;
 using BBB.UserControls;
 using BBB.Views;
 using System.Text.RegularExpressions;
@@ -7,6 +8,8 @@ namespace BBB
 {
     public partial class MainWindow : Form, RenderingUserControlInterface
     {
+        private SettingsController _settingsController;
+
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 32;
 
@@ -22,6 +25,8 @@ namespace BBB
         public MainWindow()
         {
             InitializeComponent();
+
+            this._settingsController = new SettingsController();
         }
 
         /// <summary>
@@ -219,7 +224,7 @@ namespace BBB
             MainWindowTabControl.Controls.Add(tabPage);
             this.AdjustTabSizes();
             MainWindowTabControl.SelectTab(tabPage);
-            browser.GoToURL("https://www.google.com");
+            browser.GoToURL(this._settingsController.startupURL);
         }
 
         /// <summary>

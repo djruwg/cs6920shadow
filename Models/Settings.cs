@@ -11,7 +11,7 @@ namespace BBB.Models
         public String starturl { get; private set; }
 
         public Settings() {
-            starturl = "http://www.google.com/";
+            starturl = "https://www.google.com/";
         }
 
         /// <summary>
