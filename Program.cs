@@ -12,7 +12,7 @@ namespace BBB
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            RestServiceMasterEndpointRoot.Instance.Mode = "TEST";
+            RestServiceMasterEndpointRoot.Instance.Mode = "ROBTEST";
             ApplicationConfiguration.Initialize();
             Application.Run(new MainWindow());
         }
