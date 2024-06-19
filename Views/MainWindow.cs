@@ -1,7 +1,9 @@
-﻿using BBB.Controllers;
+﻿using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
+using BBB.Controllers;
 using BBB.Helpers;
 using BBB.UserControls;
 using BBB.Views;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace BBB
@@ -339,6 +341,13 @@ namespace BBB
 
         private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AuthController authController = new AuthController();
+            authController.ValidateUser("bad", "bad");
+            Debug.Write($"Bearer Token set to :{BearerToken.Instance.Token}:");
+
+            authController.ValidateUser("good", "good");
+            Debug.Write($"Bearer Token set to :{BearerToken.Instance.Token}:");
+
             // Placeholder
         }
 
