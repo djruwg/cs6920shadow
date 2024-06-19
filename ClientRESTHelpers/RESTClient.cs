@@ -3,7 +3,6 @@ using BBB.ClientRESTHelpers;
 using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Text;
-using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
 
 namespace BBB.ClientRESTHelpers
 

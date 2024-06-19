@@ -1,4 +1,4 @@
-﻿using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
+﻿using BBB.ClientRESTHelpers;
 using BBB.Controllers;
 using BBB.Helpers;
 using BBB.UserControls;
@@ -342,11 +342,15 @@ namespace BBB
         private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AuthController authController = new AuthController();
-            authController.ValidateUser("bad", "bad");
-            Debug.Write($"Bearer Token set to :{BearerToken.Instance.Token}:");
 
-            authController.ValidateUser("good", "good");
-            Debug.Write($"Bearer Token set to :{BearerToken.Instance.Token}:");
+            Boolean auth;
+            auth = authController.ValidateUser("admin", "test123");
+            auth = authController.TestAuth();
+
+            RunUnlockToolStripMenuItem.Text += "!";
+            RunManageBlockListToolStripMenuItem.Enabled = !RunManageBlockListToolStripMenuItem.Enabled;
+            RunManageBookmarksToolStripMenuItem.Enabled = !RunManageBookmarksToolStripMenuItem.Enabled;
+
 
             // Placeholder
         }
@@ -354,11 +358,13 @@ namespace BBB
         private void manageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Placeholder
+            MessageBox.Show("This is slated for implementation in iteration 2");
         }
 
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Placeholder
+            MessageBox.Show("This is slated for implementation in iteration 3");
         }
 
         private void BookmarksToolStripMenuItem_Click(object sender, EventArgs e)

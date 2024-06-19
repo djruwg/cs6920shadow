@@ -1,4 +1,4 @@
-﻿using BBB.ClientRESTHelpers.BBB.ClientRESTHelpers;
+﻿using BBB.ClientRESTHelpers;
 using BBB.DAL;
 using BBB.Models;
 using System.Diagnostics;
@@ -94,6 +94,9 @@ namespace BBB.Views
             SettingsDAL sdal = new SettingsDAL();
             Settings settings = sdal.GetSettings();
             Debug.WriteLine($"Got {settings.starturl} as startup page");
+
+
+
 
 
         }
