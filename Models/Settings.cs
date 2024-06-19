@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BBB.Models
 {
-    internal class Settings : BBBSerializableObject
+    public class Settings : BBBSerializableObject
     {
         [JsonInclude]
         public String starturl { get; private set; }

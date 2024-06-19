@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace BBB.DAL
 {
-    internal class SettingsDAL
+    public class SettingsDAL
     {
         static RESTClient<BBBPing, Settings> _restClient;
         static string _endpoint = "http://davide.classproj.us:8484/settings";
 
-        SettingsDAL()
+        public SettingsDAL()
         {
             _restClient = new RESTClient<BBBPing, Settings>();
         }

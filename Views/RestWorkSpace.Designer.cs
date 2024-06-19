@@ -28,320 +28,335 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.sendLabel = new System.Windows.Forms.Label();
-            this.sendTextBox = new System.Windows.Forms.TextBox();
-            this.returnLabel = new System.Windows.Forms.Label();
-            this.returnTextBox = new System.Windows.Forms.TextBox();
-            this.jsonLabel = new System.Windows.Forms.Label();
-            this.jsonTextBox = new System.Windows.Forms.TextBox();
-            this.testDataTextBox = new System.Windows.Forms.TextBox();
-            this.testDataLabel = new System.Windows.Forms.Label();
-            this.send2Label = new System.Windows.Forms.Label();
-            this.return2Label = new System.Windows.Forms.Label();
-            this.send2TextBox = new System.Windows.Forms.TextBox();
-            this.return2TextBox = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.resetButton = new System.Windows.Forms.Button();
-            this.updateButton = new System.Windows.Forms.Button();
-            this.getButton = new System.Windows.Forms.Button();
-            this.putButton = new System.Windows.Forms.Button();
-            this.postButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.testData2TextBox = new System.Windows.Forms.TextBox();
-            this.data2Label = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.SuspendLayout();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            sendLabel = new Label();
+            sendTextBox = new TextBox();
+            returnLabel = new Label();
+            returnTextBox = new TextBox();
+            jsonLabel = new Label();
+            jsonTextBox = new TextBox();
+            testDataTextBox = new TextBox();
+            testDataLabel = new Label();
+            send2Label = new Label();
+            return2Label = new Label();
+            send2TextBox = new TextBox();
+            return2TextBox = new TextBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            resetButton = new Button();
+            updateButton = new Button();
+            getButton = new Button();
+            putButton = new Button();
+            postButton = new Button();
+            button1 = new Button();
+            testData2TextBox = new TextBox();
+            data2Label = new Label();
+            tableLayoutPanel1.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.sendLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.sendTextBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.returnLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.returnTextBox, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.jsonLabel, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.jsonTextBox, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.testDataTextBox, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.testDataLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.send2Label, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.return2Label, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.send2TextBox, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.return2TextBox, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 21);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.testData2TextBox, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.data2Label, 0, 13);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 22;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(2498, 1826);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 542F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(sendLabel, 0, 1);
+            tableLayoutPanel1.Controls.Add(sendTextBox, 1, 1);
+            tableLayoutPanel1.Controls.Add(returnLabel, 0, 3);
+            tableLayoutPanel1.Controls.Add(returnTextBox, 1, 3);
+            tableLayoutPanel1.Controls.Add(jsonLabel, 0, 7);
+            tableLayoutPanel1.Controls.Add(jsonTextBox, 1, 7);
+            tableLayoutPanel1.Controls.Add(testDataTextBox, 1, 5);
+            tableLayoutPanel1.Controls.Add(testDataLabel, 0, 5);
+            tableLayoutPanel1.Controls.Add(send2Label, 0, 9);
+            tableLayoutPanel1.Controls.Add(return2Label, 0, 11);
+            tableLayoutPanel1.Controls.Add(send2TextBox, 1, 9);
+            tableLayoutPanel1.Controls.Add(return2TextBox, 1, 11);
+            tableLayoutPanel1.Controls.Add(flowLayoutPanel1, 1, 21);
+            tableLayoutPanel1.Controls.Add(button1, 0, 0);
+            tableLayoutPanel1.Controls.Add(testData2TextBox, 1, 13);
+            tableLayoutPanel1.Controls.Add(data2Label, 0, 13);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 22;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 82F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.Size = new Size(2706, 2119);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // sendLabel
             // 
-            this.sendLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.sendLabel.AutoSize = true;
-            this.sendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendLabel.Location = new System.Drawing.Point(3, 75);
-            this.sendLabel.Name = "sendLabel";
-            this.sendLabel.Size = new System.Drawing.Size(179, 42);
-            this.sendLabel.TabIndex = 0;
-            this.sendLabel.Text = "send time";
+            sendLabel.Anchor = AnchorStyles.Left;
+            sendLabel.AutoSize = true;
+            sendLabel.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            sendLabel.Location = new Point(3, 102);
+            sendLabel.Name = "sendLabel";
+            sendLabel.Size = new Size(179, 42);
+            sendLabel.TabIndex = 0;
+            sendLabel.Text = "send time";
             // 
             // sendTextBox
             // 
-            this.sendTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.sendTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendTextBox.Location = new System.Drawing.Point(503, 71);
-            this.sendTextBox.Name = "sendTextBox";
-            this.sendTextBox.Size = new System.Drawing.Size(1992, 49);
-            this.sendTextBox.TabIndex = 1;
+            sendTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            sendTextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            sendTextBox.Location = new Point(545, 98);
+            sendTextBox.Margin = new Padding(3, 4, 3, 4);
+            sendTextBox.Name = "sendTextBox";
+            sendTextBox.Size = new Size(2158, 49);
+            sendTextBox.TabIndex = 1;
             // 
             // returnLabel
             // 
-            this.returnLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.returnLabel.AutoSize = true;
-            this.returnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnLabel.Location = new System.Drawing.Point(3, 203);
-            this.returnLabel.Name = "returnLabel";
-            this.returnLabel.Size = new System.Drawing.Size(194, 42);
-            this.returnLabel.TabIndex = 2;
-            this.returnLabel.Text = "return time";
+            returnLabel.Anchor = AnchorStyles.Left;
+            returnLabel.AutoSize = true;
+            returnLabel.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            returnLabel.Location = new Point(3, 266);
+            returnLabel.Name = "returnLabel";
+            returnLabel.Size = new Size(194, 42);
+            returnLabel.TabIndex = 2;
+            returnLabel.Text = "return time";
             // 
             // returnTextBox
             // 
-            this.returnTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.returnTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnTextBox.Location = new System.Drawing.Point(503, 199);
-            this.returnTextBox.Name = "returnTextBox";
-            this.returnTextBox.Size = new System.Drawing.Size(1992, 49);
-            this.returnTextBox.TabIndex = 3;
+            returnTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            returnTextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            returnTextBox.Location = new Point(545, 262);
+            returnTextBox.Margin = new Padding(3, 4, 3, 4);
+            returnTextBox.Name = "returnTextBox";
+            returnTextBox.Size = new Size(2158, 49);
+            returnTextBox.TabIndex = 3;
             // 
             // jsonLabel
             // 
-            this.jsonLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.jsonLabel.AutoSize = true;
-            this.jsonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jsonLabel.Location = new System.Drawing.Point(3, 459);
-            this.jsonLabel.Name = "jsonLabel";
-            this.jsonLabel.Size = new System.Drawing.Size(278, 42);
-            this.jsonLabel.TabIndex = 4;
-            this.jsonLabel.Text = "BBBPing JSON";
+            jsonLabel.Anchor = AnchorStyles.Left;
+            jsonLabel.AutoSize = true;
+            jsonLabel.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            jsonLabel.Location = new Point(3, 594);
+            jsonLabel.Name = "jsonLabel";
+            jsonLabel.Size = new Size(278, 42);
+            jsonLabel.TabIndex = 4;
+            jsonLabel.Text = "BBBPing JSON";
             // 
             // jsonTextBox
             // 
-            this.jsonTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.jsonTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jsonTextBox.Location = new System.Drawing.Point(503, 455);
-            this.jsonTextBox.Name = "jsonTextBox";
-            this.jsonTextBox.Size = new System.Drawing.Size(1992, 49);
-            this.jsonTextBox.TabIndex = 5;
+            jsonTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            jsonTextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            jsonTextBox.Location = new Point(545, 590);
+            jsonTextBox.Margin = new Padding(3, 4, 3, 4);
+            jsonTextBox.Name = "jsonTextBox";
+            jsonTextBox.Size = new Size(2158, 49);
+            jsonTextBox.TabIndex = 5;
             // 
             // testDataTextBox
             // 
-            this.testDataTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.testDataTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testDataTextBox.Location = new System.Drawing.Point(503, 327);
-            this.testDataTextBox.Name = "testDataTextBox";
-            this.testDataTextBox.Size = new System.Drawing.Size(1992, 49);
-            this.testDataTextBox.TabIndex = 6;
+            testDataTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            testDataTextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            testDataTextBox.Location = new Point(545, 426);
+            testDataTextBox.Margin = new Padding(3, 4, 3, 4);
+            testDataTextBox.Name = "testDataTextBox";
+            testDataTextBox.Size = new Size(2158, 49);
+            testDataTextBox.TabIndex = 6;
             // 
             // testDataLabel
             // 
-            this.testDataLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.testDataLabel.AutoSize = true;
-            this.testDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testDataLabel.Location = new System.Drawing.Point(3, 331);
-            this.testDataLabel.Name = "testDataLabel";
-            this.testDataLabel.Size = new System.Drawing.Size(161, 42);
-            this.testDataLabel.TabIndex = 7;
-            this.testDataLabel.Text = "test data";
+            testDataLabel.Anchor = AnchorStyles.Left;
+            testDataLabel.AutoSize = true;
+            testDataLabel.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            testDataLabel.Location = new Point(3, 430);
+            testDataLabel.Name = "testDataLabel";
+            testDataLabel.Size = new Size(161, 42);
+            testDataLabel.TabIndex = 7;
+            testDataLabel.Text = "test data";
             // 
             // send2Label
             // 
-            this.send2Label.AutoSize = true;
-            this.send2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.send2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.send2Label.Location = new System.Drawing.Point(3, 576);
-            this.send2Label.Name = "send2Label";
-            this.send2Label.Size = new System.Drawing.Size(494, 64);
-            this.send2Label.TabIndex = 8;
-            this.send2Label.Text = "send time";
+            send2Label.AutoSize = true;
+            send2Label.Dock = DockStyle.Fill;
+            send2Label.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            send2Label.Location = new Point(3, 738);
+            send2Label.Name = "send2Label";
+            send2Label.Size = new Size(536, 82);
+            send2Label.TabIndex = 8;
+            send2Label.Text = "send time";
             // 
             // return2Label
             // 
-            this.return2Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.return2Label.AutoSize = true;
-            this.return2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.return2Label.Location = new System.Drawing.Point(3, 715);
-            this.return2Label.Name = "return2Label";
-            this.return2Label.Size = new System.Drawing.Size(494, 42);
-            this.return2Label.TabIndex = 9;
-            this.return2Label.Text = "return time";
+            return2Label.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            return2Label.AutoSize = true;
+            return2Label.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            return2Label.Location = new Point(3, 922);
+            return2Label.Name = "return2Label";
+            return2Label.Size = new Size(536, 42);
+            return2Label.TabIndex = 9;
+            return2Label.Text = "return time";
             // 
             // send2TextBox
             // 
-            this.send2TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.send2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.send2TextBox.Location = new System.Drawing.Point(503, 579);
-            this.send2TextBox.Name = "send2TextBox";
-            this.send2TextBox.Size = new System.Drawing.Size(1992, 49);
-            this.send2TextBox.TabIndex = 10;
+            send2TextBox.Dock = DockStyle.Fill;
+            send2TextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            send2TextBox.Location = new Point(545, 742);
+            send2TextBox.Margin = new Padding(3, 4, 3, 4);
+            send2TextBox.Name = "send2TextBox";
+            send2TextBox.Size = new Size(2158, 49);
+            send2TextBox.TabIndex = 10;
             // 
             // return2TextBox
             // 
-            this.return2TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.return2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.return2TextBox.Location = new System.Drawing.Point(503, 707);
-            this.return2TextBox.Name = "return2TextBox";
-            this.return2TextBox.Size = new System.Drawing.Size(1992, 49);
-            this.return2TextBox.TabIndex = 11;
+            return2TextBox.Dock = DockStyle.Fill;
+            return2TextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            return2TextBox.Location = new Point(545, 906);
+            return2TextBox.Margin = new Padding(3, 4, 3, 4);
+            return2TextBox.Name = "return2TextBox";
+            return2TextBox.Size = new Size(2158, 49);
+            return2TextBox.TabIndex = 11;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.resetButton);
-            this.flowLayoutPanel1.Controls.Add(this.updateButton);
-            this.flowLayoutPanel1.Controls.Add(this.getButton);
-            this.flowLayoutPanel1.Controls.Add(this.putButton);
-            this.flowLayoutPanel1.Controls.Add(this.postButton);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(503, 1347);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1992, 476);
-            this.flowLayoutPanel1.TabIndex = 12;
+            flowLayoutPanel1.Controls.Add(resetButton);
+            flowLayoutPanel1.Controls.Add(updateButton);
+            flowLayoutPanel1.Controls.Add(getButton);
+            flowLayoutPanel1.Controls.Add(putButton);
+            flowLayoutPanel1.Controls.Add(postButton);
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(545, 1726);
+            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(2158, 609);
+            flowLayoutPanel1.TabIndex = 12;
             // 
             // resetButton
             // 
-            this.resetButton.AutoSize = true;
-            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetButton.Location = new System.Drawing.Point(3, 3);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(111, 52);
-            this.resetButton.TabIndex = 0;
-            this.resetButton.Text = "reset";
-            this.resetButton.UseVisualStyleBackColor = true;
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            resetButton.AutoSize = true;
+            resetButton.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            resetButton.Location = new Point(3, 4);
+            resetButton.Margin = new Padding(3, 4, 3, 4);
+            resetButton.Name = "resetButton";
+            resetButton.Size = new Size(120, 67);
+            resetButton.TabIndex = 0;
+            resetButton.Text = "reset";
+            resetButton.UseVisualStyleBackColor = true;
+            resetButton.Click += resetButton_Click;
             // 
             // updateButton
             // 
-            this.updateButton.AutoSize = true;
-            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(120, 3);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(153, 52);
-            this.updateButton.TabIndex = 1;
-            this.updateButton.Text = "update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            updateButton.AutoSize = true;
+            updateButton.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            updateButton.Location = new Point(129, 4);
+            updateButton.Margin = new Padding(3, 4, 3, 4);
+            updateButton.Name = "updateButton";
+            updateButton.Size = new Size(166, 67);
+            updateButton.TabIndex = 1;
+            updateButton.Text = "update";
+            updateButton.UseVisualStyleBackColor = true;
+            updateButton.Click += updateButton_Click;
             // 
             // getButton
             // 
-            this.getButton.AutoSize = true;
-            this.getButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getButton.Location = new System.Drawing.Point(279, 3);
-            this.getButton.Name = "getButton";
-            this.getButton.Size = new System.Drawing.Size(105, 52);
-            this.getButton.TabIndex = 2;
-            this.getButton.Text = "get";
-            this.getButton.UseVisualStyleBackColor = true;
-            this.getButton.Click += new System.EventHandler(this.getButton_Click);
+            getButton.AutoSize = true;
+            getButton.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            getButton.Location = new Point(301, 4);
+            getButton.Margin = new Padding(3, 4, 3, 4);
+            getButton.Name = "getButton";
+            getButton.Size = new Size(114, 67);
+            getButton.TabIndex = 2;
+            getButton.Text = "get";
+            getButton.UseVisualStyleBackColor = true;
+            getButton.Click += getButton_Click;
             // 
             // putButton
             // 
-            this.putButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.putButton.AutoSize = true;
-            this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.putButton.Location = new System.Drawing.Point(390, 3);
-            this.putButton.Name = "putButton";
-            this.putButton.Size = new System.Drawing.Size(80, 52);
-            this.putButton.TabIndex = 1;
-            this.putButton.Text = "put";
-            this.putButton.UseVisualStyleBackColor = true;
-            this.putButton.Click += new System.EventHandler(this.putButton_Click);
+            putButton.Anchor = AnchorStyles.Left;
+            putButton.AutoSize = true;
+            putButton.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            putButton.Location = new Point(421, 4);
+            putButton.Margin = new Padding(3, 4, 3, 4);
+            putButton.Name = "putButton";
+            putButton.Size = new Size(87, 67);
+            putButton.TabIndex = 1;
+            putButton.Text = "put";
+            putButton.UseVisualStyleBackColor = true;
+            putButton.Click += putButton_Click;
             // 
             // postButton
             // 
-            this.postButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.postButton.AutoSize = true;
-            this.postButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.postButton.Location = new System.Drawing.Point(476, 3);
-            this.postButton.Name = "postButton";
-            this.postButton.Size = new System.Drawing.Size(99, 52);
-            this.postButton.TabIndex = 3;
-            this.postButton.Text = "post";
-            this.postButton.UseVisualStyleBackColor = true;
-            this.postButton.Click += new System.EventHandler(this.postButton_Click);
+            postButton.Anchor = AnchorStyles.Left;
+            postButton.AutoSize = true;
+            postButton.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            postButton.Location = new Point(514, 4);
+            postButton.Margin = new Padding(3, 4, 3, 4);
+            postButton.Name = "postButton";
+            postButton.Size = new Size(107, 67);
+            postButton.TabIndex = 3;
+            postButton.Text = "post";
+            postButton.UseVisualStyleBackColor = true;
+            postButton.Click += postButton_Click;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(3, 4);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(81, 29);
+            button1.TabIndex = 13;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // testData2TextBox
             // 
-            this.testData2TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.testData2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testData2TextBox.Location = new System.Drawing.Point(503, 839);
-            this.testData2TextBox.Name = "testData2TextBox";
-            this.testData2TextBox.Size = new System.Drawing.Size(1992, 49);
-            this.testData2TextBox.TabIndex = 15;
+            testData2TextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            testData2TextBox.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            testData2TextBox.Location = new Point(545, 1082);
+            testData2TextBox.Margin = new Padding(3, 4, 3, 4);
+            testData2TextBox.Name = "testData2TextBox";
+            testData2TextBox.Size = new Size(2158, 49);
+            testData2TextBox.TabIndex = 15;
             // 
             // data2Label
             // 
-            this.data2Label.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.data2Label.AutoSize = true;
-            this.data2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.data2Label.Location = new System.Drawing.Point(3, 843);
-            this.data2Label.Name = "data2Label";
-            this.data2Label.Size = new System.Drawing.Size(161, 42);
-            this.data2Label.TabIndex = 16;
-            this.data2Label.Text = "test data";
+            data2Label.Anchor = AnchorStyles.Left;
+            data2Label.AutoSize = true;
+            data2Label.Font = new Font("Microsoft Sans Serif", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            data2Label.Location = new Point(3, 1086);
+            data2Label.Name = "data2Label";
+            data2Label.Size = new Size(161, 42);
+            data2Label.TabIndex = 16;
+            data2Label.Text = "test data";
             // 
             // RestWorkSpace
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2498, 1826);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "RestWorkSpace";
-            this.Text = "RestWorkSpace";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(2706, 2119);
+            Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "RestWorkSpace";
+            Text = "RestWorkSpace";
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
