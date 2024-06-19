@@ -42,13 +42,13 @@ with app.app_context():
 def get_settings():
     settings = Settings.query.first()
     if settings:
-        return jsonify(start_url=settings.start_url), 200
+        return jsonify({'start_url': settings.start_url}), 200
     else:
-        return jsonify(start_url=None), 404
+        return jsonify({'start_url': None}), 404
 
 
-# Route for validation and Bearer Token retrieval
-@app.route('/validation', methods=['POST'])
+# Route for validate and Bearer Token retrieval
+@app.route('/validate', methods=['POST'])
 def get_validation_bearer_token():
     data = request.get_json()
 
