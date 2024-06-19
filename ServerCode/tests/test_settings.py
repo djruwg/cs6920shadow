@@ -5,7 +5,7 @@ from main import app, db, Settings
 @pytest.fixture
 def client():
     app.config['TESTING'] = True
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://rk00057:xgfUVvOewU@venerable.pdx1-mysql-a7-5b.dreamhost.com:3306/rk00057'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     client = app.test_client()
 
     with app.app_context():
