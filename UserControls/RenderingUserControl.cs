@@ -169,10 +169,10 @@ namespace BBB.UserControls
             await RenderingWebView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
-        public void OpenPrintDialog()
+        public async Task OpenPrintDialog()
         {
-            RenderingWebView.CoreWebView2.ShowPrintUI();
-            // await RenderingWebView.CoreWebView2.ExecuteScriptAsync("window.print();");
+            // RenderingWebView.CoreWebView2.ShowPrintUI();
+            await RenderingWebView.CoreWebView2.ExecuteScriptAsync("window.print();");
         }
 
         public void OpenDeveloperTools()
