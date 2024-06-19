@@ -85,6 +85,11 @@ namespace BBB.Views
 
             BBBPing ping4 = pingDAL.DeleteBBBPing("/ping");
 
+            SettingsDAL sdal = new SettingsDAL();
+            Settings settings = sdal.GetSettings();
+            Debug.WriteLine($"Got {settings.starturl} as startup page");
+
+
         }
     }
 

@@ -5,10 +5,14 @@ using System.Text.Json.Serialization;
 
 namespace BBB.Models
 {
-    internal class Settings : BBBSerializableObject
+    public class Settings : BBBSerializableObject
     {
         [JsonInclude]
         public String starturl { get; private set; }
+
+        public Settings() {
+            starturl = "http://www.google.com/";
+        }
 
         /// <summary>
         /// Convert current Object into a JSON representation.
