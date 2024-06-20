@@ -21,6 +21,8 @@ namespace BBB
         private static readonly Regex urlRegex = new Regex(@"^(https?|ftp)?(:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,6}([\/\w .-]*)*\/?$",
                 RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
+        private Boolean teacherLocked = true;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -29,6 +31,11 @@ namespace BBB
             InitializeComponent();
 
             this._settingsController = new SettingsController();
+
+            RunManageBlockListToolStripMenuItem.Enabled = false;
+            RunManageBookmarksToolStripMenuItem.Enabled = false;
+            teacherLocked = true;
+
         }
 
         /// <summary>
@@ -341,25 +348,40 @@ namespace BBB
 
         private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AuthController authController = new AuthController();
+            DialogResult result;
 
-            using (TeacherModeLogin login =  new TeacherModeLogin())
+            if (this.teacherLocked)
             {
-                DialogResult result = login.ShowDialog();
-                Debug.Write(result.ToString());
+                using (TeacherModeLogin login = new TeacherModeLogin())
+                {
+                    result = login.ShowDialog();
+                }
+                if (result == DialogResult.OK)
+                {
+                    RunManageBlockListToolStripMenuItem.Enabled = true;
+                    RunManageBookmarksToolStripMenuItem.Enabled = true;
+                    this.teacherLocked = false;
+                    RunUnlockToolStripMenuItem.Text = "Lock";
+                }
+                else
+                {
+                    RunManageBlockListToolStripMenuItem.Enabled = false;
+                    RunManageBookmarksToolStripMenuItem.Enabled = false;
+                    this.teacherLocked = true;
+                    RunUnlockToolStripMenuItem.Text = "Unlock";
+                    BearerToken.Instance.Status = false;
+                }
             }
+            else
+            {
+                RunManageBlockListToolStripMenuItem.Enabled = false;
+                RunManageBookmarksToolStripMenuItem.Enabled = false;
+                RunUnlockToolStripMenuItem.Text = "Unlock";
+                this.teacherLocked = true;
+                BearerToken.Instance.Status = false;
+            }
+            Debug.WriteLine($"The token is now set to {BearerToken.Instance.Token}");
 
-
-            Boolean auth;
-            auth = authController.ValidateUser("admin", "test123");
-            auth = authController.TestAuth();
-
-            RunUnlockToolStripMenuItem.Text += "!";
-            RunManageBlockListToolStripMenuItem.Enabled = !RunManageBlockListToolStripMenuItem.Enabled;
-            RunManageBookmarksToolStripMenuItem.Enabled = !RunManageBookmarksToolStripMenuItem.Enabled;
-
-
-            // Placeholder
         }
 
         private void manageBlockListToolStripMenuItem_Click(object sender, EventArgs e)

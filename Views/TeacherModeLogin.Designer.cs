@@ -31,10 +31,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             usernameLabel = new Label();
             passwordLabel = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            UsernameTextBox = new TextBox();
+            PasswordTextBox = new TextBox();
             CancelLoginButton = new Button();
             LoginButton = new Button();
+            ErrorLabel = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,10 +46,11 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 350F));
             tableLayoutPanel1.Controls.Add(usernameLabel, 0, 1);
             tableLayoutPanel1.Controls.Add(passwordLabel, 0, 2);
-            tableLayoutPanel1.Controls.Add(textBox1, 1, 1);
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 2);
+            tableLayoutPanel1.Controls.Add(UsernameTextBox, 1, 1);
+            tableLayoutPanel1.Controls.Add(PasswordTextBox, 1, 2);
             tableLayoutPanel1.Controls.Add(CancelLoginButton, 0, 4);
             tableLayoutPanel1.Controls.Add(LoginButton, 1, 4);
+            tableLayoutPanel1.Controls.Add(ErrorLabel, 1, 3);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -60,7 +62,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 48F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(531, 290);
+            tableLayoutPanel1.Size = new Size(577, 290);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // usernameLabel
@@ -83,21 +85,22 @@
             passwordLabel.TabIndex = 1;
             passwordLabel.Text = "Password";
             // 
-            // textBox1
+            // UsernameTextBox
             // 
-            textBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.Location = new Point(178, 52);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(350, 39);
-            textBox1.TabIndex = 2;
+            UsernameTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            UsernameTextBox.Location = new Point(178, 52);
+            UsernameTextBox.Name = "UsernameTextBox";
+            UsernameTextBox.Size = new Size(396, 39);
+            UsernameTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // PasswordTextBox
             // 
-            textBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.Location = new Point(178, 100);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(350, 39);
-            textBox2.TabIndex = 3;
+            PasswordTextBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            PasswordTextBox.Location = new Point(178, 100);
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.Size = new Size(396, 39);
+            PasswordTextBox.TabIndex = 3;
+            PasswordTextBox.UseSystemPasswordChar = true;
             // 
             // CancelLoginButton
             // 
@@ -112,8 +115,8 @@
             // 
             // LoginButton
             // 
-            LoginButton.Anchor = AnchorStyles.None;
-            LoginButton.Location = new Point(278, 195);
+            LoginButton.Anchor = AnchorStyles.Right;
+            LoginButton.Location = new Point(424, 195);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(150, 42);
             LoginButton.TabIndex = 5;
@@ -121,11 +124,22 @@
             LoginButton.UseVisualStyleBackColor = true;
             LoginButton.Click += LoginButton_Click;
             // 
+            // ErrorLabel
+            // 
+            ErrorLabel.Anchor = AnchorStyles.Left;
+            ErrorLabel.AutoSize = true;
+            ErrorLabel.ForeColor = Color.Red;
+            ErrorLabel.Location = new Point(178, 152);
+            ErrorLabel.Name = "ErrorLabel";
+            ErrorLabel.Size = new Size(301, 32);
+            ErrorLabel.TabIndex = 6;
+            ErrorLabel.Text = "Bad Username or Password";
+            // 
             // TeacherModeLogin
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(531, 290);
+            ClientSize = new Size(577, 290);
             Controls.Add(tableLayoutPanel1);
             Name = "TeacherModeLogin";
             StartPosition = FormStartPosition.CenterParent;
@@ -140,9 +154,10 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label usernameLabel;
         private Label passwordLabel;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox UsernameTextBox;
+        private TextBox PasswordTextBox;
         private Button CancelLoginButton;
         private Button LoginButton;
+        private Label ErrorLabel;
     }
 }
