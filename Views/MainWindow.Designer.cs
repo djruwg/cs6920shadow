@@ -88,7 +88,7 @@
             MainWindowMenuStrip.Location = new Point(0, 0);
             MainWindowMenuStrip.Name = "MainWindowMenuStrip";
             MainWindowMenuStrip.Padding = new Padding(6, 3, 0, 3);
-            MainWindowMenuStrip.Size = new Size(1705, 44);
+            MainWindowMenuStrip.Size = new Size(1705, 42);
             MainWindowMenuStrip.TabIndex = 0;
             MainWindowMenuStrip.Text = "menuStrip1";
             // 
@@ -96,14 +96,14 @@
             // 
             FileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunNewTabToolStripMenuItem, RunPrintMenuToolStripItem, RunQuitToolStripMenuItem });
             FileToolStripMenuItem.Name = "FileToolStripMenuItem";
-            FileToolStripMenuItem.Size = new Size(71, 38);
+            FileToolStripMenuItem.Size = new Size(71, 36);
             FileToolStripMenuItem.Text = "File";
             // 
             // RunNewTabToolStripMenuItem
             // 
             RunNewTabToolStripMenuItem.Name = "RunNewTabToolStripMenuItem";
             RunNewTabToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.T;
-            RunNewTabToolStripMenuItem.Size = new Size(359, 44);
+            RunNewTabToolStripMenuItem.Size = new Size(318, 44);
             RunNewTabToolStripMenuItem.Text = "New Tab";
             RunNewTabToolStripMenuItem.Click += RunNewTabToolStripMenuItem_Click;
             // 
@@ -111,7 +111,7 @@
             // 
             RunPrintMenuToolStripItem.Name = "RunPrintMenuToolStripItem";
             RunPrintMenuToolStripItem.ShortcutKeys = Keys.Control | Keys.P;
-            RunPrintMenuToolStripItem.Size = new Size(359, 44);
+            RunPrintMenuToolStripItem.Size = new Size(318, 44);
             RunPrintMenuToolStripItem.Text = "Print";
             RunPrintMenuToolStripItem.Click += RunPrintMenuToolStripItem_Click;
             // 
@@ -119,14 +119,14 @@
             // 
             RunQuitToolStripMenuItem.Name = "RunQuitToolStripMenuItem";
             RunQuitToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
-            RunQuitToolStripMenuItem.Size = new Size(359, 44);
+            RunQuitToolStripMenuItem.Size = new Size(318, 44);
             RunQuitToolStripMenuItem.Text = "Quit";
             RunQuitToolStripMenuItem.Click += RunQuitToolStripMenuItem_Click;
             // 
             // BookmarksToolStripMenuItem
             // 
             BookmarksToolStripMenuItem.Name = "BookmarksToolStripMenuItem";
-            BookmarksToolStripMenuItem.Size = new Size(151, 38);
+            BookmarksToolStripMenuItem.Size = new Size(151, 36);
             BookmarksToolStripMenuItem.Text = "Bookmarks";
             BookmarksToolStripMenuItem.Click += BookmarksToolStripMenuItem_Click;
             // 
@@ -134,7 +134,7 @@
             // 
             TeacherToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunUnlockToolStripMenuItem, RunManageBlockListToolStripMenuItem, RunManageBookmarksToolStripMenuItem });
             TeacherToolStripMenuItem.Name = "TeacherToolStripMenuItem";
-            TeacherToolStripMenuItem.Size = new Size(116, 38);
+            TeacherToolStripMenuItem.Size = new Size(116, 36);
             TeacherToolStripMenuItem.Text = "Teacher";
             // 
             // RunUnlockToolStripMenuItem
@@ -163,7 +163,7 @@
             ToolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunTestToolStripMenuItem, RunDeveloperToolsMenuItem, RunTaskManagerToolStripMenuItem, RunRestWorkSpaceToolStripMenuItem });
             ToolsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
-            ToolsToolStripMenuItem.Size = new Size(89, 38);
+            ToolsToolStripMenuItem.Size = new Size(89, 36);
             ToolsToolStripMenuItem.Text = "Tools";
             // 
             // RunTestToolStripMenuItem
@@ -203,7 +203,7 @@
             MainWindowTableLayoutPanel2.ColumnStyles.Add(new ColumnStyle());
             MainWindowTableLayoutPanel2.Controls.Add(MainWindowTabControl, 0, 0);
             MainWindowTableLayoutPanel2.Dock = DockStyle.Fill;
-            MainWindowTableLayoutPanel2.Location = new Point(4, 163);
+            MainWindowTableLayoutPanel2.Location = new Point(4, 161);
             MainWindowTableLayoutPanel2.Margin = new Padding(4, 5, 4, 5);
             MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             MainWindowTableLayoutPanel2.RowCount = 1;
@@ -232,7 +232,7 @@
             MainWindowTableLayoutPanel3.Controls.Add(MainWindowFlowLayoutPanel1, 0, 0);
             MainWindowTableLayoutPanel3.Controls.Add(MainWindowFlowLayoutPanel2, 1, 0);
             MainWindowTableLayoutPanel3.Dock = DockStyle.Fill;
-            MainWindowTableLayoutPanel3.Location = new Point(3, 48);
+            MainWindowTableLayoutPanel3.Location = new Point(3, 46);
             MainWindowTableLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
             MainWindowTableLayoutPanel3.Name = "MainWindowTableLayoutPanel3";
             MainWindowTableLayoutPanel3.RowCount = 1;

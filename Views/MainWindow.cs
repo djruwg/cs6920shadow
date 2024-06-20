@@ -206,6 +206,10 @@ namespace BBB
             {
                 MainWindowTabControl.Controls.Remove(MainWindowTabControl.TabPages[tabIndex]);
             }
+            else
+            {
+                this.UpdateControlState();
+            }
         }
 
         /// <summary>
@@ -240,6 +244,15 @@ namespace BBB
         /// Listen for rendering user control events.
         /// </summary>
         public void RenderingUserControlEvent(object sender, EventArgs e)
+        {
+            Debug.WriteLine($"event {MainWindowTabControl.SelectedIndex}");
+            this.UpdateControlState();
+        }
+
+        /// <summary>
+        /// Updates the state of this form's controls based on the currently selected tab.
+        /// </summary>
+        private void UpdateControlState()
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
 
