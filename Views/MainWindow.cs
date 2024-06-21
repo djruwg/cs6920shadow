@@ -108,6 +108,11 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Runs the task manager when selected from the menu.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RunTaskManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -350,19 +355,30 @@ namespace BBB
             }
         }
 
+        /// <summary>
+        /// Runs the REST testing workspace
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void restWorkSpaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RestWorkSpace restWorkSpace = new RestWorkSpace();
             restWorkSpace.Show();
         }
 
-        private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Runs the teacher authentication dialog.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RunUnlockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result;
 
             if (this.teacherLocked)
             {
-                using (TeacherModeLogin login = new TeacherModeLogin())
+                // using (TeacherModeLogin login = new TeacherModeLogin())
+                using (LoginForm login = new LoginForm())
                 {
                     result = login.ShowDialog();
                 }
@@ -392,26 +408,47 @@ namespace BBB
             }
         }
 
-        private void manageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Runs the block list manager.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RunManageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 2", "Not Yet Implemented");
         }
 
-        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        // Runs the bookmark manager.
+        private void RunManageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
         }
 
+        /// <summary>
+        /// Runs the view bookmarks dialog.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
         }
 
+        /// <summary>
+        /// Creates a new tab when this menu item is selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RunNewTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.OpenNewTab();
         }
 
+        /// <summary>
+        /// Quits the application when this menu item is selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RunQuitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
