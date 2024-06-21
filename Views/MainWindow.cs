@@ -32,10 +32,7 @@ namespace BBB
 
             this._settingsController = new SettingsController();
 
-            RunManageBlockListToolStripMenuItem.Enabled = false;
-            RunManageBookmarksToolStripMenuItem.Enabled = false;
             teacherLocked = true;
-
         }
 
         /// <summary>
@@ -393,25 +390,21 @@ namespace BBB
                 this.teacherLocked = true;
                 BearerToken.Instance.Status = false;
             }
-            Debug.WriteLine($"The token is now set to {BearerToken.Instance.Token}");
-
         }
 
         private void manageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Placeholder
-            MessageBox.Show("This is slated for implementation in iteration 2");
+            MessageBox.Show("This is slated for implementation in iteration 2", "Not Yet Implemented");
         }
 
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Placeholder
-            MessageBox.Show("This is slated for implementation in iteration 3");
+            MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
         }
 
         private void BookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
         }
 
         private void RunNewTabToolStripMenuItem_Click(object sender, EventArgs e)
