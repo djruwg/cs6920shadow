@@ -4,7 +4,7 @@ using BBB.Controllers;
 namespace UnitTesting
 {
     [TestClass]
-    public class SettingsControllerrTest
+    public class SettingsControllerTest
     {
 
         [ClassInitialize]
