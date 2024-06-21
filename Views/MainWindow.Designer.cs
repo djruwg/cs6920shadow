@@ -40,7 +40,6 @@
             RunManageBlockListToolStripMenuItem = new ToolStripMenuItem();
             RunManageBookmarksToolStripMenuItem = new ToolStripMenuItem();
             ToolsToolStripMenuItem = new ToolStripMenuItem();
-            RunTestToolStripMenuItem = new ToolStripMenuItem();
             RunDeveloperToolsMenuItem = new ToolStripMenuItem();
             RunTaskManagerToolStripMenuItem = new ToolStripMenuItem();
             RunRestWorkSpaceToolStripMenuItem = new ToolStripMenuItem();
@@ -140,7 +139,7 @@
             // RunUnlockToolStripMenuItem
             // 
             RunUnlockToolStripMenuItem.Name = "RunUnlockToolStripMenuItem";
-            RunUnlockToolStripMenuItem.Size = new Size(359, 44);
+            RunUnlockToolStripMenuItem.Size = new Size(358, 44);
             RunUnlockToolStripMenuItem.Text = "Unlock";
             RunUnlockToolStripMenuItem.Click += RunUnlockToolStripMenuItem_Click;
             // 
@@ -148,7 +147,7 @@
             // 
             RunManageBlockListToolStripMenuItem.Enabled = false;
             RunManageBlockListToolStripMenuItem.Name = "RunManageBlockListToolStripMenuItem";
-            RunManageBlockListToolStripMenuItem.Size = new Size(359, 44);
+            RunManageBlockListToolStripMenuItem.Size = new Size(358, 44);
             RunManageBlockListToolStripMenuItem.Text = "Manage Block List";
             RunManageBlockListToolStripMenuItem.Click += RunManageBlockListToolStripMenuItem_Click;
             // 
@@ -156,24 +155,17 @@
             // 
             RunManageBookmarksToolStripMenuItem.Enabled = false;
             RunManageBookmarksToolStripMenuItem.Name = "RunManageBookmarksToolStripMenuItem";
-            RunManageBookmarksToolStripMenuItem.Size = new Size(359, 44);
+            RunManageBookmarksToolStripMenuItem.Size = new Size(358, 44);
             RunManageBookmarksToolStripMenuItem.Text = "Manage Bookmarks";
             RunManageBookmarksToolStripMenuItem.Click += RunManageBookmarksToolStripMenuItem_Click;
             // 
             // ToolsToolStripMenuItem
             // 
-            ToolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunTestToolStripMenuItem, RunDeveloperToolsMenuItem, RunTaskManagerToolStripMenuItem, RunRestWorkSpaceToolStripMenuItem });
+            ToolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { RunDeveloperToolsMenuItem, RunTaskManagerToolStripMenuItem, RunRestWorkSpaceToolStripMenuItem });
             ToolsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem";
             ToolsToolStripMenuItem.Size = new Size(89, 36);
             ToolsToolStripMenuItem.Text = "Tools";
-            // 
-            // RunTestToolStripMenuItem
-            // 
-            RunTestToolStripMenuItem.Name = "RunTestToolStripMenuItem";
-            RunTestToolStripMenuItem.Size = new Size(403, 44);
-            RunTestToolStripMenuItem.Text = "Run Test";
-            RunTestToolStripMenuItem.Click += RunTestToolStripMenuItem_Click;
             // 
             // RunDeveloperToolsMenuItem
             // 
@@ -383,7 +375,6 @@
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel2;
         private System.Windows.Forms.TabControl MainWindowTabControl;
         private System.Windows.Forms.ToolStripMenuItem ToolsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem RunTestToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel MainWindowTableLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel MainWindowFlowLayoutPanel2;
         private System.Windows.Forms.ToolStripMenuItem RunDeveloperToolsMenuItem;

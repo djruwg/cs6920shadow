@@ -2,11 +2,17 @@
 
 namespace BBB.UserControls
 {
+    /// <summary>
+    /// Interface for interacting with this control.
+    /// </summary>
     public interface RenderingUserControlInterface
     {
         void RenderingUserControlEvent(object sender, EventArgs e);
     }
 
+    /// <summary>
+    /// A user control for rendering web pages.
+    /// </summary>
     public partial class RenderingUserControl : UserControl
     {
         private RenderingUserControlInterface _listener;
@@ -88,11 +94,19 @@ namespace BBB.UserControls
             RenderingWebView.Reload();
         }
 
+        /// <summary>
+        /// Get the current URL
+        /// </summary>
+        /// <returns>A URL string</returns>
         public string GetUrl()
         {
             return RenderingWebView.Source.ToString();
         }
 
+        /// <summary>
+        /// Get the current page title
+        /// </summary>
+        /// <returns>A page title string</returns>
         public string GetPageTitle()
         {
             return this._pageTitle;
@@ -101,8 +115,8 @@ namespace BBB.UserControls
         /// <summary>
         /// Called when WebView2 completes initialization
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RenderingWebView_CoreWebView2InitializationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs e)
         {
             Debug.WriteLine("initialization completed");
@@ -111,8 +125,8 @@ namespace BBB.UserControls
         /// <summary>
         /// Called when WebView2 starts navigating
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RenderingWebView_NavigationStarting(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationStartingEventArgs e)
         {
             Debug.WriteLine("navigation starting");
@@ -121,8 +135,8 @@ namespace BBB.UserControls
         /// <summary>
         /// Called when the WebView2 source URL changes
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RenderingWebView_SourceChanged(object sender, Microsoft.Web.WebView2.Core.CoreWebView2SourceChangedEventArgs e)
         {
             if (RenderingWebView.CoreWebView2 != null)
@@ -137,8 +151,8 @@ namespace BBB.UserControls
         /// <summary>
         /// Called when WebView2 content begins loading
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RenderingWebView_ContentLoading(object sender, Microsoft.Web.WebView2.Core.CoreWebView2ContentLoadingEventArgs e)
         {
             Debug.WriteLine("content loading");
@@ -147,8 +161,8 @@ namespace BBB.UserControls
         /// <summary>
         /// Called when WebView2 navigation completes
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RenderingWebView_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
         {
             if (RenderingWebView.CoreWebView2 != null)
@@ -162,24 +176,33 @@ namespace BBB.UserControls
         /// <summary>
         /// Runs the provided Javascript
         /// </summary>
-        /// <param name="script"></param>
-        /// <returns>an async task</returns>
+        /// <param name="script">A string of Javascript</param>
+        /// <returns>An async task</returns>
         public async Task RunScriptAsync(string script)
         {
             await RenderingWebView.CoreWebView2.ExecuteScriptAsync(script);
         }
 
+        /// <summary>
+        /// Opens the print dialog
+        /// </summary>
+        /// <returns></returns>
         public async Task OpenPrintDialog()
         {
-            // RenderingWebView.CoreWebView2.ShowPrintUI();
             await RenderingWebView.CoreWebView2.ExecuteScriptAsync("window.print();");
         }
 
+        /// <summary>
+        /// Opens the developer tools
+        /// </summary>
         public void OpenDeveloperTools()
         {
             RenderingWebView.CoreWebView2.OpenDevToolsWindow();
         }
 
+        /// <summary>
+        /// Opens the task manager
+        /// </summary>
         public void OpenTaskManager()
         {
             RenderingWebView.CoreWebView2.OpenTaskManagerWindow();

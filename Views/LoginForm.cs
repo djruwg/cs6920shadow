@@ -1,5 +1,4 @@
 ﻿using BBB.Controllers;
-using System.Diagnostics;
 
 namespace BBB.Views
 {
@@ -17,18 +16,22 @@ namespace BBB.Views
         {
             InitializeComponent();
             _authController = new AuthController();
-            // ErrorMessageLabel.Visible = false;
         }
 
+        /// <summary>
+        /// Performs an authentication when clicked
+        /// </summary>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void LoginButton_Click(object sender, EventArgs e)
         {
             try
             {
-                Boolean auth = _authController.ValidateUser(UsernameTextBox.Text, PasswordTextBox.Text);
-                Debug.WriteLine($"auth = {auth}");
-                ErrorMessageLabel.Visible = !auth;
+                Boolean authenticated = _authController.ValidateUser(UsernameTextBox.Text, PasswordTextBox.Text);
 
-                if (auth)
+                ErrorMessageLabel.Visible = !authenticated;
+
+                if (authenticated)
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -44,12 +47,22 @@ namespace BBB.Views
             }
         }
 
+        /// <summary>
+        /// Cancels authentication when clicked
+        /// </summary>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
+        /// <summary>
+        /// Clears the message label when the username field is typed in
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (!ErrorMessageLabel.Text.Equals(""))
@@ -58,6 +71,11 @@ namespace BBB.Views
             }
         }
 
+        /// <summary>
+        /// Clears the message label when the password field is typed in
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
             if (!ErrorMessageLabel.Text.Equals(""))
