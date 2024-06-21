@@ -13,7 +13,15 @@ namespace BBB.ClientRESTHelpers
         public static RestServiceMasterEndpointRoot Instance => instance.Value;
 
         private string _endpointRoot;
-        private string _mode;
+        private Modes _mode;
+        public enum Modes
+        {
+            PROD,
+            TEST,
+            TESTBAD,
+            TESTDOWN,
+            ROBTEST
+        }
 
         public string EndpointRoot
         {
@@ -27,7 +35,7 @@ namespace BBB.ClientRESTHelpers
             }
         }
 
-        public string Mode
+        public Modes Mode
         {
             get
             {
@@ -37,19 +45,19 @@ namespace BBB.ClientRESTHelpers
             {
                 switch (value)
                 {
-                    case "PROD":
+                    case Modes.PROD:
                         _endpointRoot = "http://cloud.classproj.us";
                         break;
-                    case "TEST":
+                    case Modes.TEST:
                         _endpointRoot = "http://davide.classproj.us:8484";
                         break;
-                    case "TESTBAD":
+                    case Modes.TESTBAD:
                         _endpointRoot = "http://davide.classproj.us:8484/bad";
                         break;
-                    case "TESTDOWN":
+                    case Modes.TESTDOWN:
                         _endpointRoot = "http://davide.classproj.us:9999/down";
                         break;
-                    case "ROBTEST":
+                    case Modes.ROBTEST:
                         _endpointRoot = "http://rob.classproj.us:8080";
                         break;
                     default:
@@ -62,7 +70,7 @@ namespace BBB.ClientRESTHelpers
 
         private RestServiceMasterEndpointRoot()
         {
-            _mode = "PROD";
+            _mode = Modes.PROD;
             _endpointRoot = "http://cloud.classprog.us/";
         }
     }
