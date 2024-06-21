@@ -35,6 +35,8 @@ namespace BBB.UserControls
         private async void InitializeWebView2()
         {
             await RenderingWebView.EnsureCoreWebView2Async();
+
+            RenderingWebView.CoreWebView2.Settings.UserAgent = "Big Brother Browser 0.1b";
         }
 
         /// <summary>

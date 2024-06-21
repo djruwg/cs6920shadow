@@ -336,7 +336,6 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
             ClientSize = new Size(1705, 1771);
             Controls.Add(MainWindowTableLayoutPanel1);
             MainMenuStrip = MainWindowMenuStrip;
