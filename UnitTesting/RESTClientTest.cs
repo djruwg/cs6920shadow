@@ -16,12 +16,11 @@ namespace UnitTesting
         [ClassInitialize]
         public static void ClassInitialize(TestContext context)
         {
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
             _restClient = new RESTClient<Echo, Echo> ();
         }
-        //[ClassCleanup]
-        //[TestInitialize]
-        //[TestCleanup]
-
+        [ClassInitialize]
+        
         [TestMethod]
         public void TestGetObjectAsyncGoodEndpoint()
         {

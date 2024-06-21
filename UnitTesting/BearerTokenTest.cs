@@ -12,6 +12,12 @@ namespace UnitTesting
     public class BearerTokenTest
     {
 
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext context)
+        {
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
+        }
+
         [TestMethod]
         public void TestReadTokenWhenSet()
         {

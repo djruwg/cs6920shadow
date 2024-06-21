@@ -64,7 +64,7 @@ namespace BBB.ClientRESTHelpers
                         _endpointRoot = "http://cloud.classproj.us/";
                         break;
                 }
-
+                _mode = value;
             }
         }
 

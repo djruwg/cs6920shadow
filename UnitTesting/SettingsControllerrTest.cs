@@ -1,15 +1,23 @@
-﻿using BBB.Controllers;
+﻿using BBB.ClientRESTHelpers;
+using BBB.Controllers;
 
 namespace UnitTesting
 {
     [TestClass]
-    internal class SettingsControllerrTest
+    public class SettingsControllerrTest
     {
+
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext context)
+        {
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
+        }
+
         [TestMethod]
         public void TestGetDefaultURL()
         {
             SettingsController settings = new SettingsController();
-            Assert.AreEqual("https://westga.edu/", settings.startupURL);
+            Assert.AreEqual(settings.startupURL, "https://www.westga.edu");
         }
     }
 }

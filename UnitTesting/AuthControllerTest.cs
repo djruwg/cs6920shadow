@@ -1,19 +1,17 @@
 ﻿using BBB.ClientRESTHelpers;
-using BBB.DAL;
-using BBB.Models;
+using BBB.Controllers;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace UnitTesting
 {
-    [TestClass]
-    public class SettingsDALTest
-    {
 
+    [TestClass]
+    public class AuthControllerTest
+    {
         [ClassInitialize]
         public static void ClassInitialize(TestContext context)
         {
@@ -21,12 +19,10 @@ namespace UnitTesting
         }
 
         [TestMethod]
-        public void TestGetSettings()
+        public void TestGetDefaultURL()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
-            SettingsDAL settingsDAL = new SettingsDAL();
-            Settings settings = settingsDAL.GetSettings();
-            Assert.AreEqual("https://www.westga.edu", settings.starturl);
+            SettingsController settings = new SettingsController();
+            Assert.AreEqual("http://westga.edu/", settings.startupURL);
         }
     }
 }

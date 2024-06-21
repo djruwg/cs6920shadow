@@ -11,13 +11,20 @@ namespace UnitTesting
 
     // We don't test every endpoint because those change for testing senarios and are un-important for production code.
     // We do validate that the default which is PROD return correctly.
-    internal class RestServiceMasterEndpointRootTest
+    public class RestServiceMasterEndpointRootTest
     {
-        [TestMethod]
-        public void TestDefaults()
+
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext context)
         {
-            Assert.AreEqual(RestServiceMasterEndpointRoot.Instance.Mode, RestServiceMasterEndpointRoot.Modes.PROD);
-            Assert.AreEqual(RestServiceMasterEndpointRoot.Instance.EndpointRoot, "http://cloud.classproj.us");
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
+        }
+
+        [TestMethod]
+        public void TestProd()
+        {
+            Assert.AreEqual(RestServiceMasterEndpointRoot.Modes.PROD, RestServiceMasterEndpointRoot.Instance.Mode);
+            Assert.AreEqual("http://cloud.classproj.us", RestServiceMasterEndpointRoot.Instance.EndpointRoot);
         }
     }
 }
