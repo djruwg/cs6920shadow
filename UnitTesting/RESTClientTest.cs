@@ -25,7 +25,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestGetObjectAsyncGoodEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TEST";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TEST;
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.GetObjectAsync("/echo")).Result;
             Assert.IsTrue(wrapper.success, "testing wrapper.success");
             Assert.IsTrue(wrapper.containsData, "testing wrapper.containsData");
@@ -36,7 +36,7 @@ namespace UnitTesting
         public void TestPutObjectAsyncGoodEndpoint()
         {
 
-            RestServiceMasterEndpointRoot.Instance.Mode = "TEST";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TEST;
             Echo echo = Echo.FromJSON("{ \"message\": \"put /echo\"}");
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.PutObjectAsync("/echo", echo)).Result;
             Assert.IsTrue(wrapper.success, "testing wrapper.success");
@@ -47,7 +47,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestPostObjectAsyncGoodEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TEST";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TEST;
             Echo echo = Echo.FromJSON("{ \"message\": \"post /echo\"}");
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.PostObjectAsync("/echo", echo)).Result;
             Assert.IsTrue(wrapper.success, "testing wrapper.success");
@@ -58,7 +58,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestDeleteObjectAsyncGoodEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TEST";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TEST;
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.DeleteObjectAsync("/echo")).Result;
             Assert.IsTrue(wrapper.success, "testing wrapper.success");
             Assert.IsFalse(wrapper.containsData, "testing wrapper.containsData");
@@ -68,7 +68,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestGetObjectAsyncBadEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TESTBAD";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TESTBAD;
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.GetObjectAsync("/echo")).Result;
             Assert.IsFalse(wrapper.success, "testing wrapper.success");
             Assert.IsFalse(wrapper.containsData, "testing wrapper.containsData");
@@ -78,7 +78,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestPutObjectAsyncBadEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TESTBAD";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TESTBAD;
             Echo echo = Echo.FromJSON("{ \"message\": \"put /echo\"}");
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.PutObjectAsync("/echo", echo)).Result;
             Assert.IsFalse(wrapper.success, "testing wrapper.success");
@@ -89,7 +89,7 @@ namespace UnitTesting
         [TestMethod]
         public void TestPostObjectAsyncBadEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TESTBAD";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TESTBAD;
             Echo echo = Echo.FromJSON("{ \"message\": \"post /echo\"}");
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.PostObjectAsync("/echo", echo)).Result;
             Assert.IsFalse(wrapper.success, "testing wrapper.success");
@@ -100,16 +100,11 @@ namespace UnitTesting
         [TestMethod]
         public void TestDeleteObjectAsyncBadEndpoint()
         {
-            RestServiceMasterEndpointRoot.Instance.Mode = "TESTBAD";
+            RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.TESTBAD;
             RESTClientReturnData<Echo> wrapper = Task.Run(() => _restClient.DeleteObjectAsync("/echo")).Result;
             Assert.IsFalse(wrapper.success, "testing wrapper.success");
             Assert.IsFalse(wrapper.containsData, "testing wrapper.containsData");
             Assert.IsNull(wrapper.obj);
         }
-
-        //public async Task<RESTClientReturnData<TOUT>> GetObjectAsync(string restEndpoint)
-        //public async Task<RESTClientReturnData<TOUT>> PutObjectAsync(string restEndpoint, TIN obj)
-        //public async Task<RESTClientReturnData<TOUT>> PostObjectAsync(string restEndpoint, TIN obj)
-        //public async Task<RESTClientReturnData<TOUT>> DeleteObjectAsync(string restEndpoint)
     }
 }
