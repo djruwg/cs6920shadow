@@ -9,7 +9,6 @@ namespace UnitTesting
         public void TestGetDefaultURL()
         {
             SettingsController settings = new SettingsController();
-
             Assert.AreEqual("https://westga.edu/", settings.startupURL);
         }
     }
