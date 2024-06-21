@@ -11,7 +11,7 @@ namespace UnitTesting
     [TestClass]
     public class RESTClientTest
     {
-        private static RESTClient<Echo, Echo> _restClient;
+        private static RESTClient<Echo, Echo> _restClient = new RESTClient<Echo, Echo>();
 
         [ClassInitialize]
         public static void ClassInitialize(TestContext context)
@@ -19,7 +19,6 @@ namespace UnitTesting
             RestServiceMasterEndpointRoot.Instance.Mode = RestServiceMasterEndpointRoot.Modes.PROD;
             _restClient = new RESTClient<Echo, Echo> ();
         }
-        [ClassInitialize]
         
         [TestMethod]
         public void TestGetObjectAsyncGoodEndpoint()
