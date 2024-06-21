@@ -8,10 +8,16 @@ using System.Text.RegularExpressions;
 
 namespace BBB
 {
+    /// <summary>
+    /// The main web browser window
+    /// </summary>
     public partial class MainWindow : Form, RenderingUserControlInterface
     {
         private SettingsController _settingsController;
 
+        /// <summary>
+        /// Sets the visual spacing of the tab close icon
+        /// </summary>
         private const int TAB_LEADING_SPACE = 8;
         private const int TAB_TRAILING_SPACE = 32;
 
@@ -38,8 +44,8 @@ namespace BBB
         /// <summary>
         /// Perform initial setup once this component has loaded
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindow_Load(object sender, EventArgs e)
         {
             Image? image = MainWindowReloadButton.BackgroundImage;
@@ -55,20 +61,10 @@ namespace BBB
         }
 
         /// <summary>
-        /// Use this to invoke test code
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void RunTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // YOUR TEST CODE HERE
-        }
-
-        /// <summary>
         /// Launches the print dialog
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunPrintMenuToolStripItem_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -89,8 +85,8 @@ namespace BBB
         /// <summary>
         /// Launches the developer tools window
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunDeveloperToolsMenuItem_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -111,8 +107,8 @@ namespace BBB
         /// <summary>
         /// Runs the task manager when selected from the menu.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunTaskManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -133,7 +129,7 @@ namespace BBB
         /// <summary>
         /// Returns the rendering user control of the currently selected tab
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The currently selected rendering user control</returns>
         private RenderingUserControl? GetRenderingUserControl()
         {
             RenderingUserControl? renderingControl = null;
@@ -154,8 +150,8 @@ namespace BBB
         /// <summary>
         /// Intercept the tab drawing routine and add an 'x' for closing tabs.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowTabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
             Rectangle rect = MainWindowTabControl.GetTabRect(e.Index);
@@ -194,8 +190,8 @@ namespace BBB
         /// <summary>
         /// Determine if the tab's 'x' was clicked and if so close the tab.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowTabControl_MouseUp(object sender, MouseEventArgs e)
         {
             int tabIndex = MainWindowTabControl.SelectedIndex;
@@ -208,17 +204,15 @@ namespace BBB
             {
                 MainWindowTabControl.Controls.Remove(MainWindowTabControl.TabPages[tabIndex]);
             }
-            else
-            {
-                this.UpdateControlState();
-            }
+            
+            this.UpdateControlState();
         }
 
         /// <summary>
         /// Handle click of new tab button and open a new tab.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowNewTabButton_Click(object sender, EventArgs e)
         {
             MainWindowNewTabButton.Enabled = false;
@@ -266,6 +260,12 @@ namespace BBB
                 MainWindowTabControl.TabPages[MainWindowTabControl.SelectedIndex].Text = renderingControl.GetPageTitle().Truncate(16);
                 this.AdjustTabSizes();
             }
+            else
+            {
+                MainWindowBackButton.Enabled = false;
+                MainWindowForwardButton.Enabled = false;
+                MainWindowURLBar.Text = string.Empty;
+            }
 
             MainWindowNewTabButton.Enabled = true;
         }
@@ -299,8 +299,8 @@ namespace BBB
         /// <summary>
         /// On press of the enter key, requests the renderer navigate to the URL in the URL bar
         /// </summary>
-        /// <param name="sender">the sending object</param>
-        /// <param name="e">the key press event</param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The key press event</param>
         private void MainWindowURLBar_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
@@ -313,8 +313,8 @@ namespace BBB
         /// <summary>
         /// Handle back button click and go back a page.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowBackButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -328,8 +328,8 @@ namespace BBB
         /// <summary>
         /// Handle forward button click and go forward a page.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowForwardButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -343,8 +343,8 @@ namespace BBB
         /// <summary>
         /// Handle reload button click and reload the page.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void MainWindowReloadButton_Click(object sender, EventArgs e)
         {
             RenderingUserControl? renderingControl = GetRenderingUserControl();
@@ -358,8 +358,8 @@ namespace BBB
         /// <summary>
         /// Runs the REST testing workspace
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void restWorkSpaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RestWorkSpace restWorkSpace = new RestWorkSpace();
@@ -369,8 +369,8 @@ namespace BBB
         /// <summary>
         /// Runs the teacher authentication dialog.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunUnlockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result;
@@ -411,14 +411,18 @@ namespace BBB
         /// <summary>
         /// Runs the block list manager.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunManageBlockListToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 2", "Not Yet Implemented");
         }
 
-        // Runs the bookmark manager.
+        /// <summary>
+        /// Runs the bookmark manager
+        /// </summary>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunManageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
@@ -427,8 +431,8 @@ namespace BBB
         /// <summary>
         /// Runs the view bookmarks dialog.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void BookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This is slated for implementation in iteration 3", "Not Yet Implemented");
@@ -437,8 +441,8 @@ namespace BBB
         /// <summary>
         /// Creates a new tab when this menu item is selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunNewTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.OpenNewTab();
@@ -447,8 +451,8 @@ namespace BBB
         /// <summary>
         /// Quits the application when this menu item is selected.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The sending object</param>
+        /// <param name="e">The event</param>
         private void RunQuitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
