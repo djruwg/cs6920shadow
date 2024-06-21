@@ -42,7 +42,7 @@ namespace BBB.Views
             // UsernameLabel
             // 
             UsernameLabel.AutoSize = true;
-            UsernameLabel.Location = new Point(13, 11);
+            UsernameLabel.Location = new Point(24, 20);
             UsernameLabel.Margin = new Padding(4, 0, 4, 0);
             UsernameLabel.Name = "UsernameLabel";
             UsernameLabel.Size = new Size(121, 32);
@@ -52,7 +52,7 @@ namespace BBB.Views
             // PasswordLabel
             // 
             PasswordLabel.AutoSize = true;
-            PasswordLabel.Location = new Point(13, 54);
+            PasswordLabel.Location = new Point(24, 63);
             PasswordLabel.Margin = new Padding(4, 0, 4, 0);
             PasswordLabel.Name = "PasswordLabel";
             PasswordLabel.Size = new Size(111, 32);
@@ -62,10 +62,11 @@ namespace BBB.Views
             // UsernameTextBox
             // 
             LoginTableLayoutPanel.SetColumnSpan(UsernameTextBox, 2);
-            UsernameTextBox.Location = new Point(157, 13);
+            UsernameTextBox.Location = new Point(164, 22);
             UsernameTextBox.Margin = new Padding(4, 2, 4, 2);
+            UsernameTextBox.MaxLength = 16;
             UsernameTextBox.Name = "UsernameTextBox";
-            UsernameTextBox.Size = new Size(432, 39);
+            UsernameTextBox.Size = new Size(414, 39);
             UsernameTextBox.TabIndex = 2;
             UsernameTextBox.TextChanged += UsernameTextBox_TextChanged;
             // 
@@ -73,11 +74,12 @@ namespace BBB.Views
             // 
             PasswordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             LoginTableLayoutPanel.SetColumnSpan(PasswordTextBox, 2);
-            PasswordTextBox.Location = new Point(157, 56);
+            PasswordTextBox.Location = new Point(164, 65);
             PasswordTextBox.Margin = new Padding(4, 2, 4, 2);
+            PasswordTextBox.MaxLength = 32;
             PasswordTextBox.Name = "PasswordTextBox";
             PasswordTextBox.PasswordChar = '*';
-            PasswordTextBox.Size = new Size(432, 39);
+            PasswordTextBox.Size = new Size(414, 39);
             PasswordTextBox.TabIndex = 4;
             PasswordTextBox.TextChanged += PasswordTextBox_TextChanged;
             // 
@@ -86,7 +88,7 @@ namespace BBB.Views
             ErrorMessageLabel.AutoSize = true;
             LoginTableLayoutPanel.SetColumnSpan(ErrorMessageLabel, 3);
             ErrorMessageLabel.ForeColor = Color.Red;
-            ErrorMessageLabel.Location = new Point(13, 97);
+            ErrorMessageLabel.Location = new Point(24, 106);
             ErrorMessageLabel.Margin = new Padding(4, 0, 4, 0);
             ErrorMessageLabel.Name = "ErrorMessageLabel";
             ErrorMessageLabel.Size = new Size(0, 32);
@@ -96,7 +98,7 @@ namespace BBB.Views
             // 
             LoginTableLayoutPanel.ColumnCount = 3;
             LoginTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            LoginTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220F));
+            LoginTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 202F));
             LoginTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 220F));
             LoginTableLayoutPanel.Controls.Add(UsernameLabel, 0, 0);
             LoginTableLayoutPanel.Controls.Add(PasswordTextBox, 1, 1);
@@ -109,7 +111,7 @@ namespace BBB.Views
             LoginTableLayoutPanel.Location = new Point(0, 0);
             LoginTableLayoutPanel.Margin = new Padding(4, 2, 4, 2);
             LoginTableLayoutPanel.Name = "LoginTableLayoutPanel";
-            LoginTableLayoutPanel.Padding = new Padding(9, 11, 9, 11);
+            LoginTableLayoutPanel.Padding = new Padding(20);
             LoginTableLayoutPanel.RowCount = 4;
             LoginTableLayoutPanel.RowStyles.Add(new RowStyle());
             LoginTableLayoutPanel.RowStyles.Add(new RowStyle());
@@ -121,7 +123,7 @@ namespace BBB.Views
             // LoginButton
             // 
             LoginButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            LoginButton.Location = new Point(439, 158);
+            LoginButton.Location = new Point(428, 149);
             LoginButton.Margin = new Padding(4, 2, 4, 2);
             LoginButton.Name = "LoginButton";
             LoginButton.Size = new Size(150, 47);
@@ -133,7 +135,7 @@ namespace BBB.Views
             // CancelButton
             // 
             CancelButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            CancelButton.Location = new Point(157, 158);
+            CancelButton.Location = new Point(164, 149);
             CancelButton.Margin = new Padding(4, 2, 4, 2);
             CancelButton.Name = "CancelButton";
             CancelButton.Size = new Size(150, 47);
