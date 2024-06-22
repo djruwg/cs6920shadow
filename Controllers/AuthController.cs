@@ -33,7 +33,7 @@ namespace BBB.Controllers
             }
         }
 
-        public Boolean TestAuth()
+        public Boolean IsLoggedIn()
         {
             RESTClientReturnData<ValidateServerMessage> wrapper = Task.Run(() => _restClient.GetObjectAsync("/testtoken")).Result;
             if (wrapper != null && wrapper.success && wrapper.containsData)

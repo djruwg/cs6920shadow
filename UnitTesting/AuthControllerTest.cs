@@ -27,7 +27,7 @@ namespace UnitTesting
             AuthController auth = new AuthController();
             Boolean result = auth.ValidateUser("admin", "test123");
             Assert.IsTrue(result);
-            result = auth.TestAuth();
+            result = auth.IsLoggedIn();
             Assert.IsTrue(result);
         }
 
@@ -37,7 +37,7 @@ namespace UnitTesting
             AuthController auth = new AuthController();
             Boolean result = auth.ValidateUser("wrong", "test123");
             Assert.IsFalse(result);
-            result = auth.TestAuth();
+            result = auth.IsLoggedIn();
             Assert.IsFalse(result);
         }
 
@@ -47,7 +47,7 @@ namespace UnitTesting
             AuthController auth = new AuthController();
             Boolean result = auth.ValidateUser("admin", "wrong");
             Assert.IsFalse(result);
-            result = auth.TestAuth();
+            result = auth.IsLoggedIn();
             Assert.IsFalse(result);
         }
     }
