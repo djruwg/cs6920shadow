@@ -202,7 +202,7 @@
             MainWindowTableLayoutPanel2.Name = "MainWindowTableLayoutPanel2";
             MainWindowTableLayoutPanel2.RowCount = 1;
             MainWindowTableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            MainWindowTableLayoutPanel2.Size = new Size(1697, 1789);
+            MainWindowTableLayoutPanel2.Size = new Size(1697, 1605);
             MainWindowTableLayoutPanel2.TabIndex = 2;
             // 
             // MainWindowTabControl
@@ -212,7 +212,7 @@
             MainWindowTabControl.Margin = new Padding(4, 5, 4, 5);
             MainWindowTabControl.Name = "MainWindowTabControl";
             MainWindowTabControl.SelectedIndex = 0;
-            MainWindowTabControl.Size = new Size(1689, 1779);
+            MainWindowTabControl.Size = new Size(1689, 1595);
             MainWindowTabControl.TabIndex = 6;
             MainWindowTabControl.DrawItem += MainWindowTabControl_DrawItem;
             MainWindowTabControl.MouseUp += MainWindowTabControl_MouseUp;
